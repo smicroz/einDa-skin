@@ -1,0 +1,99 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SKINS">`LANG_MANAGE_SKINS`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/skins.html|
+|HTM_RESELLER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Skin list</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|SKINS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_UPLOAD_SKIN|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=uploadform action="CMD_SKINS" enctype="multipart/form-data" method="POST">
+			<input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+			<input type="hidden" name="action" value="upload">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_FILE|">|LANG_FILE|</label>
+				<div class="form-datos">
+					<input type=file name="file" size=40>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_SKIN_NAME|">|LANG_SKIN_NAME|</label>
+				<div class="form-datos">
+					|SERVERSKIN|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_SKIN_NAME|"></label>
+				<div class="form-datos">
+					|SERVERSKIN|
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=save value="|LANG_UPLOAD|">
+			</div> <!-- fin contenedor para boton submit -->
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_CURRENTLY_USING| <b>|SKIN|</b></p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_RESELLER_BOTTOM|

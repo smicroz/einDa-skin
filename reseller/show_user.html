@@ -1,0 +1,195 @@
+|LF_STANDARD|
+|LF_CREATE|
+|?TREE=&raquo; <a class=tree href="/`USER_REFERER`">`LANG_SHOW_USERS`</a> &raquo; <a class=tree href="/CMD_SHOW_USER?user=`user`">`LANG_USER` `user`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/modify.html|
+
+|HTM_RESELLER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_DETAILS| |user|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table width=100% cellpadding=0 cellspacing=0>
+					<tr>
+						<form action="CMD_LOGIN" method="POST">
+							<td align=center>
+
+								<input type=hidden name=username value="|LOGIN_AS_MASTER_NAME|\||user|">
+								<input type=submit value="|LANG_LOGIN_AS| |user|"><br>
+							</td>
+						</form>
+						<form>
+							<td align=center>
+
+								<input type=button value="|LANG_MODIFY_USER| |user|" onClick="location.href='CMD_MODIFY_USER?user=|user|'">
+							</td>
+						</form>
+						<form name=tableform action='CMD_SELECT_USERS' method='GET'>
+							<td align=center>
+								<input type=hidden name=select0 value="|user|">
+								<input type=submit value='|LANG_DELETE_USER| |user|' name=delete>
+							</td>
+						</form>
+					</tr>
+					<tr>
+						<form action="CMD_SELECT_USERS" method='GET'>
+							<td align=center>
+								<input type=hidden name=select0 value="|user|">
+								<input type=hidden name=location value="CMD_SHOW_USER?user=|user|">
+								<input type=submit value="|LANG_SUSPEND|" name=dosuspend>
+							</td>
+						</form>
+						<form action="CMD_SELECT_USERS" method='GET'>
+							<td align=center>
+								<input type=hidden name=select0 value="|user|">
+								<input type=hidden name=location value="CMD_SHOW_USER?user=|user|">
+								<input type=submit value="|LANG_UNSUSPEND|" name=dounsuspend>
+							</td>
+						</form>
+					</tr>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Domains</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|DOMAINS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Stats</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|STATS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<script language="Javascript">
+<!--
+|?SHOW_MESSAGE=showUserMessage()|
+|?EDIT_MESSAGE=`LANG_EDIT_USER_MESS`|
+|*if ACCOUNT_USERTYPE="reseller"|
+|?SHOW_MESSAGE=showResellerMessage()|
+|?EDIT_MESSAGE=`LANG_EDIT_RES_MESS`|
+|*endif|
+|*if ACCOUNT_USERTYPE="admin"|
+|?SHOW_MESSAGE=showAdminMessage()|
+|?EDIT_MESSAGE=`LANG_EDIT_RES_MESS`|
+|*endif|
+
+function showUserMessage()
+{
+	var message = window.open("CMD_EDIT_USER_MESSAGE","message","width=740,height=480,scrollbars=no,resizable=yes");
+}
+function showResellerMessage()
+{
+	var message = window.open("CMD_EDIT_RESELLER_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+function showAdminMessage()
+{
+	var message = window.open("CMD_EDIT_ADMIN_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_RESEND_WELCOME_EMAIL|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class=list cellpadding=0 cellspacing=0>
+					<form action="/CMD_RESEND_EMAIL" method="POST">
+						<input type=hidden name=user value=|user|>	
+						<tr><td class=list align=center>|LANG_SEND_TO|: <input type=text name=email value="|USER_EMAIL|">
+							<input type=checkbox name=newpass value="yes">|LANG_RANDOM_PASS|
+							<input type=submit value="|LANG_SEND|">&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="javascript:|SHOW_MESSAGE|;">|EDIT_MESSAGE|</a>
+						</td></tr>
+					</form>
+				</table>
+				<table class=list cellpadding=3 cellspacing=1>
+					<tr><td class=listtitle>|LANG_USER_COMMENTS|</td></tr>
+					<form action="CMD_COMMENTS" method="POST">
+						<input type=hidden name=user value="|user|">
+						<input type=hidden name=location value="CMD_SHOW_USER">
+						<tr><td class=list align=center><textarea rows=15 cols=80 name=comments>|COMMENTS|</textarea></td></tr>
+						<tr><td class=listtitle align=right><input type=submit value="|LANG_SAVE_COMMENTS|"></td></tr>
+					</form>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+|HTM_RESELLER_BOTTOM|

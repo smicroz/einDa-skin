@@ -1,0 +1,74 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_REDIRECT?DOMAIN=`DOMAIN`">`LANG_SITE_REDIRECTS`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#redirect|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_ADD_NEW_REDIRECT|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        <table class=list cellpadding=0 cellspacing=0>
+          <form name=info action='/CMD_REDIRECT' method='POST'>
+            <input type=hidden name=domain value="|DOMAIN|">
+            <input type=hidden name=action value="add">
+            <tr><td class=list>|LANG_LOCAL_URL|</td><td class=list>|DOMAIN|<input type=text name=from value="/"> |LANG_EG_REDIRECT|</td></tr>
+            <tr><td class=list>|LANG_REDIRECT_TYPE|</td><td class=list><select name=type>
+              <option value="301">301 - |LANG_PERMANENT|</option>
+              <option value="302" selected>302 - |LANG_TEMPORARY|</option>
+              <option value="303">303 - |LANG_REPLACED|</option>
+            </select></td></tr>
+            <tr><td class=list>|LANG_DESTINATION_URL|</td><td class=list><input type=text name=to value="http://"> |LANG_EG_DOMAIN|</td></tr>
+            <tr><td class=listtitle align=right colspan=2><input type=submit value="|LANG_SAVE|"></td></tr>
+          </form>
+        </table>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Redirects</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |REDIRECTS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+
+
+|HTM_USER_BOTTOM|

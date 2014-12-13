@@ -1,0 +1,90 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_MIME_TYPES?DOMAIN=`DOMAIN`">`LANG_MIME_TYPES`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#mime|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_ADD_MIME_TYPE|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="/CMD_MIME_TYPES" method="POST">
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=action value="add">
+
+			<!-- form -->
+
+			<div class="bcpbp-form">
+				<label for="|LANG_MIME_TYPE|">|LANG_MIME_TYPE|</label>
+				<div class="form-datos">
+					<input type=text name=name>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_EXTENSION|">|LANG_EXTENSION|</label>
+				<div class="form-datos">
+					<input type=text name=extension size=5>
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_ADD|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_USER_MIME_TYPES|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|MIMETYPES|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+
+		<!-- link footer -->
+		<div class="bcpbp-link--footer">
+			<div class="bcpbplf-izq">
+				<a href="/CMD_MIME_TYPES?action=system&domain=|DOMAIN|">|LANG_LIST_SYSTEM_MIMES|</a>
+			</div>
+
+			<div class="bcpbplf-der">
+				test
+			</div>
+		</div> <!-- fin link footer -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+|HTM_USER_BOTTOM|

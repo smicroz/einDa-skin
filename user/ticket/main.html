@@ -1,0 +1,93 @@
+|?TREE=&raquo; <a class=tree href="/CMD_TICKET">`LANG_MESS_SYS`</a>|
+|?HELP_SECTION=`USER_HELPER`/gettingstarted.html#ticket|
+|HTM_USER_TOP|
+
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Tickets</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- subtitulo link -->
+		<div class="bcpbp-subtitulo--link">
+			<div class="bcpbpsl-izq">
+				<a href="CMD_TICKET_CREATE?TYPE=Ticket">|LANG_CREATE_TICKET|</a>
+				<a href="CMD_TICKET?action=closed">|LANG_VIEW_CLOSED_TICKETS||NEWCLOSED|</a>
+			</div>
+
+			<div class="bcpbpsl-der">
+				test
+			</div>
+		</div>
+		<!-- end subtitulo -->
+
+
+		<div class="box-da-table">
+			|TICKETS|
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Messages</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<div class="box-da-table">
+			|MESSAGES|
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Options</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="CMD_TICKET" method="post">
+			<input type=hidden name=action value="email">
+			<input type=checkbox name=ON value="yes" |EMAILCHECKED|> |LANG_EMAIL_TO| <input type=text name=email value="|EMAIL|">
+			<input type=submit name=save value="|LANG_SAVE|">
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

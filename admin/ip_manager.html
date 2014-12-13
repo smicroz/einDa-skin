@@ -1,0 +1,69 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_IP_MANAGER">`LANG_IP_MANAGER`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`/ipman.html|
+|HTM_ADMIN_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_ADD_IP|</h2>
+		</div>
+
+		|TEXT|<br>
+
+		<form action="/CMD_IP_MANAGER" method='POST'>
+			<input type=hidden name=action value=add>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_IP|">|LANG_IP|</label>
+				<div class="form-datos">
+					<input type="text" name="ip" />
+				</div>				
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_NETMASK|">|LANG_NETMASK|</label>
+				<div class="form-datos">
+					<input type=text name=netmask value="255.255.255.0">|*if HAVE_IPV6="yes"| |LANG_IPV6_MASK||*endif|
+				</div>
+			</div>
+
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value='|LANG_ADD_IP|' />
+			</div> <!-- fin contenedor para boton submit -->
+		</form>
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>List IP</h2>
+		</div>
+
+		<div class="box-da-table">
+			|TABLE|
+		</div> <!-- fin tabla -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

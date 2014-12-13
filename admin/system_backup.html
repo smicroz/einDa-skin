@@ -1,0 +1,298 @@
+|LF_STANDARD|
+|LF_BACKUPS|
+|?TREE=&raquo; <a class=tree href="/CMD_SYSTEM_BACKUP">`LANG_SYSTEM_BACKUP`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+
+|HTM_ADMIN_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_RUN_SYS_BK|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_ON_PER_DAY|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<form action="/CMD_SYSTEM_BACKUP" method="POST">
+			<input type=hidden name=action value="now">
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_RUN_NOW|">
+			</div> <!-- fin contenedor para boton submit -->
+
+			<!-- link footer -->
+			<div class="bcpbp-link--footer">
+				<div class="bcpbplf-izq">
+					<a href="/CMD_SYSTEM_BACKUP/status.log.txt">|LANG_VIEW_LOG|</a> |LOG_TIME|
+				</div>
+
+				<div class="bcpbplf-der">
+					test
+				</div>
+			</div> <!-- fin link footer -->
+		</form>
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CRON_SCHEDULE|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="/CMD_SYSTEM_BACKUP" method="POST">
+			<input type=hidden name=action value="when">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_MINUTE|">|LANG_MINUTE|</label>
+				<div class="form-datos">
+					<input type=text name=minute value="|MINUTE|" size=2>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_HOUR|">|LANG_HOUR|</label>
+				<div class="form-datos">
+					<input type=text name=hour value="|HOUR|" size=2>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DAY_OF_MONTH|">|LANG_DAY_OF_MONTH|</label>
+				<div class="form-datos">
+					<input type=text name=dayofmonth value="|DAY|" size=2>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_MONTH|">|LANG_MONTH|</label>
+				<div class="form-datos">
+					<input type=text name=month value="|MONTH|" size=2>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DAY_OF_WEEK|"></label>
+				<div class="form-datos">
+					<input type=text name=dayofweek value="|DAYOFWEEK|" size=2>
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SAVE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+			<div class="bcpbp-form">
+				<label for="|LANG_USE_CRON|">|LANG_USE_CRON|</label>
+				<input type=checkbox name=use_cron value="yes" |CRON|>
+			</div>
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CONFIGURE_FULL_SYSTEM_BACKUP|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="/CMD_SYSTEM_BACKUP" method="POST">
+			<input type=hidden name=action value="setting">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BACKUP_PATH|">|LANG_BACKUP_PATH|</label>
+				<div class="form-datos">
+					<input type=text name="BACKUP_PATH" value="|BACKUP_PATH|" size=32>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_MIN_DISK_SPACE|">|LANG_MIN_DISK_SPACE|</label>
+				<div class="form-datos">
+					<input type=text name="MIN_DISK" value="|MIN_DISK|" size=4> on partition |MOUNT_POINT|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_ADD_USERS|">|LANG_ADD_USERS|</label>
+				<div class="form-datos">
+					<input type=checkbox name="ADD_USERS_TO_LIST" value="yes" |ADD_USERS_TO_LIST|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BACKUP_HTTP_CONFIG|">|LANG_BACKUP_HTTP_CONFIG|</label>
+				<div class="form-datos">
+					<input type=checkbox name="HTTP_BK" value="yes" |HTTP_BK|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BACKUP_BIND_CONFIG|">|LANG_BACKUP_BIND_CONFIG|</label>
+				<div class="form-datos">
+					<input type=checkbox name="BIND_BK" value="yes" |BIND_BK|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BACKUP_MYSQL_CONFIG|">|LANG_BACKUP_MYSQL_CONFIG|</label>
+				<div class="form-datos">
+					<input type=checkbox name="MYSQL_BK" value="yes" |MYSQL_BK|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BACKUP_DIRS_FILES|">|LANG_BACKUP_DIRS_FILES|</label>
+				<div class="form-datos">
+					<input type=checkbox name="CUSTOM_BK" value="yes" |CUSTOM_BK|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_USE_REMOTE_TRANSFER|">|LANG_USE_REMOTE_TRANSFER|</label>
+				<div class="form-datos">
+					<input type=checkbox name="USE_RTRANS" value="yes" |USE_RTRANS|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_REMOTE_TRANSFER_METHOD|">|LANG_REMOTE_TRANSFER_METHOD|</label>
+				<div class="form-datos">
+					|RTRANS_SELECT|
+					<a href="/CMD_SYSTEM_BACKUP/id_dsa.pub">|LANG_DOWNLOAD_ID_DSA|</a>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DEL_AFTER_RTRANS|">|LANG_DEL_AFTER_RTRANS|</label>
+				<div class="form-datos">
+					<input type=checkbox name="DEL_AFTERTRANS" value="yes" |DEL_AFTERTRANS|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_FILE_BY_FILE|">|LANG_FILE_BY_FILE|</label>
+				<div class="form-datos">
+					<input type=checkbox name="FBF_RTRANS" value="yes" |FBF_RTRANS|>
+					|LANG_FILE_BY_FILE_COMMENT|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_REMOTE_HOST|">|LANG_REMOTE_HOST|</label>
+				<div class="form-datos">
+					<input type=text name="FTP_HOST" value="|FTP_HOST|">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_REMOTE_USER|">|LANG_REMOTE_USER|</label>
+				<div class="form-datos">
+					<input type=text name="FTP_USER" value="|FTP_USER|">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_REMOTE_PASS|">|LANG_REMOTE_PASS|</label>
+				<div class="form-datos">
+					<input type=password name="FTP_PASS" value="|FTP_PASS|">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_REMOTE_PATH|">|LANG_REMOTE_PATH|</label>
+				<div class="form-datos">
+					<input type=text name="FTP_RPATH" value="|FTP_RPATH|">
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SAVE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Bloque sin contenido</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- table -->
+		<div class="box-da-table">
+			<table class=list cellspacing=1 cellpadding=3>
+				<tr>
+					<td class=list>
+						<div style="overflow: auto; height: 160px; width: 100%;">|BACKUP_DIRECTORIES|
+						<form action="/CMD_SYSTEM_BACKUP" method="POST"></div>
+							<input type=hidden name=action value="adddirectory">
+							<input type=text name=directory> <input type=submit value="|LANG_ADD_DIRECTORY|">
+						</form>
+					</td>
+
+					<td class=list>
+						<div style="overflow: auto; height: 160px; width: 100%;">|BACKUP_FILES|
+						<form action="/CMD_SYSTEM_BACKUP" method="POST"></div>
+							<input type=hidden name=action value="addfile">
+							<input type=text name=file> <input type=submit value="|LANG_ADD_FILE|">
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td class=listtitle colspan=2 align=right>&nbsp;</td>
+				</tr>
+			</table>
+		</div> <!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

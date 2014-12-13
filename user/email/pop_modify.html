@@ -1,0 +1,93 @@
+|LF_STANDARD|
+|LF_POP|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_EMAIL_POP?DOMAIN=`DOMAIN`">`LANG_POP_ACCOUNTS`</a> &raquo; <a class=tree href="/HTM_EMAIL_POP_MODIFY?DOMAIN=`DOMAIN`&USER=`USER`">`LANG_MODIFY` `USER`</a>|
+|?HELP_SECTION=`USER_HELPER`/email.html#pop3|
+|HTM_USER_TOP|
+
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass()|
+|*if AJAX="1"|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('')|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="Javascript">
+<!--
+
+|HTM_JAVASCRIPT|
+
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_POP_MODIFY|</h2>
+		</div>
+
+		<!-- form -->
+		<form name=reseller action="CMD_EMAIL_POP" method="post">
+			<input type=hidden name=action value=modify>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=user value="|USER|">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_POP_USERNAME|">|LANG_POP_USERNAME|</label>
+				<div class="form-datos">
+					<input type=text name=newuser value="|USER|" size=16><b>@|DOMAIN|</b>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_NEW_PASS|">|LANG_NEW_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd name=passwd size=16 |CHECK_PASS|> |LANG_LEAVE_BLANK|
+					<div id=passwd_result class=warning></div>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd2 name=passwd2 size=16>
+					<input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_EMAIL_QUOTA|">|LANG_EMAIL_QUOTA|</label>
+				<div class="form-datos">
+					<input type=text name=quota size=16 value="|QUOTA|"> |LANG_ZERO_UNLIMITED|
+				</div>
+			</div>
+
+			|?SEND_LIMIT_VALUE=|
+			|*if SEND_LIMIT!="no"||?SEND_LIMIT_VALUE=`SEND_LIMIT`||*endif|
+			|*if USER_CAN_SET_SEND_LIMIT="yes"|
+			<div class="bcpbp-form">
+				<label for="|LANG_SEND_LIMIT|">|LANG_SEND_LIMIT|</label>
+				<div class="form-datos">
+					<input type=text name=limit size=16 value="|SEND_LIMIT_VALUE|"> |LANG_SEND_LIMIT_DESC| |GLOBAL_PER_EMAIL_LIMIT|
+				</div>
+			</div>
+			|*endif|		
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=update value="|LANG_MODIFY|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

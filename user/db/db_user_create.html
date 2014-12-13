@@ -1,0 +1,110 @@
+|LF_STANDARD|
+|LF_DB|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_DB?DOMAIN=`DOMAIN`">`LANG_MYSQL_SETUP`</a> &raquo; <a class=tree href="/CMD_DB_VIEW?DOMAIN=`DOMAIN`&name=`name`">`LANG_VIEW` `name`</a> &raquo; <a class=tree href="/HTM_DB_USER_CREATE?DOMAIN=`DOMAIN`&name=`name`">`LANG_NEW_USER`</a>|
+|?HELP_SECTION=`USER_HELPER`/mysql.html#adduser|
+|HTM_USER_TOP|
+
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass()|
+|*if AJAX="1"|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('')|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="javascript">
+
+|HTM_JAVASCRIPT|
+
+function setGreyout(value)
+{
+	if (document.reseller)
+	{
+		with (document.reseller)
+		{
+			if (value == '...')
+			{
+				user.disabled = false;
+				user.value = '';
+				passwd.disabled = false;
+				passwd.value = '';
+				passwd2.disabled = false;
+				passwd2.value = '';
+
+			}
+			else
+			{
+				user.value = value;
+				user.disabled = true;
+				passwd.value = '********';
+				passwd.disabled = true;
+				passwd2.value = '********';
+				passwd2.disabled = true;
+			}
+		}
+	}
+}
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_ADD_USER_TO| |name|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=reseller action="CMD_DB" method="post">
+
+			|HTM_PREVENT_AUTOFILL|
+
+			<input type=hidden name=action value=createuser>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=name value="|name|">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DB_USERNAME|">|LANG_DB_USERNAME|</label>
+				<div class="form-db">
+					<b>|USERNAME|_</b>
+					<input type=text name=user size=12>
+					|*if DB_USER_LIST|
+					|LANG_DB_USE_EXISTING|
+					|DB_USER_LIST|
+					|*endif|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DB_PASS|">|LANG_DB_PASS|</label>
+				<div class="form-db">
+					<input type=password id=passwd name=passwd size=20 |CHECK_PASS|>
+					<input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|">
+					<div id=passwd_result class=warning></div>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DB_PASS_AGAIN|">|LANG_DB_PASS_AGAIN|</label>
+				<div class="form-datos">
+					<input type=password id=passwd2 name=passwd2 size=20 onChange="checkPass()">
+				</div>				
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=create value="|LANG_CREATE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

@@ -1,0 +1,136 @@
+|?TREE=&raquo; <a class=tree href="/CMD_USER_SHOW">`LANG_SHOW_USERS`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/modify.html|
+|HTM_RESELLER_TOP|
+
+<script language="Javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+	{
+		str = str.substring(1, str.length);
+	}
+	while (str.substring(str.length-1, str.length) == ' ')
+	{
+		str = str.substring(0,str.length-1);
+	}
+
+	strobj.value = str;
+
+	return true;
+}
+
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>List Users</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- subtitulo link -->
+		<div class="bcpbp-subtitulo--link">
+			<div class="bcpbpsl-izq">
+				<a href="HTM_ACCOUNT_USER_CREATE">|LANG_CREATE_USER|</a>
+				<a href="HTM_ACCOUNT_USER_DELETE">|LANG_DELETE_USER|</a>
+				<a href="HTM_USER_PASSWD">|LANG_CHANGE_A_PASS|</a><br>
+				<br>
+				<a href="/CMD_MODIFY_USER?user=|USERNAME|">|LANG_MODIFY_OWN_DATA|</a>
+			</div>
+
+			<div class="bcpbpsl-der">
+				test
+			</div>
+		</div>
+		<!-- end subtitulo -->
+
+		<form action="" method="GET" name=searchform onSubmit="trimit(value7);">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_SHOW_DOMAINS_THAT_CONTAIN|">|LANG_SHOW_DOMAINS_THAT_CONTAIN|</label>
+				<div class="form-datos">
+					<input type=text size=12 class=inputclass name=value7
+					|*if value7|
+					value='|value7|'
+					|*endif|
+					>
+					<input type=hidden name=comparison7 value="contains">
+					<input type=hidden name=sort1 value="7">
+					<input type=hidden name=sort1dir value="1">
+					<input type=hidden name=sort2dir value="1">
+					<input type=hidden name=ipp value="50">
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SEARCH|">
+				<input type=button value="|LANG_CLEAR_SEARCH|" onClick="document.searchform.value7.value=''; document.searchform.submit();">
+			</div> <!-- fin contenedor para boton submit -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+<script language="javascript">
+document.searchform.value7.focus();
+document.searchform.value7.select();
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>List</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|TABLE|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_CLICK_USERNAME|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_RESELLER_BOTTOM|

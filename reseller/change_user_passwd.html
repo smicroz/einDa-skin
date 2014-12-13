@@ -1,0 +1,86 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_USER_SHOW">`LANG_SHOW_USERS`</a> &raquo; <a class=tree href="/HTM_USER_PASSWD">`LANG_CHANGE_PASS`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/userpass.html|
+|HTM_RESELLER_TOP|
+
+|?CHECK_PASS=|
+|*if AJAX="1"|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+	<script type="text/javascript" src="JS_LIVESEARCH"></script>
+	<script type="text/javascript" src="JS_JAVASCRIPT"></script>
+|*endif|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CHANGE_PASS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=reseller action="CMD_USER_PASSWD" method="post" autocomplete="off">
+
+			|HTM_PREVENT_AUTOFILL|
+
+			|*if AJAX="1"|
+			<div class="bcpbp-form">
+				<label for="|LANG_USERNAME|">|LANG_USERNAME|</label>
+				<div class="form-datos">
+					<input type=text name=username onkeydown="showResult(this.value, 'CMD_AJAX_USERS')" onblur="hideit(1, 'CMD_AJAX_USERS')" autocomplete="off">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for=""></label>
+				<div id="livecontainer"><div id="livesearch"></div></div>
+			</div>
+
+			|*else|
+
+			<div class="bcpbp-form">
+				<label for="|LANG_USERNAME|">|LANG_USERNAME|</label>
+				<div class="form-datos">
+					<input type=text name=username>
+				</div>
+			</div>
+			|*endif|
+
+			<div class="bcpbp-form">
+				<label for="|LANG_ENTER_PASS|">|LANG_ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd name=passwd |CHECK_PASS|>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd2 name=passwd2 onChange="checkPass()">
+				</div>				
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SUBMIT|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|*if AJAX="1"|
+	|LANG_AJAX_HOWTO|
+	<script type="text/javascript">
+		setLoaded();
+	</script>
+|*endif|
+
+|HTM_RESELLER_BOTTOM|

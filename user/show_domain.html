@@ -1,0 +1,582 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`domain`">`domain`</a>|
+|?HELP_SECTION=`USER_HELPER`|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>My account</h2>
+		</div>
+
+		<!-- items -->
+		<div class="bcpbp-navitem">
+
+			<!-- icono -->
+			|*if ALLOWED_CMD_DOMAIN!="no"|
+			<div class="box-items">
+				<a href="/CMD_ADDITIONAL_DOMAINS?domain=|domain|">
+					<div class="item-icono">
+						DS
+					</div>
+					<div class="item-titulo">
+						|LANG_DOMAIN_SETUP|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/HTM_PASSWD?domain=|domain|">
+					<div class="item-icono">
+						CP
+					</div>
+					<div class="item-titulo">
+						|LANG_CHANGE_PASSWORD|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_LOGIN_HISTORY?domain=|domain|">
+					<div class="item-icono">
+						LH
+					</div>
+					<div class="item-titulo">
+						|LANG_LOGIN_HISTORY|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			|*if USERDNSCONTROL="ON"|
+			<div class="box-items">
+				<a href="/CMD_DNS_CONTROL?domain=|domain|">
+					<div class="item-icono">
+						DM
+					</div>
+					<div class="item-titulo">
+						|LANG_DNS_MANAGEMENT|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_TICKET?domain=|domain|">
+					<div class="item-icono">
+						SC
+					</div>
+					<div class="item-titulo">
+						|LANG_SUPPORT_CENTER|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_PERL_MODULES?domain=|domain|">
+					<div class="item-icono">
+						IPM
+					</div>
+					<div class="item-titulo">
+						|LANG_INSTALLED_PERL_MODULES|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_SITE_BACKUP?domain=|domain|">
+					<div class="item-icono">
+						CRB
+					</div>
+					<div class="item-titulo">
+						|LANG_CREATE_RESTORE_BACKUPS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_USER_STATS?domain=|domain|">
+					<div class="item-icono">
+						SSSL
+					</div>
+					<div class="item-titulo">
+						|LANG_SITE_SUM_STATS_LOGS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			|*if USERFTPMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_FTP?domain=|domain|">
+					<div class="item-icono">
+						FM
+					</div>
+					<div class="item-titulo">
+						|LANG_FTP_MANAGEMENT|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if NUSERSUBDOMAINSMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_SUBDOMAIN?domain=|domain|">
+					<div class="item-icono">
+						SM
+					</div>
+					<div class="item-titulo">
+						|LANG_SUBDOMAIN_MANAGEMENT|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if FRONTPAGE_ON="yes"|
+			<div class="box-items">
+				<a href="/CMD_FRONTPAGE?domain=|domain|">
+					<div class="item-icono">
+						FE
+					</div>
+					<div class="item-titulo">
+						|LANG_FRONTPAGE_EXTENSIONS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERDATABASEMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_DB?domain=|domain|">
+					<div class="item-icono">
+						MM
+					</div>
+					<div class="item-titulo">
+						|LANG_MYSQL_MANAGEMENT|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_PROTECTED_DIRECTORIES?domain=|domain|">
+					<div class="item-icono">
+						PPD
+					</div>
+					<div class="item-titulo">
+						|LANG_PASS_PROC_DIRS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_FILE_MANAGER?domain=|domain|">
+					<div class="item-icono">
+						FM
+					</div>
+					<div class="item-titulo">
+						|LANG_FILE_MANAGER|
+					</div>
+				</a>
+			</div>
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>E-mail management</h2>
+		</div>
+
+		<!-- items -->
+		<div class="bcpbp-navitem">
+
+			<!-- icono -->
+			|*if USEREMAILMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_POP?domain=|domain|">
+					<div class="item-icono">
+						PEA
+					</div>
+					<div class="item-titulo">
+						|LANG_POP_EMAIL_ACCOUNTS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERCATCHALL="ON"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_CATCH_ALL?domain=|domain|">
+					<div class="item-icono">
+						CAE
+					</div>
+					<div class="item-titulo">
+						|LANG_CATCH_ALL_EMAIL|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERFORWARDERMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_FORWARDER?domain=|domain|">
+					<div class="item-icono">
+						F
+					</div>
+					<div class="item-titulo">
+						|LANG_FORWARDERS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERRESPONDERMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_AUTORESPONDER?domain=|domain|">
+					<div class="item-icono">
+						AR
+					</div>
+					<div class="item-titulo">
+						|LANG_AUTORESPONDERS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USEREMAILMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_VACATION?domain=|domain|">
+					<div class="item-icono">
+						VM
+					</div>
+					<div class="item-titulo">
+						|LANG_VAC_MESSAGES|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERSPAM="ON"|
+			<div class="box-items">
+				<a href="/CMD_SPAMASSASSIN?domain=|domain|">
+					<div class="item-icono">
+						SA
+					</div>
+					<div class="item-titulo">
+						|LANG_SPAMASSASSIN|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERMLISTMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_LIST?domain=|domain|">
+					<div class="item-icono">
+						ML
+					</div>
+					<div class="item-titulo">
+						|LANG_MAILING_LISTS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|?SHOW_LINKS=yes|
+			|*if USEREMAILMAX!="0"|
+			<div class="box-items">
+				<a href="/CMD_EMAIL_FILTER?domain=|domain|">
+					<div class="item-icono">
+						SF
+					</div>
+					<div class="item-titulo">
+						|LANG_SPAM_FILTERS|
+					</div>
+				</a>
+			</div>
+			|*else|
+			|?SHOW_LINKS=no|
+			|*endif|
+
+			<!-- webmail -->
+			|*if HIDE_WEBMAIL_LINKS="yes"|
+			|?SHOW_LINKS=no|
+			|*endif|
+			|*if SHOW_LINKS="no"|
+			|?HAVE_SQUIRRELMAIL=no|
+			|?HAVE_WEBMAIL=no|
+			|?HAVE_ROUNDCUBE=no|
+			|?HAVE_ATMAIL=no|
+			|*endif|
+
+			<!-- icono -->
+			|*if HAVE_SQUIRRELMAIL="yes"|
+			<div class="box-items">
+				<a href="|WEBAPPS_SSL|://|HOSTNAME|/squirrelmail" target="_blank">
+					<div class="item-icono">
+						WS
+					</div>
+					<div class="item-titulo">
+						|LANG_WEBMAIL_SM|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if HAVE_WEBMAIL="yes"|
+			<div class="box-items">
+				<a href="|WEBAPPS_SSL|://|HOSTNAME|/webmail" target="_blank">
+					<div class="item-icono">
+						WU
+					</div>
+					<div class="item-titulo">
+						|LANG_WEBMAIL_UEBI|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if HAVE_ROUNDCUBE="yes"|
+			<div class="box-items">
+				<a href="|WEBAPPS_SSL|://|HOSTNAME|/roundcube" target="_blank">
+					<div class="item-icono">
+						WR
+					</div>
+					<div class="item-titulo">
+						|LANG_WEBMAIL_ROUNDCUBE|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if HAVE_ATMAIL="yes"|
+			<div class="box-items">
+				<a href="|WEBAPPS_SSL|://|HOSTNAME|/atmail" target="_blank">
+					<div class="item-icono">
+						WA
+					</div>
+					<div class="item-titulo">
+						|LANG_WEBMAIL_ATMAIL|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERDNSCONTROL="ON"|
+			<div class="box-items">
+				<a href="/CMD_DNS_MX?domain=|domain|">
+					<div class="item-icono">
+						MR
+					</div>
+					<div class="item-titulo">
+						|LANG_MX_RECORDS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Advanced features</h2>
+		</div>
+
+		<!-- items -->
+		<div class="bcpbp-navitem">
+
+			<!-- icono -->
+			|*if USERSYSINFO="ON"|
+			<div class="box-items">
+				<a href="/CMD_SYSTEM_INFO?domain=|domain|">
+					<div class="item-icono">
+						SI
+					</div>
+					<div class="item-titulo">
+						|LANG_SERVER_INFO|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERSSL="ON"|
+			<div class="box-items">
+				<a href="/CMD_SSL?domain=|domain|">
+					<div class="item-icono">
+						SC
+					</div>
+					<div class="item-titulo">
+						|LANG_SSL_CERTS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			|*if USERCRON="ON"|
+			<div class="box-items">
+				<a href="/CMD_CRON_JOBS?domain=|domain|">
+					<div class="item-icono">
+						CJ
+					</div>
+					<div class="item-titulo">
+						|LANG_CRONJOBS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_MIME_TYPES?domain=|domain|">
+					<div class="item-icono">
+						MT
+					</div>
+					<div class="item-titulo">
+						|LANG_MIMETYPES|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_HANDLERS?domain=|domain|">
+					<div class="item-icono">
+						AH
+					</div>
+					<div class="item-titulo">
+						|LANG_APACHE_HANDLERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/HTM_ERROR_PAGES?domain=|domain|">
+					<div class="item-icono">
+						CEP
+					</div>
+					<div class="item-titulo">
+						|LANG_CUSTOM_ERROR_PAGES|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a target="_blank" href="|HTTP|://|HOSTNAME|/phpmyadmin">
+					<div class="item-icono">
+						PMA
+					</div>
+					<div class="item-titulo">
+						|LANG_PHPMYADMIN|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_REDIRECT?domain=|domain|">
+					<div class="item-icono">
+						SR
+					</div>
+					<div class="item-titulo">
+						|LANG_SITE_REDIRECTION|
+					</div>
+				</a>
+			</div>
+
+
+			|*if USERPOINTERSMAX!="0"|
+			|*endif|
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_DOMAIN_POINTER?domain=|domain|">
+					<div class="item-icono">
+						DP
+					</div>
+					<div class="item-titulo">
+						|LANG_DOMAIN_POINTERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			|*if LOGIN_KEYS_ENABLED="0"|
+			|?USERLOGINKEYS=OFF|
+			|*endif|
+			|*if USERLOGINKEYS="ON"|
+			<div class="box-items">
+				<a href="/CMD_LOGIN_KEYS">
+					<div class="item-icono">
+						LK
+					</div>
+					<div class="item-titulo">
+						|LANG_LOGIN_KEYS|
+					</div>
+				</a>
+			</div>
+			|*endif|
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

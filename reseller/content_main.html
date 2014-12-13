@@ -1,0 +1,192 @@
+|LF_STANDARD|
+|LF_CREATE|
+
+<script language="javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+	{
+		str = str.substring(1, str.length);
+	}
+	while (str.substring(str.length-1, str.length) == ' ')
+	{
+		str = str.substring(0,str.length-1);
+	}
+
+	strobj.value = str;
+
+	return true;
+}
+
+function doSearch(type)
+{
+	if (document.searchform)
+		with (document.searchform)
+		{
+			trimit(value);
+
+			if (type == 'user')
+			{
+				value1.value=value.value
+				value7.value='';
+			}
+			else
+			{
+				value7.value=value.value.toLowerCase();
+				value1.value='';
+			}
+
+			submit();
+		}
+}
+
+// -->
+</script>
+
+<script language="javascript">
+<!--
+if (document.searchform)
+{
+	with (document.searchform)
+	{
+		value.focus();
+		value.select();
+	}
+}
+function showUserMessage()
+{
+	var message = window.open("CMD_EDIT_USER_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Account Management</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- items -->
+		<div class="bcpbp-navitem" ng-controller="gestorItems">
+
+			<!-- icono -->
+			<div class="box-items" ng-repeat="item in itemsMain | filter: 'accountManagement' ">
+				<a href="{{item.url}}">
+					<div class="item-icono">
+						{{item.iniciales}}
+					</div>
+					<div class="item-titulo">
+						{{item.nombre}}
+					</div>
+				</a>
+			</div>
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Reseller Tools</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- items -->
+		<div class="bcpbp-navitem" ng-controller="gestorItems">
+
+			<!-- icono -->
+			<div class="box-items" ng-repeat="item in itemsMain | filter: 'resellerTools' ">
+				<a href="{{item.url}}">
+					<div class="item-icono">
+						{{item.iniciales}}
+					</div>
+					<div class="item-titulo">
+						{{item.nombre}}
+					</div>
+				</a>
+			</div>
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Extra Features</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- items -->
+		<div class="bcpbp-navitem" ng-controller="gestorItems">
+
+			<!-- icono -->
+			<div class="box-items" ng-repeat="item in itemsMain | filter: 'extraFeatures' ">
+				<a href="{{item.url}}">
+					<div class="item-icono">
+						{{item.iniciales}}
+					</div>
+					<div class="item-titulo">
+						{{item.nombre}}
+					</div>
+				</a>
+			</div>
+
+		</div> <!-- fin navitems -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+<script>
+
+	/* idioma */
+
+	// account Management
+	var am_add_new_user = "|LANG_ADD_NEW_USER|"
+	var am_list_users = "|LANG_LIST_USERS|"
+	var am_manage_tickets = "|LANG_MANAGE_TICKETS|"
+	var am_add_package = "|LANG_ADD_PACKAGE|"
+	var am_list_packages = "|LANG_LIST_PACKAGES|"
+	var am_edit_user_msg = "|LANG_EDIT_USER_MESS|"
+
+	// reseller tools
+	var rt_change_pass = "|LANG_CHANGE_PASSWORDS|"
+	var rt_reseller_stats = "|LANG_RESELLER_STATS|"
+	var rt_ip_manager = "|LANG_IP_MANAGER|"
+	var rt_skin_manager = "|LANG_SKIN_MANAGER|"
+	var rt_user_backups = "|LANG_USER_BACKUPS|"
+
+	// extra features
+	var ef_sys_info = "|LANG_SYSTEM_INFO|"
+	var ef_namerservers = "|LANG_NAMESERVERS|"
+	var ef_msg_all_users = "|LANG_MESSSAGE_ALL_USERS|"
+	var ef_contact_admin = "|LANG_CONTACT_ADMIN|"
+
+</script>

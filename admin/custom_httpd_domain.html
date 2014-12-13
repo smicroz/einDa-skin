@@ -1,0 +1,222 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_CUSTOM_HTTPD">`LANG_CUST_HTTPD_CONF`</a> &raquo; <a class=tree href="/CMD_CUSTOM_HTTPD?domain=`domain`">`domain`|
+|?HELP_SECTION=`ADMIN_HELPER`|
+
+|HTM_ADMIN_TOP|
+
+|*if CONFIG_ERROR="1"|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<div class="alerta alerta-danger">
+				|LANG_CONFIG_ERROR|
+			</div>
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Custom HTTPD</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+<table class=list>
+<form action="/CMD_CUSTOM_HTTPD" method="POST">
+<input type=hidden name=domain value="|domain|">
+<input type=hidden name=proxy value="|proxy|">
+<tr>
+	<td class=listtitle>|*if HAVE_NGINX="yes"||LANG_NGINX_CUST_FOR||*else||LANG_CUST_FOR||*endif| <b>|domain|</b></td>
+</tr>
+<tr>
+	<td class=list align=center>|*if HAVE_NGINX="yes"||LANG_NGINX_WARNING||*else||LANG_WARNING||*endif|<br><textarea cols=120 rows=10 wrap=off name=config>|CONFIG|</textarea></td>
+</tr>
+
+<script type="text/javascript" src="JS_VISIBILITY"></script>
+<script language="Javascript">
+<!--
+function show_additional_custom_tokens()
+{
+	document.getElementById('addition_custom_tokens').style.display = 'none';
+	for (i=1; i<=4; i++)
+	{
+		document.getElementById('custom'+i+'_toggle_tr').style.display = '';
+	}
+
+}
+function toggle_custom(x)
+{
+	show_additional_custom_tokens();
+
+	var toggle_name="custom"+x+"_toggle";
+	var tr_name="custom"+x+"_tr";
+
+	toggle_expand(toggle_name, tr_name);
+}
+function trigger_toggle()
+{
+|*if CUSTOM1!=""|
+	toggle_custom(1);
+|*endif|
+|*if CUSTOM2!=""|
+	toggle_custom(2);
+|*endif|
+|*if CUSTOM3!=""|
+	toggle_custom(3);
+|*endif|
+|*if CUSTOM4!=""|
+	toggle_custom(4);
+|*endif|
+}
+//-->
+</script>
+<tr id=addition_custom_tokens>
+	<td class=list2><span class=expand_toggle_plus onclick="show_additional_custom_tokens();">+</span> |LANG_ADDITIONAL_CUSTOM_TOKENS|</td>
+</tr>
+<tr id=custom1_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom1_toggle onclick="toggle_custom(1);">+</span> CUSTOM1</td>
+</tr>
+<tr id=custom1_tr style="display: none;">
+	<td class=list align=center>
+		|LANG_TOP_OF_TEMPLATE|<br>
+		<textarea cols=120 rows=4 wrap=off name=custom1>|CUSTOM1|</textarea>
+	</td>
+</tr>
+<tr id=custom2_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom2_toggle onclick="toggle_custom(2);">+</span> CUSTOM2</td>
+</tr>
+<tr id=custom2_tr style="display: none;">
+	<td class=list align=center>
+		|*if HAVE_NGINX="yes"||LANG_ALL_LOCATIONS||*else||LANG_BEFORE_DIRECTORY||*endif|<br>
+		<textarea cols=120 rows=4 wrap=off name=custom2>|CUSTOM2|</textarea>
+	</td>
+</tr>
+<tr id=custom3_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom3_toggle onclick="toggle_custom(3);">+</span> CUSTOM3</td>
+</tr>
+<tr id=custom3_tr style="display: none;">
+	<td class=list align=center>
+		|*if HAVE_NGINX="yes"||LANG_BEFORE_WEBAPPS||*else||LANG_FIRST_DIRECTORY||*endif|<br>
+		<textarea cols=120 rows=4 wrap=off name=custom3>|CUSTOM3|</textarea>
+	</td>
+</tr>
+<tr id=custom4_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom4_toggle onclick="toggle_custom(4);">+</span> CUSTOM4</td>
+</tr>
+<tr id=custom4_tr style="display: none;">
+	<td class=list align=center>
+		|LANG_LAST_ENTRY|<br>
+		<textarea cols=120 rows=4 wrap=off name=custom4>|CUSTOM4|</textarea>
+	</td>
+</tr>
+<script language="Javascript">
+<!--
+trigger_toggle();
+//-->
+</script>
+
+
+<tr><td class=list colspan=2><span class=expand_toggle_plus id=tokens_toggle onclick="toggle_expand('tokens_toggle', 'tokens_visibility');">+</span> |LANG_AVAIL_TOKENS|</td></tr>
+<tr id=tokens_visibility style="display: none;">
+	<td class=list align=center>
+		<textarea cols=120 rows=40 wrap=off readonly>|AVAILABLE_TOKENS|</textarea>
+	</td>
+</tr>
+<tr>
+	<td class=listtitle align=right><input type=submit value="|LANG_SAVE|"></td>
+</tr>
+<form>
+</table>
+</div> <!-- fin table -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Nginx</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+<table class=list>
+<tr>
+	<td class=listtitle>
+		|*if HAVE_NGINX="yes"||LANG_NGINX_CONTENTS_FOR||*else||LANG_HTTPD_CONTENTS_FOR||*endif| |domain|
+	</td>
+</tr>
+<tr>
+	<td class=list align=center>
+		<textarea cols=120 rows=40 wrap=off readonly>|HTTPD|</textarea>
+	</td>
+</tr>
+</table>
+</div> <!-- fin table -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Nginx</h2>
+		</div>
+		<!-- table -->
+		<div class="box-da-table">
+
+<table class=list>
+<tr>
+	<td class=listtitle>
+	|LANG_CONFIG_CHECK|
+	</td>
+</tr>
+<tr>
+	<td class=list align=center>
+		<textarea cols=120 rows=5 wrap=off readonly>|CONFIG_TEST|</textarea>
+	</td>
+</tr>
+</table>
+</div> <!-- fin tabla -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

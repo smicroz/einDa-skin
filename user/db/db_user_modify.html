@@ -1,0 +1,81 @@
+|LF_STANDARD|
+|LF_DB|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_DB?DOMAIN=`DOMAIN`">`LANG_MYSQL_SETUP`</a> &raquo; <a class=tree href="/CMD_DB_VIEW?DOMAIN=`DOMAIN`&name=`NAME`">`LANG_VIEW` `NAME`</a> &raquo; <a class=tree href="/HTM_DB_USER_MODIFY?DOMAIN=`DOMAIN`&NAME=`NAME`&USER=`USER`">`LANG_MODIFY` `USER`</a>|
+|?HELP_SECTION=`USER_HELPER`/mysql.html#password|
+|HTM_USER_TOP|
+
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass()|
+|*if AJAX="1"|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('')|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="javascript">
+
+|HTM_JAVASCRIPT|
+
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_MODIFY_1|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=reseller action="CMD_DB" method="post">
+			<input type=hidden name=action value=modifyuser>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=name value="|NAME|">
+			<input type=hidden name=user value="|USER|">
+
+			<div class="bcpbp-form">
+				<label for="User">User</label>
+				<div class="form-datos">
+					|USER|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="database">database</label>
+				<div class="form-datos">
+					|NAME|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DB_PASS|">|LANG_DB_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd name=passwd size=20 |CHECK_PASS|>
+					<input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|">
+					<div id=passwd_result class=warning></div>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DB_PASS_AGAIN|">|LANG_DB_PASS_AGAIN|</label>
+				<div class="form-datos">
+					<input type=password id=passwd2 name=passwd2 size=20 onChange="checkPass()">
+				</div>
+			</div>
+
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=create value="|LANG_SAVE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

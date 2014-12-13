@@ -1,0 +1,143 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_FILE_MANAGER">`LANG_FILEMANAGER`</a> &raquo; <a class=tree href="/CMD_FILE_MANAGER`path`">`path`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#password|
+|HTM_USER_TOP|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_PROTECTION_ON|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="alerta alerta-info">
+        |path|
+      </div>
+
+    </div><!-- fin generales -->
+
+    <!-- form -->
+
+    <form name=info action='/CMD_FILE_MANAGER' method='POST'>
+
+      |HTM_PREVENT_AUTOFILL|
+
+      <input type=hidden name=action value="protect">
+      <input type=hidden name=path value="|path|">
+
+      <div class="bcpbp-form"> <!-- vacio -->
+        <label for="|LANG_PROMPT|">|LANG_PROMPT|</label>
+        <div class="form-datos">
+          <input type=text name=name value="|NAME|"> |LANG_EG|
+        </div>
+      </div>
+
+      <div class="bcpbp-form"> <!-- vacio -->
+        <label for="|LANG_SET_USER|">|LANG_SET_USER|</label>
+        <div class="form-datos">
+          <input type=text name=user> |LANG_NOT_REQUIRED|
+        </div>
+      </div>
+
+      <div class="bcpbp-form"> <!-- vacio -->
+        <label for="|LANG_AND_PASS|">|LANG_AND_PASS|</label>
+        <div class="form-datos">
+          <input type=password name=passwd>
+        </div>
+      </div>
+
+      <div class="bcpbp-form"> <!-- vacio -->
+        <label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+        <div class="form-datos">
+          <input type=password name=passwd2>
+        </div>
+      </div>
+
+      <div class="bcpbp-form"> <!-- vacio -->
+        <div class="form-datos">
+          <input type=checkbox name=enabled value="yes" |ENABLED|>
+          |LANG_PROTECTION_ENABLED|
+        </div>
+      </div>
+
+      <!-- contenedor para boton submit -->
+      <div class="bcpbp-form--submit">
+        <input type=submit value="|LANG_SAVE|">
+      </div> <!-- fin contenedor para boton submit -->
+
+    </form>
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Users</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |USERS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+    <!-- link footer -->
+    <div class="bcpbp-link--footer">
+      <div class="bcpbplf-izq">
+        <a href="/CMD_PROTECTED_DIRECTORIES?domain=|domain|">|LANG_GO_BACK|</a>
+      </div>
+
+      <div class="bcpbplf-der">
+        test
+      </div>
+    </div> <!-- fin link footer -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>|LANG_PROTECT_NOT_REQUIRED_DESC|</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

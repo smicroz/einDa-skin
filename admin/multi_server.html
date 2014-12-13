@@ -1,0 +1,125 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_MULTI_SERVER">`LANG_MULTI_SERVER`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+|HTM_ADMIN_TOP|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Multi server</h2>
+		</div>
+
+		<form action="/CMD_MULTI_SERVER" method="POST">
+			<input type=hidden name=action value="onoff">
+			|*if CLUSTER_ON="yes"|
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_MULTI_IS_ON|">|LANG_MULTI_IS_ON|</label>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=off value="|LANG_TURN_OFF|">
+			</div> <!-- fin contenedor para boton submit -->
+
+			|*else|
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_MULTI_IS_OFF|">|LANG_MULTI_IS_OFF|</label>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=on value="|LANG_TURN_ON|">
+				|*endif|
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_LIST_OF_SERVERS|</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+			|TABLE|
+		</div><!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_ADD_REMOTE_SERVER|</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+			<table class=list cellpadding=0 cellspacing=0>
+				<form action="/CMD_MULTI_SERVER" method=POST>
+					<input type=hidden name=action value=add>
+					<tr>
+						<td class=list>|LANG_IP|: <input type=text name=ip size=15></td>
+						<td class=list>|LANG_PORT|: <input type=text name=port size=4 value="2222"></td>
+						<td class=list>|LANG_SSL|: <input type=checkbox name=ssl value=yes size=4></td>
+						<td class=list>|LANG_USERNAME|: <input type=text name=user size=8></td>
+						<td class=list>|LANG_PASSWORD|: <input type=password name=passwd size=8></td>
+					</tr>
+					<tr><td class=listtitle align=right colspan=5><input type=submit value="|LANG_ADD|"><//td></tr>
+				</form>
+			</table>
+		</div> <!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<div class="bcpbp-generales">
+
+			<div class="bcpbpt-texto">
+				<p>|LANG_SSL_DESCRIPTION|</p>
+				<p>|LANG_ZONE_TRANSFER_DESCRIPTION|</p>
+				<p>|LANG_DOMAIN_CHECK_DESCRIPTION|</p>
+			</div>
+
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

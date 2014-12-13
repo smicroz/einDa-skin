@@ -1,0 +1,265 @@
+|*if !timer|
+|?timer=0|
+|*endif|
+|*if !scrollpos|
+|?scrollpos=0|
+|*endif|
+
+|*if timer>"0"|
+|?BODY=onLoad='start_timer(1)'|
+|*endif|
+
+
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_PROCESS_MONITOR">`LANG_PROCESS_MONITOR`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+|HTM_ADMIN_TOP|
+
+<script type="text/javascript">
+
+var timer_on=false;
+
+function do_reload(remaining)
+{
+	timer_on=false;
+
+	document.reloadform.remaining.value="reloading ...";
+
+	var command = window.location.href.split("?");
+
+	if (remaining > 0)
+	{
+
+|*if OLDURL=""|
+		window.location.href=command[0] + '?timer=' + remaining + "&scrollpos=" + document.body.scrollTop;
+|*else|
+		window.location.href=command[0] + '?|OLDURL|&timer=' + remaining + "&scrollpos=" + document.body.scrollTop;
+|*endif|
+	}
+	else
+	{
+		//called by refresh button, timer shut off
+		window.location.href=command[0] + '?|OLDURL|';
+	}
+}
+
+function print_option(val, selected)
+{
+	var select_text="";
+
+|*if timer>"0"|
+	if (val == "|timer|")
+|*else|
+	if (selected == "1")
+|*endif|	{
+		select_text="selected";
+	}
+
+
+	document.write('<option value="' + val + '" ' + select_text + '>' + val + '</option>\n');
+}
+
+function tick_down()
+{
+	if (!timer_on) return;
+
+	with (document.reloadform)
+	{
+		if (remaining.value <= 0)
+		{
+			do_reload(delay.value);
+			return;
+		}
+
+		remaining.value = remaining.value - 1;
+
+		setTimeout("tick_down()", 1000);
+	}
+
+}
+
+function stop_timer()
+{
+	timer_on=false;
+}
+
+function start_timer(autoloaded)
+{
+	//its already on, ignore.
+	//else we end up counting faster for each click.
+	if (timer_on)
+	{
+		return;
+	}
+
+	timer_on=true;
+
+	with (document.reloadform)
+	{
+		remaining.value=delay.value;
+
+		setTimeout("tick_down()", 1000);
+	}
+
+|*if scrollpos>="0"|
+	if (!autoloaded)
+	{
+		document.body.scrollTop = 297;
+	}
+	else
+	{
+		document.body.scrollTop = |scrollpos|;
+	}
+|*else|
+	document.body.scrollTop = 297;
+|*endif|
+}
+
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_PROCESS_MONITOR|</h2>
+		</div>
+
+		<form name="reloadform" action="/CMD_PROCESS_MONITOR" method=POST>
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="Reload Delay (Seconds)">Reload Delay (Seconds)</label>
+				<div class="form-datos">
+					<select class=selectclass name="delay">
+						<option value=0>--</option>
+						<script type="text/javascript">
+						print_option("1", 0);
+						print_option("2", 0);
+						print_option("3", 0);
+						print_option("4", 0);
+						print_option("5", 1);
+						print_option("10", 0);
+						print_option("15", 0);
+						print_option("30", 0);
+						print_option("60", 0);
+						</script>
+					</select>
+				</div>				
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="Remaining sec.">Remaining sec.</label>
+				<div class="form-datos">
+					<input type=text name="remaining" value="0" readonly size=12>
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=button value="|LANG_START|" onClick="start_timer(0)";>
+				<input type=button value="|LANG_STOP|" onClick="stop_timer()">
+				<input type=button value="|LANG_REFRESH|" onClick='do_reload(0);'>
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Top</h2>
+		</div>
+
+		<div class="bcpbp-resp">
+			<div class="bcpbp-resp--consola">
+				|BOXINFO|
+			</div>
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_AUTH_TO_SEND|</h2>
+		</div>
+
+		<form action="/CMD_PROCESS_MONITOR" method=POST>
+
+			|*if REQUIRE_ROOT_AUTH="yes"|
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_ROOT_PASS|">|LANG_ROOT_PASS|</label>
+				<div class="form-datos">
+					<input type=password name=rootpass>
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_AUTH|">
+				<input type=hidden name=authenticate value="yes">
+			</div> <!-- fin contenedor para boton submit -->
+
+			|*else|
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_REMOVE_AUTH|">
+				<input type=hidden name=authenticate value="no">
+			</div> <!-- fin contenedor para boton submit -->
+
+			|*endif|
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Processes</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+			|PROCESSES|
+		</div> <!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

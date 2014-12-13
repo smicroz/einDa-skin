@@ -1,0 +1,113 @@
+|LF_STANDARD|
+|LF_FTP|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_FTP?DOMAIN=`DOMAIN`">`LANG_FTP_SETUP`</a> &raquo; <a class=tree href="/HTM_FTP_CREATE?DOMAIN=`DOMAIN`">`LANG_CREATE_FTP`</a>|
+|?HELP_SECTION=`USER_HELPER`/ftp.html#create|
+|HTM_USER_TOP|
+
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass(); reseller.random.value=reseller.passwd.value|
+|*if AJAX="1"|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('random')|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="Javascript">
+<!--
+
+|HTM_JAVASCRIPT|
+
+// -->
+</script>
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_FTP|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=reseller action="CMD_FTP" method="post">
+
+			|HTM_PREVENT_AUTOFILL|
+
+			<input type=hidden name=action value=create>
+			<input type=hidden name=domain value="|DOMAIN|">
+
+			<!-- form -->
+
+			<div class="bcpbp-form">
+				<label for="|LANG_FTP_USERNAME|">|LANG_FTP_USERNAME|</label>
+				<div class="form-datos">
+					<input type=text name=user align=right size=16>|*if owned!="yes"|<b>|FTP_SEP||DOMAIN|</b>|*endif|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_ENTER_PASS|">|LANG_ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd name=passwd size=16 |CHECK_PASS|>
+					<input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|">
+					<input type=text id=random name=random value="|LANG_FTP_SAVE_PASSWORD|" size=16>
+					<div id=passwd_result class=warning></div>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type=password id=passwd2 name=passwd2 size=16>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DOMAIN|">|LANG_DOMAIN|</label>
+				<div class="form-datos">
+					<input type=radio name=type value="domain" checked>
+					|LANG_DOMAIN_USER|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_FTP|">|LANG_FTP|</label>
+				<div class="form-datos">
+					<input type=radio name=type value="ftp">
+					|LANG_FTP_USER|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_USER|">|LANG_USER|</label>
+				<div class="form-datos">
+					<input type=radio name=type value="user">
+					|LANG_USER_USER|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_CUSTOM|">|LANG_CUSTOM|</label>
+				<div class="form-datos">
+					<input type=radio name=type value="custom">
+					<input type=text size=36 name=custom_val value="|HOME_DIR|">
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit name=create value="|LANG_CREATE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

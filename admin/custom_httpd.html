@@ -1,0 +1,56 @@
+|LF_CUST_HTTPD|
+|?TREE=&raquo; <a class=tree href="/CMD_CUSTOM_HTTPD">`LANG_CUSTOM_HTTPD`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+|HTM_ADMIN_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_CUSTOM_HTTPD|</h2>
+    </div>
+
+    <!-- table -->
+
+      <form action="" method="GET">
+
+        <div class="bcpbp-form"> <!-- vacio -->
+          <label for="">|LANG_SHOW_DOMAINS_THAT|</label>
+          <div class="form-datos">
+            <select class=selectclass name=comparison1>
+              <option value="none">--</option >
+              <option value="equals">|LANG_EQUAL|</option >
+              <option value="contains">|LANG_CONTAIN|</option >
+              <option selected value="startswith">|LANG_START_WITH|</option >
+            </select>
+          </div>
+        </div>
+
+        <!-- contenedor para boton submit -->
+        <div class="bcpbp-form--submit">
+          <input type=text size=12 class=inputclass name=value1>
+          <input type=hidden name=sort1 value="1">
+          <input type=hidden name=sort1dir value="1">
+          <input type=hidden name=ipp value="50">
+          <input type=submit value="|LANG_SEARCH|">
+        </div>
+        <!-- fin contenedor para boton submit -->
+
+      </form>
+
+
+<!-- table -->
+<div class="box-da-table">
+|DOMAINS|
+</div> <!-- fin table -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

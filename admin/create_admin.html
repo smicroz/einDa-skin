@@ -1,0 +1,112 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_ADMIN_SHOW">`LANG_SHOW_ADMINS`</a> &raquo; <a class=tree href="/HTM_ACCOUNT_ADMIN_CREATE">`LANG_CREATE_ADMIN`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`/createa.html|
+|HTM_ADMIN_TOP|
+
+|?CHECK_NAME=checkName()|
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass()|
+
+|*if AJAX="1"|
+	|?CHECK_NAME=ajax_checkName()|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('')|
+
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="Javascript">
+<!--
+
+|HTM_JAVASCRIPT|
+
+function showAdminMessage()
+{
+	var message = window.open("CMD_EDIT_ADMIN_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+
+function formOK()
+{
+	with (document.reseller)
+	{
+		if (checkName() && checkPass() && checkEmail())
+			return true;
+	}
+	return false;
+}
+
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_ADMIN_ACCOUNT|</h2>
+		</div>
+
+
+    <form name=reseller action="CMD_ACCOUNT_ADMIN" method="post" onSubmit="return formOK()">
+
+|HTM_PREVENT_AUTOFILL|
+
+      		<input type=hidden name=action value=create>
+
+					<div class="bcpbp-form">
+						<label for="|LANG_USERNAME|">|LANG_USERNAME|</label>
+						<div class="form-datos">
+							<input type=text id=username name=username maxlength=|MAX_USERNAME_LENGTH| onChange="|CHECK_NAME|">
+						</div>						
+					</div>
+
+					<div class="bcpbp-form">
+						<label for="|LANG_EMAIL|">|LANG_EMAIL|</label>
+						<div class="form-datos">
+							<input type=text name=email onChange="checkEmail()">
+						</div>
+					</div>
+
+					<div class="bcpbp-form">
+						<label for="|LANG_ENTER_PASS|">|LANG_ENTER_PASS|</label>
+						<div class="form-datos">
+							<input type=password id=passwd name=passwd |CHECK_PASS|>
+							<input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|">
+							<div id=passwd_result class=warning></div>
+						</div>
+					</div>
+
+					<div class="bcpbp-form">
+						<label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+						<div class="form-datos">
+							<input type=password id=passwd2 name=passwd2 onChange="checkPass()">
+						</div>
+
+					</div>
+
+					<div class="bcpbp-form">
+						<label for="|LANG_EMAIL_NOTIFICATION|">|LANG_EMAIL_NOTIFICATION|</label>
+						<div class="form-datos">
+							<input type=checkbox value="yes" name=notify checked />
+							(<a href="javascript:showAdminMessage();">|LANG_EDIT_ADMIN_MESSAGE|</a>)
+						</div>
+					</div>
+
+					<!-- contenedor para boton submit -->
+					<div class="bcpbp-form--submit">
+						<input type=submit value="|LANG_SUBMIT|">
+					</div> <!-- fin contenedor para boton submit -->
+
+
+			</form>
+
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|HTM_ADMIN_BOTTOM|

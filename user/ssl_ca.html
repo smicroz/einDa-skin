@@ -1,0 +1,115 @@
+|LF_STANDARD|
+|LF_SSL|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_SSL?DOMAIN=`DOMAIN`">`LANG_SSL`</a> &raquo; <a class=tree href="/CMD_SSL?DOMAIN=`DOMAIN`&view=cacert">`LANG_CA_SSL`</a>|
+|?HELP_SECTION=`USER_HELPER`/ssl.html|
+|HTM_USER_TOP|
+
+<script language="javascript">
+function copyCertificate(text)
+{
+	text.focus();
+	text.select();
+	if (document.all)
+	{
+		therange = text.createTextRange();
+		therange.execCommand("Copy");
+		alert('|LANG_CERT_COPIED|');
+	}
+}
+
+function pasteCertificate(text)
+{
+	text.focus();
+	text.select();
+
+	if (document.all)
+	{
+		document.execCommand("Paste");
+
+		with (document.info)
+		for (var i=0; i < elements.length; i++)
+			if (elements[i].type == 'radio')
+				if ( (elements[i].name == "type") && (elements[i].value == "paste")  )
+				{
+					elements[i].checked = true;
+				}
+	}
+}
+
+</script>
+
+|*if !RESULT|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+
+		<div class="bcpbp-generales">
+			<div class="alerta alerta-info">
+				|RESULT|
+			</div>
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CA_CERT|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class=list cellpadding=0 cellspacing=0>
+
+					<form name=info action="CMD_SSL" method="post">
+						<input type=hidden name=domain value="|DOMAIN|">
+						<input type=hidden name=action value="save">
+						<input type=hidden name=type value="cacert">
+						<tr>
+							<td class=list align=center>
+								<input type=checkbox name=active value="yes" |CHECKED|> |LANG_USE_CA|
+							</td>
+						</tr>
+
+						<tr>
+							<td class=list align=center>
+								<textarea class="code_edit ssl_text" name=cacert rows=16>|CACERT|</textarea><br>
+								<input type=button value="|LANG_PASTE_FROM|" onClick="pasteCertificate(document.info.cacert)">
+								<input type=button value="|LANG_COPY_TO|" onClick="copyCertificate(document.info.cacert)"> |LANG_IE_ONLY|
+							</td>
+						</tr>
+						<tr><td class=listtitle align=right>
+							<input type=submit name=submit value="|LANG_SAVE|">
+						</td></tr>
+					</form>
+
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+
+|HTM_USER_BOTTOM|

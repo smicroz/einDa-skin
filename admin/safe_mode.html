@@ -1,0 +1,104 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_PHP_SAFE_MODE">`LANG_SAFE_MODE_SETTINGS`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+|HTM_ADMIN_TOP|
+
+<style>
+.safe_mode_on { COLOR: green; FONT-WEIGHT: bold; }
+.safe_mode_off{ COLOR: red; }
+</style>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SAFE_MODE_SETTINGS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="/CMD_PHP_SAFE_MODE" method=POST>
+			<input type=hidden name=action value=enabled>
+			|LANG_DEFAULT|:
+			<input type=radio name=enabled value="ON" |ONCHECKED|>|LANG_ON|
+			<input type=radio name=enabled value="OFF" |OFFCHECKED|>|LANG_OFF|
+			<br>
+			|LANG_OBD|:
+			<input type=radio name=obdenabled value="ON" |OBDONCHECKED|>|LANG_ON|
+			<input type=radio name=obdenabled value="OFF" |OBDOFFCHECKED|>|LANG_OFF|
+			<br>
+			<input type=submit value="|LANG_SAVE|">
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SHOW_DOMAINS_THAT|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- table -->
+		<div class="box-da-table">
+			<table class=list cellpadding=0 cellspacing=0>
+				<form action="" method="GET">
+					<tr>
+						<td class=listtitle>
+
+							<select class=selectclass name=comparison1>
+								<option value="none">--</option>
+								<option value="equals">|LANG_EQUAL|</option>
+								<option value="contains">|LANG_CONTAIN|</option>
+								<option selected value="startswith">|LANG_START_WITH|</option>
+							</select>
+							<input type=text size=12 class=inputclass name=value1>
+							<input type=hidden name=sort1 value="1">
+							<input type=hidden name=sort1dir value="1">
+							<input type=hidden name=ipp value="50">
+							<input type=submit value="|LANG_SEARCH|">
+						</td>
+					</tr>
+				</form>
+			</table>
+		</div> <!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Bloque sin contenido</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- table -->
+		<div class="box-da-table">
+			|DOMAINS|
+		</div> <!-- fin table -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

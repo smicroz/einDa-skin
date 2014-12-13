@@ -1,0 +1,195 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_CRON_JOBS">`LANG_CRON_JOBS`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#cron|
+|HTM_USER_TOP|
+
+<script language="Javascript">
+<!--
+function preventEmail()
+{
+	with (document.info)
+	{
+		command.value = command.value + ' >/dev/null 2>&1';
+		prevent.disabled = true;
+	}
+}
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Cron</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_VALID_CRON|</p>
+				<p>|LANG_EXACT_TIMES|</p>
+				<p>|LANG_DASH|</p>
+				<p>|LANG_INTERVALS|</p>
+				<p>|LANG_COMBINE|</p>
+			</div><!-- fin texto -->
+
+
+			<div class="alerta alerta-info">
+				|LANG_CURRENT_TIME|: |TIME|
+			</div>
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_NEW_CRON|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class=list  cellpadding=0 cellspacing=0>
+					<form name=info action='/CMD_CRON_JOBS' method='POST'>
+						<input type=hidden name=action value="create">
+
+						<tr><td class=list>|LANG_MINUTE|</td><td class=list><input type=text size=8 name=minute value=*></td><td class=list>0-59</td></tr>
+						<tr><td class=list>|LANG_HOUR|</td><td class=list><input type=text size=8 name=hour value=*></td><td class=list>0-23</td></tr>
+						<tr><td class=list>|LANG_DAY_OF_MONTH|</td><td class=list><input type=text size=8 name=dayofmonth value=*></td><td class=list>1-31</td></tr>
+						<tr><td class=list>|LANG_MONTH|</td><td class=list><input type=text size=8 name=month value=*></td><td class=list>1-12</td></tr>
+						<tr><td class=list>|LANG_DAY_OF_WEEK|</td><td class=list><input type=text size=8 name=dayofweek value=*></td><td class=list>0-7 (0 or 7 = |LANG_SUNDAY|)</td></tr>
+						<tr><td class=list>|LANG_COMMAND|</td><td class=list><input type=text size=35 name=command value='/home/|USERNAME|/'></td>
+							<td class=list>
+								<input type=button name=prevent value="|LANG_PREVENT_EMAIL|" onClick='preventEmail()'>
+							</td>
+						</tr>
+						<tr><td colspan=3 class=listtitle align=right><input type=submit value="|LANG_ADD|"></td></tr>
+					</form>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Active cron</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|CRONJOBS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SEND_OUTPUT_TO|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- generales -->
+
+		<div class="bcpbp-generales">
+			<div class="alerta alerta-info">
+				|LANG_VALID_EMAIL|: <i>|USERNAME|</i>, |LANG_OR_BLANK_FIELD|.
+			</div>
+		</div> <!-- fin generales -->
+
+		<form action='/CMD_CRON_JOBS' method='POST'>
+			<input type=hidden name="action" value="saveemail">
+
+			<!-- form -->
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_EMAIL|">|LANG_EMAIL|</label>
+				<div class="form-datos">
+					<input type=text name=email size=36 value="|MAILTO|">
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SAVE|">
+			</div> <!-- fin contenedor para boton submit -->
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SAMPLE_CRON|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>/usr/local/bin/php /home/|USERNAME|/domains/domain.com/public_html/script.php</p>
+				<p>/usr/local/bin/curl --silent http://www.domain.com/cron.php > /dev/null</p>
+				<p>|*if OS_TYPE="FreeBSD"|/usr/local/bin/wget -O /dev/null http://www.domain.com/cron.php|*else|/usr/bin/wget -O /dev/null http://www.domain.com/cron.php|*endif|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

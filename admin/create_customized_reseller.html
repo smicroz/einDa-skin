@@ -1,0 +1,382 @@
+|LF_CREATE|
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_RESELLER_SHOW">`LANG_SHOW_RESELLER`</a> &raquo; <a class=tree href="/HTM_ACCOUNT_RESELLER_CREATE">`LANG_CREATE_RES`</a> &raquo; `LANG_CUSTOMIZE` `NEWUSERNAME`|
+|?HELP_SECTION=`ADMIN_HELPER`/creater.html|
+|HTM_ADMIN_TOP|
+
+<script language="Javascript">
+<!--
+
+function setText(inputid,checkbx)
+{
+	var textfld = document.getElementById(inputid);
+	if (checkbx.checked)
+		textfld.disabled = true;
+	if (!checkbx.checked)
+		textfld.disabled = false;
+}
+
+function showResellerMessage()
+{
+	var message = window.open("CMD_EDIT_RESELLER_MESSAGE","message","width=740,height=480,scrollbars=no,resizable=yes");
+}
+
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_RES|</h2>
+		</div>
+
+
+		<div class="bcpbp-form">
+
+		<form name=package action="CMD_ACCOUNT_RESELLER" method="post">
+		<input type=hidden name=action value=create>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_USERNAME|">|LANG_USERNAME|</label>
+			<div class="form-datos">
+				<input type=text name=username value="|NEWUSERNAME|" />
+			</div>			
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_EMAIL|">|LANG_EMAIL|</label>
+			<div class="form-datos">
+				<input type=text name=email value="|EMAIL|"/>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="Email">|LANG_ENTER_PASS|</label>
+			<div class="form-datos">
+				<input type=password name=passwd value="|PASSWD|" />
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_RE-ENTER_PASS|">|LANG_RE-ENTER_PASS|</label>
+			<div class="form-datos">
+				<input type=password name=passwd2 value="|PASSWD2|" />
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAIN|">|LANG_DOMAIN|</label>
+			<div class="form-datos">
+				<input type=text name=domain value="|DOMAIN|">
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_BANDWIDTH|">|LANG_BANDWIDTH|</label>
+			<div class="form-datos">
+				<input type=text name=domain value="|DOMAIN|">
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAIN|">|LANG_DOMAIN|</label>
+			<div class="form-datos">
+				<input type=text name=domain value="|DOMAIN|">
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAIN|">|LANG_DOMAIN|</label>
+			<div class="form-datos">
+				<input type=text id="bandwidth" name=bandwidth value="|BANDWIDTH|">
+				<input type="checkbox" name="ubandwidth" value="ON" onClick='setText("bandwidth",this)' |BANDWIDTHCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DISK_SPACE|">|LANG_DISK_SPACE|</label>
+			<div class="form-datos">
+				<input type=text id="quota" name=quota value="|QUOTA|" />
+				<input type="checkbox" name="uquota" value="ON" onClick='setText("quota",this)' |QUOTACHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		|*if HAVE_INODE="yes"|
+		<div class="bcpbp-form">
+			<label for="|LANG_INODES|">|LANG_INODES|</label>
+			<div class="form-datos">
+				<input type=text id="inode" name=inode value="|INODE|">
+				<input type="checkbox" name="uinode" value="ON" onClick='setText("inode",this)' |INODECHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+		|*endif|
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAINS|">|LANG_DOMAINS|</label>
+			<div class="form-datos">
+				<input type=text id="vdomains" name=vdomains value="|VDOMAINS|">
+				<input type="checkbox" name="uvdomains" value="ON" onClick='setText("vdomains",this)' |VDOMAINSCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SUBDOMAINS|">|LANG_SUBDOMAINS|</label>
+			<div class="form-datos">
+				<input type=text id="nsubdomains" name=nsubdomains value="|NSUBDOMAINS|">
+				<input type="checkbox" name="unsubdomains" value="ON" onClick='setText("nsubdomains",this)' |NSUBDOMAINSCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_IPS|">|LANG_IPS|</label>
+			<div class="form-datos">
+				<input type=text name=ips value="|IPS|">
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_EMAIL_ACCOUNTS|">|LANG_EMAIL_ACCOUNTS|</label>
+			<div class="form-datos">
+				<input type=text id="nemails" name=nemails value="|NEMAILS|">
+				<input type="checkbox" name="unemails" value="ON" onClick='setText("nemails",this)' |NEMAILSCHECKED|>|LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_EMAIL_FORWARDERS|">|LANG_EMAIL_FORWARDERS|</label>
+			<div class="form-datos">
+				<input type=text id="nemailf" name=nemailf value="|NEMAILF|">
+				<input type="checkbox" name="unemailf" value="ON" onClick='setText("nemailf",this)' |NEMAILFCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="LANG_MAILING_LISTS|">LANG_MAILING_LISTS|</label>
+			<div class="form-datos">
+				<input type=text id="nemailml" name=nemailml value="|NEMAILML|">
+				<input type="checkbox" name="unemailml" value="ON" onClick='setText("nemailml",this)' |NEMAILMLCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_AUTO_RESPONDERS|">|LANG_AUTO_RESPONDERS|</label>
+			<div class="form-datos">
+				<input type=text id="nemailr" name=nemailr value="|NEMAILR|">
+				<input type="checkbox" name="unemailr" value="ON" onClick='setText("nemailr",this)' |NEMAILRCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_MYSQL_DBS|">|LANG_MYSQL_DBS|</label>
+			<div class="form-datos">
+				<input type=text id="mysql" name=mysql value="|MYSQL|">
+				<input type="checkbox" name="umysql" value="ON" onClick='setText("mysql",this)' |MYSQLCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAIN_PTRS|">|LANG_DOMAIN_PTRS|</label>
+			<div class="form-datos">
+				<input type=text id="domainptr" name=domainptr value="|DOMAINPTR|">
+				<input type="checkbox" name="udomainptr" value="ON" onClick='setText("domainptr",this)' |DOMAINPTRCHECKED|> |LANG_UNLIMITED|
+			</div>
+
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_FTP_ACCOUNTS|">|LANG_FTP_ACCOUNTS|</label>
+			<div class="form-datos">
+				<input type=text id="ftp" name=ftp value="|FTP|">
+				<input type="checkbox" name="uftp" value="ON" onClick='setText("ftp",this)' |FTPCHECKED|> |LANG_UNLIMITED|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_ANON_FTP_ACCOUNTS|">|LANG_ANON_FTP_ACCOUNTS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=aftp value="ON" |AFTPCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_CGI| |LANG_ACCESS|">|LANG_CGI| |LANG_ACCESS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=cgi value="ON" |CGICHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_PHP| |LANG_ACCESS|">|LANG_PHP| |LANG_ACCESS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=php value="ON" |PHPCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SPAM|">|LANG_SPAM|</label>
+			<div class="form-datos">
+				<input type=checkbox name=spam value="ON" |SPAMCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_CATCHALL|">|LANG_CATCHALL|</label>
+			<div class="form-datos">
+				<input type=checkbox name=catchall value="ON" |CATCHALLCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SSL| |LANG_ACCESS|">|LANG_SSL| |LANG_ACCESS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=ssl value="ON" |SSLCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SSH| |LANG_ACCESS|">|LANG_SSH| |LANG_ACCESS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=ssh value="ON" |SSHCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SSH_FOR_USERS|">|LANG_SSH_FOR_USERS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=userssh value="ON" |USERSSHCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_ALLOW_OVERSELLING|">|LANG_ALLOW_OVERSELLING|</label>
+			<div class="form-datos">
+				<input type=checkbox name=oversell value="ON" |OVERSELLCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_CRON_JOBS|">|LANG_CRON_JOBS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=cron value="ON" |CRONCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SYSTEM_INFO|">|LANG_SYSTEM_INFO|</label>
+			<div class="form-datos">
+				<input type=checkbox name=sysinfo value="ON" |SYSINFOCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_LOGIN_KEYS|">|LANG_LOGIN_KEYS|</label>
+			<div class="form-datos">
+				<input type=checkbox name=login_keys value="ON" |LOGINKEYSCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DNS_CONTROL|">|LANG_DNS_CONTROL|</label>
+			<div class="form-datos">
+				<input type=checkbox name=dnscontrol value="ON" |DNSCONTROLCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_PERSONAL_DNS|">|LANG_PERSONAL_DNS|</label>
+			<div class="form-datos">
+				<input type=radio name=dns value="OFF" |DNSCHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_NONE|">|LANG_NONE|</label>
+			<div class="form-datos">
+				<input type=radio name=dns value="TWO" |DNS2CHECKED|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_TWO_IPS|">|LANG_TWO_IPS|</label>
+			<div class="form-datos">
+				<input type=radio name=dns value="THREE" |DNS3CHECKED|>
+				|LANG_THREE_IPS|
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_SERVER_IP|">|LANG_SERVER_IP|</label>
+			<div class="form-datos">
+				<input type=checkbox name=serverip value="ON" |SERVERIP|>
+			</div>
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_DOMAIN| |LANG_IP|">|LANG_DOMAIN| |LANG_IP|</label>
+			<select class=selectclass name=ip>
+				<option value=shared |SELECTSHARE|>|LANG_SHARED_SERVER|</option>
+				<option value=sharedreseller |SHAREDRESELLER|>|LANG_SHARED_RES|</option>
+				<option value=assign |SELECTASSIGNED|>|LANG_ASSIGNED|</option>
+			</select >
+		</div>
+
+		<div class="bcpbp-form">
+			<label for="|LANG_EMAIL_NOTIFY|">|LANG_EMAIL_NOTIFY|</label>
+			<input type=checkbox name=notify value="yes" |NOTIFY|> <a href="javascript:showResellerMessage();">|LANG_EDIT_RES_MESS|</a>
+		</div>
+
+
+		|*if CUSTOM_ITEM_1|
+		<div class="bcpbp-form">
+			<label for="|CUSTOM_ITEM_1_STR|">|CUSTOM_ITEM_1_STR|</label>
+			|CUSTOM_ITEM_1|
+			|CUSTOM_ITEM_1_DESC|
+		</div>
+		|*endif|
+
+		|*if CUSTOM_ITEM_2|
+		<div class="bcpbp-form">
+			<label for="|CUSTOM_ITEM_2_STR|">|CUSTOM_ITEM_2_STR|</label>
+			|CUSTOM_ITEM_2|
+			|CUSTOM_ITEM_2_DESC|
+		</div>
+		|*endif|
+
+		|*if CUSTOM_ITEM_3|
+		<div class="bcpbp-form">
+			<label for="|CUSTOM_ITEM_3_STR|">|CUSTOM_ITEM_3_STR|</label>
+			|CUSTOM_ITEM_3|
+			|CUSTOM_ITEM_3_DESC|
+		</div>
+		|*endif|
+
+		|*if CUSTOM_ITEM_4|
+		<div class="bcpbp-form">
+			<label for="|CUSTOM_ITEM_4_STR|">|CUSTOM_ITEM_4_STR|</label>
+			|CUSTOM_ITEM_4|
+			|CUSTOM_ITEM_4_DESC|
+		</div>
+		|*endif|
+
+		|*if CUSTOM_ITEM_5|
+		<div class="bcpbp-form">
+			<label for="|CUSTOM_ITEM_5_STR|">|CUSTOM_ITEM_5_STR|</label>
+			|CUSTOM_ITEM_5|
+			|CUSTOM_ITEM_5_DESC|
+		</div>
+		|*endif|
+
+			<input type=submit name=add value="|LANG_SUBMIT|">
+		</form>
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>	<!-- fin bloque -->
+|HTM_ADMIN_BOTTOM|

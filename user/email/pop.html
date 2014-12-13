@@ -1,0 +1,66 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_EMAIL_POP?DOMAIN=`DOMAIN`">`LANG_POP_ACCOUNTS`</a>|
+|?HELP_SECTION=`USER_HELPER`/email.html#pop3|
+|HTM_USER_TOP|
+
+|*if EMAIL_MESSAGE!=""|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>|EMAIL_MESSAGE|</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Email accounts</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- subtitulo link -->
+    <div class="bcpbp-subtitulo--link">
+      <div class="bcpbpsl-izq">
+        <a href="HTM_EMAIL_POP_CREATE?DOMAIN=|DOMAIN|&DEFAULT_POP_QUOTA=|DEFAULT_POP_QUOTA|&USER_CAN_SET_SEND_LIMIT=|USER_CAN_SET_SEND_LIMIT|&GLOBAL_PER_EMAIL_LIMIT=|GLOBAL_PER_EMAIL_LIMIT|">|LANG_POP_CREATE|</a>
+        <a href="CMD_EMAIL_USAGE?domain=|DOMAIN|">|LANG_EMAIL_USAGE|</a>
+      </div>
+
+      <div class="bcpbpsl-der">
+        test
+      </div>
+    </div>
+    <!-- end subtitulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |POPACCOUNTS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

@@ -1,0 +1,39 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_RESELLER_SHOW">`LANG_SHOW_RES`</a> &raquo; <a class=tree href="/HTM_ACCOUNT_RESELLER_DELETE">`LANG_DELETE_RES`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`/listr.html|
+|HTM_ADMIN_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_DELETE_RES|</h2>
+		</div>
+
+		<form action="CMD_ACCOUNT_RESELLER" method="post">
+
+			<input type=hidden name=action value=delete>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_USERNAME|">|LANG_USERNAME|</label>
+				<div class="form-datos">
+					<input type=text name=username>
+				</div>				
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_DELETE|" />
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+	<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|HTM_ADMIN_BOTTOM|

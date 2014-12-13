@@ -1,0 +1,63 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_DOMAIN_POINTER?DOMAIN=`DOMAIN`">`LANG_DOMAIN_POINTERS`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#pointers|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_ADD_NEW_DOMAIN_POINTER|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        <table class=list cellpadding=0 cellspacing=0>
+          <form name=info action='/CMD_DOMAIN_POINTER' method='POST'>
+            <input type=hidden name=domain value="|DOMAIN|">
+            <input type=hidden name=action value="add">
+            <tr><td class=list>|LANG_SOURCE_DOMAIN|</td><td class=list>http://www.<input type=text name=from> --> |DOMAIN| &nbsp;&nbsp;|LANG_EG|</td></tr>
+            <tr><td class=listtitle align=right colspan=2><input type=checkbox name=alias value="yes" checked>|LANG_CREATE_ALIAS| &nbsp;&nbsp; <input type=submit value="|LANG_ADD|"></td></tr>
+          </form>
+        </table>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Domain pointer list</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |DOMAINPOINTERS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

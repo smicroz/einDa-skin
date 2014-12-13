@@ -1,0 +1,156 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SECURITY_QUESTIONS">`LANG_SECURITY_QUESTIONS`</a>|
+|HTM_USER_TOP|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SECURITY_QUESTIONS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				|?SQ_BOLD_OPEN=|
+				|?SQ_BOLD_CLOSE=|
+				|*if SECURITY_QUESTIONS_CHECKED=""|
+				<p>|LANG_FEATURE_OFF|</p>
+				<p>|LANG_ADD_A_SECURITY_QUESTION|</p>
+				|?SQ_BOLD_OPEN=<b>|
+					|?SQ_BOLD_CLOSE=</b>|
+					|*endif|
+
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>User questions</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|USER_QUESTIONS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Add new security questions</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|SECURITY_QUESTIONS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SECURITY_QUESTION_OPTIONS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class='list table-highlight' cellpadding=0 cellspacing=0>
+					<form name="tableform3" action='CMD_SECURITY_QUESTIONS' method='POST'>
+						<input type='hidden' name="action" value="settings" />
+						<input type='hidden' name="version" value="1" />
+							<tr>
+								<td class=list align=center><input type=checkbox name="security_questions" value="yes" |SECURITY_QUESTIONS_CHECKED| |SECURITY_QUESTIONS_DISABLED|></td>
+								<td class=list>|SQ_BOLD_OPEN||LANG_REQUIRE_VALID_ANSWER||SQ_BOLD_CLOSE|</td>
+							</tr>
+							<tr>
+								<td class=list2 align=center><input type=checkbox name="api_with_password" value="yes" |SECURITY_QUESTIONS_ON_API_CHECKED|></td>
+								<td class=list2>|LANG_ALLOW_AP_LOGIN|</td>
+							</tr>
+							<tr>
+								<td class=list align=center><input type=checkbox name="notify_on_all_question_failures" value="yes" |NOTIFY_ON_ALL_FAILURES_CHECKED|></td>
+								<td class=list>|LANG_NOTIFY_ME| |MAX_ATTEMPTS| |LANG_FAILED_ATTEMPTS|</td>
+							</tr>
+							<tr>
+								<td colspan=2 class=listtitle align=right><input type=submit name=save value="Save"></td >
+								</tr>
+							</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_SECURITY_QUESTION_NOTES|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

@@ -1,0 +1,196 @@
+|LF_STANDARD|
+|LF_JS|
+|?TREE=&raquo; <a class=tree href="/HTM_ADD_DOMAIN">`LANG_CREATE_DOMAIN`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#domains|
+|HTM_USER_TOP|
+
+
+|?CHECK_DOMAIN=checkDomain()|
+|*if AJAX="1"|
+	|?CHECK_DOMAIN=ajax_checkDomain()|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+
+<script language="Javascript">
+<!--
+
+var shortDomain='|LANG_SHORT_DOMAIN|';
+var domainNeedsDot='|LANG_DOMAIN_DOT|';
+var invalidDomain='|LANG_INVALID_DOMAIN|';
+
+function setText( textfld, checkbx)
+{
+	if (checkbx.checked)
+		textfld.disabled = true;
+	if (!checkbx.checked)
+		textfld.disabled = false;
+}
+
+function domainOK(domain)
+{
+	var ch;
+	var i;
+	var dotCount = 0;
+
+	if (domain.length < 3)
+	{
+		alert(shortDomain);
+		return 0;
+	}
+
+	if (domain.charAt(domain.length-1) == '.')
+	{
+		alert(invalidDomain);
+		return 0;
+	}
+
+	for (i=0; i<domain.length; i++)
+	{
+		if ((ch = domain.charAt(i)) == '.') dotCount++;
+	}
+
+	if (dotCount == 0)
+	{
+		alert(domainNeedsDot);
+		return 0;
+	}
+
+	return 1;
+}
+
+function checkDomain()
+{
+	with (document.info)
+	{
+		if (!domainOK(domain.value))
+		{
+			domain.focus();
+			domain.select();
+			return 0;
+		}
+	}
+	return 1;
+}
+
+function formOK()
+{
+	with (document.info)
+	{
+		if (checkDomain())
+			return true;
+	}
+	return false;
+}
+
+function submitForm()
+{
+	document.info.create.disabled = true;
+	document.info.submit();
+}
+
+// -->
+</script>
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_DOMAIN|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=info action="/CMD_DOMAIN" method="post" onSubmit="return formOK()">
+			<input type=hidden name=action value=create>
+
+
+			<!-- form -->
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DOMAIN|">|LANG_DOMAIN|</label>
+				<div class="form-datos">
+					<input type=text id=domain name=domain size=32 value="domain.com" onFocus="this.select();" onChange="|CHECK_DOMAIN|">
+					<div id=domain_result class=warning></div>
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BANDWIDTH|">|LANG_BANDWIDTH|</label>
+				<div class="form-datos">
+					<input type=text name=bandwidth value="1000" disabled>
+					<input type="checkbox" name="ubandwidth" value="unlimited" checked onClick='setText( document.info.bandwidth,this)' >
+					|LANG_SAME_AS_MAIN|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_DISK_SPACE|">|LANG_DISK_SPACE|</label>
+				<div class="form-datos">
+					<input type=text name=quota value="0" disabled>
+					<input type="checkbox" name="uquota" value="unlimited" checked onClick='setText( document.info.quota,this)' >
+					|LANG_SAME_AS_MAIN|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_SECURE_SSL|">|LANG_SECURE_SSL|</label>
+				<div class="form-datos">
+					<input type="checkbox" name=ssl value="ON">
+					|LANG_IGNORED|
+				</div>
+			</div>
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_CGI| |LANG_ACCESS|">|LANG_CGI| |LANG_ACCESS|</label>
+				<div class="form-datos">
+					<input type="checkbox" name=cgi value="ON" checked>
+					|LANG_IGNORED|
+				</div>
+			</div>
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_PHP| |LANG_ACCESS|">|LANG_PHP| |LANG_ACCESS|</label>
+				<div class="form-datos">
+					<input type="checkbox" name=php value="ON" checked>
+					|LANG_IGNORED|
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=button name=create value="|LANG_CREATE|" onClick="if (formOK()) {submitForm();}">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+		
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_NO_CAPS|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

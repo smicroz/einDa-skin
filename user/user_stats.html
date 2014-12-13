@@ -1,0 +1,172 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`domain`">`domain`</a> &raquo; <a class=tree href="/CMD_USER_STATS?domain=`domain`">`LANG_STATS_FOR` `USERNAME`</a>|
+|?HELP_SECTION=`USER_HELPER`/stats.html|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_DETAILS_FOR| |USERNAME|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- subtitulo link -->
+		<div class="bcpbp-subtitulo--link">
+			<div class="bcpbpsl-izq">
+				<a href="/CMD_FILE_MANAGER/domains/|domain|/logs">|LANG_APACHE_LOGS|</a>
+				<a href="/CMD_USER_HISTORY?domain=|domain|">|LANG_USER_HISTORY|</a>
+			</div>
+
+			<div class="bcpbpsl-der">
+				test
+			</div>
+		</div>
+		<!-- end subtitulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class=list cellpadding=0 cellspacing=0>
+					<tr>
+						<td class=listtitle>|LANG_LOG_TYPE|</td><td class=listtitle>|LANG_FULL_LOG|</td><td class=listtitle>|LANG_LAST_LINES|</td>
+					</tr>
+					<tr>
+						<td class=list>
+							|LANG_APACHE_USAGE|
+						</td>
+						<td class=list>
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=log">|LANG_FULL_USAGE|</a>
+						</td>
+						<td class=list>
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=log&lines=10">|LANG_10_LINES|</a>&nbsp;&nbsp;
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=log&lines=100">|LANG_100_LINES|</a>
+						</td>
+					</tr>
+					<tr>
+						<td class=list>
+							|LANG_APACHE_ERROR|
+						</td>
+						<td class=list>
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=error">|LANG_FULL_ERROR|</a>
+						</td>
+						<td class=list>
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=error&lines=10">|LANG_10_LINES|</a>&nbsp;&nbsp;
+							<a href="/CMD_SHOW_LOG?domain=|domain|&type=error&lines=100">|LANG_100_LINES|</a>
+						</td>
+					</tr>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Domains</h2>
+		</div>
+		<!-- fin titulo -->
+
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|DOMAINS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+			<div class="alerta alerta-info">
+				|LANG_WEBALIZER|
+			</div>
+		</div> <!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_NOTE|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Stats</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|STATS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|*if !RESULT|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+
+		<div class="bcpbp-generales">
+			<div class="alerta alerta-info">
+				|RESULT|
+			</div>
+		</div>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+|HTM_USER_BOTTOM|

@@ -1,0 +1,80 @@
+|LF_STANDARD|
+|LF_SSL|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`domain`">`domain`</a> &raquo; <a class=tree href="/CMD_SSL?DOMAIN=`domain`">`LANG_SSL`</a> &raquo; `LANG_CREATE_CSR`|
+|?HELP_SECTION=`USER_HELPER`/ssl.html#install|
+|HTM_USER_TOP|
+<script language="javascript">
+function copyCertificate(text)
+{
+	text.focus();
+	text.select();
+	if (document.all)
+	{
+		therange = text.createTextRange();
+		therange.execCommand("Copy");
+		alert('|LANG_CERT_COPIED|');
+	}
+}
+</script>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SSL_CSR|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class=list cellpadding=0 cellspacing=0>
+					<tr><td class=listtitle></td></tr>
+					|*if NOTICE!=""|
+					<tr><td class=listwrap><b>|NOTICE|</b></td></tr>
+					|*endif|
+					<tr><td class=listwrap>|LANG_HERE_IS_CSR|</td></tr>
+
+					<form name=info>
+						<tr><td class=list align=center>
+							<textarea class="code_edit ssl_text" name=request rows=16>|REQUEST|</textarea>
+						</td></tr>
+						<tr><td class=listtitle align=center><input type=button value="|LANG_COPY_TO|" onClick="copyCertificate(document.info.request)"> |LANG_IE_ONLY|</td></tr>
+					</form>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|*if USERTYPE="admin"|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_ADMIN_SAVE_KEY|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+|HTM_USER_BOTTOM|

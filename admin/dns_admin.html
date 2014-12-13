@@ -1,0 +1,105 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_DNS_ADMIN">`LANG_DNS_ADMIN`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`/dnsadmin.html|
+|HTM_ADMIN_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_SELECT_DNS|</h2>
+    </div>
+
+    <form action="" method="GET">
+      <div class="bcpbp-form--submit"> <!-- vacio -->
+        <label for="|LANG_SHOW_DOMAINS_THAT|">|LANG_SHOW_DOMAINS_THAT|</label>
+        <select class=selectclass name=comparison1>
+          <option value="none">--</option >
+          <option value="equals">|LANG_EQUAL|</option >
+          <option value="contains">|LANG_CONTAIN|</option >
+          <option selected value="startswith">|LANG_START_WITH|</option >
+        </select>
+
+        <input type=text size=12 class=inputclass name=value1>
+        <input type=hidden name=sort1 value="1">
+        <input type=hidden name=sort1dir value="1">
+        <input type=hidden name=ipp value="50">
+        <input type=submit value="|LANG_SEARCH|">
+      </div>
+    </form>
+
+    <div class="box-da-table">
+      |TABLE|
+    </div> <!-- fin tabla -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_ADD_ZONE|</h2>
+    </div>
+
+    <form action="/CMD_DNS_ADMIN" method="POST">
+      <input type=hidden name=action value="create">
+
+      <div class="bcpbp-form">
+        <label for="|LANG_DOMAIN_NAME|">|LANG_DOMAIN_NAME|</label>
+        <div class="form-datos">
+          <input type=text name=domain />
+        </div>        
+      </div>
+
+      <div class="bcpbp-form">
+        <label for="|LANG_IP_ADDRESS|">|LANG_IP_ADDRESS|</label>
+        <div class="form-datos">
+          <input type=text name=ip />
+        </div>        
+      </div>
+
+      <div class="bcpbp-form">
+        <label for="|LANG_NAME_SERVER_1|">|LANG_NAME_SERVER_1|</label>
+        <div class="form-datos">
+          <input type=text name=ns1 />
+        </div>        
+      </div>
+
+      <div class="bcpbp-form">
+        <label for="|LANG_NAME_SERVER_2|">|LANG_NAME_SERVER_2|</label>
+        <div class="form-datos">
+          <input type=text name=ns2 />
+        </div>        
+      </div>
+
+      <div class="bcpbp-form">
+        <label for="|LANG_REVERSE|">|LANG_REVERSE|</label>
+        <div class="form-datos">
+          <input type=checkbox name=reverse value="yes" />
+        </div>        
+      </div>
+    </form>
+
+    <!-- contenedor para boton submit -->
+    <div class="bcpbp-form--submit">
+      <input type=submit value="|LANG_ADD|">
+    </div> <!-- fin contenedor para boton submit -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_ADMIN_BOTTOM|

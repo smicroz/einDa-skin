@@ -1,0 +1,154 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_EMAIL_FILTER?DOMAIN=`DOMAIN`">`LANG_EMAIL_FILTERS`</a>|
+|?HELP_SECTION=`USER_HELPER`/email.html#filters|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_EMAIL_FILTERS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=add>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=type value="email">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BLOCK_EMAIL|">|LANG_BLOCK_EMAIL|</label>
+				<div class="form-datos">
+					<input type=text name=value>
+					<input type=submit name=add value="|LANG_BLOCK|" >
+				</div>
+			</div>
+		</form>
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=add>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=type value="domain">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BLOCK_DOMAIN|">|LANG_BLOCK_DOMAIN|</label>
+				<div class="form-datos">
+					<input type=text name=value>
+					<input type=submit name=add value="|LANG_BLOCK|" >
+				</div>
+			</div>
+		</form>
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=add>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=type value="word">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BLOCK_WORD|">|LANG_BLOCK_WORD|</label>
+				<div class="form-datos">
+					<input type=text name=value>
+					<input type=submit name=add value="|LANG_BLOCK|" >
+				</div>
+			</div>
+		</form>
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=add>
+			<input type=hidden name=domain value="|DOMAIN|">
+			<input type=hidden name=type value="size">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BLOCK_SIZE|">|LANG_BLOCK_SIZE|</label>
+				<div class="form-datos">
+					<input type=text name=value>|LANG_KB|
+					<input type=submit name=add value="|LANG_BLOCK|" >
+				</div>
+			</div>
+		</form>
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=adult>
+			<input type=hidden name=domain value="|DOMAIN|">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_BLOCK_ADULT| |STATE|">|LANG_BLOCK_ADULT| : |STATE|</label>
+				<div class="form-datos">
+					<input type=submit name=add value="|ADULT|" >
+				</div>
+			</div>
+		</form>
+
+		<form action='/CMD_EMAIL_FILTER' method='POST'>
+			<input type=hidden name=action value=action>
+			<input type=hidden name=domain value="|DOMAIN|">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_ACTION_FILTER|">|LANG_ACTION_FILTER|</label>
+				<div class="form-datos">
+					<input type=radio name=value value="drop" |DROP_CHECKED|> |LANG_ACTION_DROP|
+				</div>
+				<div class="form-datos">
+					<input type=radio name=value value="email" |EMAIL_CHECKED|> |LANG_ACTION_TO_SPAM|					
+				</div>
+				<div class="form-datos">
+					<input type=submit name=add value="|LANG_SAVE|" >
+				</div>
+			</div>
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Filters</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|FILTERS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_WORD_WARNING|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

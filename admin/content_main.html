@@ -1,0 +1,483 @@
+|LF_STANDARD|
+
+|*if AJAX="1"|
+<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+<script language="Javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+		{
+			str = str.substring(1, str.length);
+		}
+		while (str.substring(str.length-1, str.length) == ' ')
+			{
+				str = str.substring(0,str.length-1);
+			}
+
+			strobj.value = str;
+
+			return true;
+		}
+
+		function doSearch(type)
+		{
+			if (document.searchform)
+				with (document.searchform)
+				{
+					trimit(value);
+
+					if (type == 'user')
+						{
+							value1.value=value.value
+							value8.value='';
+						}
+						else
+							{
+								value8.value=value.value.toLowerCase();
+								value1.value='';
+							}
+
+							submit();
+						}
+					}
+
+					// -->
+					</script>
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Server Management</h2>
+		</div>
+
+		<!-- items -->
+		<div class="bcpbp-navitem">
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/HTM_ACCOUNT_ADMIN_CREATE">
+					<div class="item-icono">
+						CA
+					</div>
+					<div class="item-titulo">
+						|LANG_CREATE_ADMIN|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_ADMIN_SHOW">
+					<div class="item-icono">
+						LA
+					</div>
+					<div class="item-titulo">
+						|LANG_LIST_ADMINS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/HTM_USER_PASSWD">
+					<div class="item-icono">
+						CP
+					</div>
+					<div class="item-titulo">
+						|LANG_CHANGE_PASS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_TICKET_MANAGE">
+					<div class="item-icono">
+						MA
+					</div>
+					<div class="item-titulo">
+						|LANG_MANAGE_TICKETS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/HTM_ACCOUNT_RESELLER_CREATE">
+					<div class="item-icono">
+						CR
+					</div>
+					<div class="item-titulo">
+						|LANG_CREATE_RESELLER|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_RESELLER_SHOW">
+					<div class="item-icono">
+						LR
+					</div>
+					<div class="item-titulo">
+						|LANG_LIST_RESELLERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_MANAGE_RESELLER_PACKAGES">
+					<div class="item-icono">
+						MRP
+					</div>
+					<div class="item-titulo">
+						|LANG_RESELLER_PACKAGES|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_ALL_USER_SHOW">
+					<div class="item-icono">
+						SAU
+					</div>
+					<div class="item-titulo">
+						|LANG_SHOW_ALL_USERS|
+					</div>
+				</a>
+			</div>
+
+
+		</div>
+		<!-- fin items -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Admin tools</h2>
+		</div>
+
+			<!-- items -->
+			<div class="bcpbp-navitem">
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_IP_MANAGER">
+					<div class="item-icono">
+						IP
+					</div>
+					<div class="item-titulo">
+						|LANG_IP_MANAGEMENT|
+					</div>
+				</a>
+			</div>
+
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_DNS_ADMIN">
+					<div class="item-icono">
+						DA
+					</div>
+					<div class="item-titulo">
+						|LANG_DNS_ADMIN|
+					</div>
+				</a>
+			</div>
+
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_ADMIN_BACKUP">
+					<div class="item-icono">
+						AB
+					</div>
+					<div class="item-titulo">
+						|LANG_ADMIN_BACKUPS|
+					</div>
+				</a>
+			</div>
+
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_MULTI_SERVER">
+					<div class="item-icono">
+						MS
+					</div>
+					<div class="item-titulo">
+						|LANG_MULTI_SERVER|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_MAIL_QUEUE?sort1=2">
+					<div class="item-icono">
+						MA
+					</div>
+					<div class="item-titulo">
+						|LANG_MAIL_Q_ADMIN|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_MOVE_USERS">
+					<div class="item-icono">
+						MU
+					</div>
+					<div class="item-titulo">
+						|LANG_MOVE_USERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_SYSTEM_INFO">
+					<div class="item-icono">
+						SI
+					</div>
+					<div class="item-titulo">
+						|LANG_SYSTEM_INFO|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_SHOW_SERVICES">
+					<div class="item-icono">
+						SM
+					</div>
+					<div class="item-titulo">
+						|LANG_SERVICE_MONITOR|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_SYSTEM_BACKUP">
+					<div class="item-icono">
+						SB
+					</div>
+					<div class="item-titulo">
+						|LANG_SYS_BACKUP|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_LOG_VIEWER">
+					<div class="item-icono">
+						LV
+					</div>
+					<div class="item-titulo">
+						|LANG_LOG_VIEWER|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_ADMIN_FILE_EDITOR">
+					<div class="item-icono">
+						FE
+					</div>
+					<div class="item-titulo">
+						|LANG_FILE_EDITOR|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_PROCESS_MONITOR?sort1=|PMSORT|">
+					<div class="item-icono">
+						PM
+					</div>
+					<div class="item-titulo">
+						|LANG_PROCESS_MONITOR|
+					</div>
+				</a>
+			</div>
+
+		</div>
+		<!-- fin items -->
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Extra Features</h2>
+		</div>
+
+		<!-- items -->
+		<div class="bcpbp-navitem">
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_ADMIN_STATS">
+					<div class="item-icono">
+						CUS
+					</div>
+					<div class="item-titulo">
+						|LANG_COMPLETE_USAGE_STATS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_CUSTOM_HTTPD">
+					<div class="item-icono">
+						CHC
+					</div>
+					<div class="item-titulo">
+						|LANG_CUSTOM_HTTPD|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_PHP_SAFE_MODE">
+					<div class="item-icono">
+						PC
+					</div>
+					<div class="item-titulo">
+						|LANG_PHP_SAFEMODE|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_BRUTE_FORCE_MONITOR?sort1=-1&seek_value=-500000">
+					<div class="item-icono">
+						BFM
+					</div>
+					<div class="item-titulo">
+						|LANG_BRUTE_FORCE_MONITOR|
+					</div>
+				</a>
+			</div>
+
+			<!-- item B -->
+			<div class="box-items">
+				<a href="CMD_ADMIN_SETTINGS">
+					<div class="item-icono">
+						AS
+					</div>
+					<div class="item-titulo">
+						|LANG_ADMIN_SETTINGS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_LICENSE">
+					<div class="item-icono">
+						LS
+					</div>
+					<div class="item-titulo">
+						|LANG_LICENSE_UPDATES|
+					</div>
+				</a>
+			</div>
+
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_PLUGIN_MANAGER">
+					<div class="item-icono">
+						PM
+					</div>
+					<div class="item-titulo">
+						|LANG_PLUGIN_MANAGER|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_ADMIN_CRON_JOBS">
+					<div class="item-icono">
+						CJ
+					</div>
+					<div class="item-titulo">
+						|LANG_ADMIN_CRON_JOBS|
+					</div>
+				</a>
+			</div>
+
+
+		</div>
+		<!-- fin items -->
+
+		|PLUGIN_0_ADMIN_TXT|<br>
+		|PLUGIN_1_ADMIN_TXT|<br>
+		|PLUGIN_2_ADMIN_TXT|<br>
+		|PLUGIN_3_ADMIN_TXT|<br>
+		|PLUGIN_4_ADMIN_TXT|<br>
+		|PLUGIN_5_ADMIN_TXT|<br>
+		|PLUGIN_6_ADMIN_TXT|<br>
+		|PLUGIN_7_ADMIN_TXT|<br>
+		|PLUGIN_8_ADMIN_TXT|<br>
+		|PLUGIN_9_ADMIN_TXT|<br>
+
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+|*if AJAX="1"|
+<script type="text/javascript">
+	set_admin_level_updates();
+</script>
+|*endif|

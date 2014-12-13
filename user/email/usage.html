@@ -1,0 +1,194 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_EMAIL_USAGE?DOMAIN=`DOMAIN`">`LANG_EMAIL_USAGE`</a>|
+|?HELP_SECTION=`USER_HELPER`/email.html#email_usage|
+|HTM_USER_TOP|
+
+|*if BLOCK_CRACKING_PATHS="yes"|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_EMAIL_USAGE|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |BLOCK_CRACKING_PATHS_TABLE|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+|*endif|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_SHOW_USAGE|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <form name=whichfile action=? method=GET>
+      <input type=hidden name='domain' value='|DOMAIN|'>
+      <div class="bcpbp-form">    
+        <div class="form-datos">
+          <input type=radio name=which value="today" onClick="document.whichfile.submit();" |TODAY_CHECKED|> |LANG_TODAY|
+        </div>
+        <div class="form-datos">
+          <input type=radio name=which value="both" onClick="document.whichfile.submit();" |BOTH_CHECKED|> |LANG_THIS_MONTH|
+        </div>
+        <div class="form-datos">
+          <input type=radio name=which value="past" onClick="document.whichfile.submit();" |PAST_CHECKED|> |LANG_THIS_MONTH_EXCLUDING|
+        </div>
+      </div>
+
+    </form>
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Email stats</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |EMAIL_STATS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Count Note</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |LANG_COUNT_NOTE|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Email Usage</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |EMAIL_USAGE|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>|LANG_SENDER_NOTE|</p>
+        <p>|LANG_AUTH_NOTE|</p>
+        <p>|LANG_SENDER_HOST_NOTE|</p>
+        <p>|LANG_PATH_NOTE|</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>PHP sending scripts</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |SENDING_PHP_SCRIPTS|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

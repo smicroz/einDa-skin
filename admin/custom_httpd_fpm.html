@@ -1,0 +1,133 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_CUSTOM_HTTPD">`LANG_CUST_HTTPD_CONF`</a> &raquo; <a class=tree href="/CMD_CUSTOM_HTTPD?user=`user`&php-fpm=`php-fpm`">php-fpm `php-fpm`</a>|
+|?HELP_SECTION=`ADMIN_HELPER`|
+
+|HTM_ADMIN_TOP|
+
+|*if CONFIG_ERROR="1"|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<div class="alerta alerta-danger">
+				|LANG_CONFIG_ERROR|
+			</div>
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+|*endif|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Tablas DA</h2>
+		</div>
+
+		<!-- table -->
+		<div class="box-da-table">
+
+<table class=list>
+<form action="/CMD_CUSTOM_HTTPD" method="POST">
+<input type=hidden name=user value="|user|">
+<input type=hidden name=php-fpm value="|php-fpm|">
+<tr>
+	<td class=listtitle>|LANG_CUST_FOR| |user| <b>php-fpm |php-fpm|</b></td>
+</tr>
+<tr>
+	<td class=list align=center>|LANG_INSTRUCTIONS|<br>
+		<b>&#124;CUSTOM1&#124;</b><br>
+		<textarea cols=160 rows=4 wrap=off name=custom1>|CUSTOM1|</textarea>
+
+		<br><br>
+
+		<b>&#124;CUSTOM2&#124;</b><br>
+		<textarea cols=160 rows=4 wrap=off name=custom2>|CUSTOM2|</textarea>
+
+		<br><br>
+	</td>
+</tr>
+<script type="text/javascript" src="JS_VISIBILITY"></script>
+<tr><td class=list colspan=2><span class=expand_toggle_plus id=tokens_toggle onclick="toggle_expand('tokens_toggle', 'tokens_visibility');">+</span> |LANG_AVAIL_TOKENS|</td></tr>
+<tr id=tokens_visibility style="display: none;">
+	<td class=list align=center>
+		<textarea cols=120 rows=30 wrap=off readonly>|AVAILABLE_TOKENS|</textarea>
+	</td>
+</tr>
+<form>
+</table>
+</div> <!-- fin table -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|FPM_CONFIG_FILE|</h2>
+		</div>
+<!-- table -->
+<div class="box-da-table">
+<table class=list>
+<tr>
+	<td class=list align=center>
+		<textarea cols=160 rows=20 wrap=off readonly>|FPM_CONFIG|</textarea>
+	</td>
+</tr>
+</table>
+</div> <!-- fin table -->
+
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_PHP_FPM_CONFIG_CHECK|</h2>
+		</div>
+
+<!-- table -->
+<div class="box-da-table">
+<table class=list>
+<tr>
+	<td class=list align=center>
+		<textarea cols=160 rows=5 wrap=off readonly>|CONFIG_TEST|</textarea>
+	</td>
+</tr>
+</table>
+</div> <!-- fin table -->
+<!-- fin contenido bloque -->
+
+</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_ADMIN_BOTTOM|

@@ -1,0 +1,69 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`domain`">`domain`</a> &raquo; <a class=tree href="/CMD_SUBDOMAIN?domain=`domain`">`LANG_SUBDOMAINS`</a>|
+|?HELP_SECTION=`USER_HELPER`/subdomains.html|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>Subdomains</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|SUBDOMAINS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_ADD_SUB|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form name=info action="CMD_SUBDOMAIN" method="POST">
+			<input type=hidden name=action value="create">
+			<input type=hidden name=domain value="|DOMAIN|">
+			<!-- form -->
+
+			<div class="bcpbp-form"> <!-- vacio -->
+				<label for="|LANG_ADD_SUB|">Name</label>
+				<div class="form-datos">
+					<input type=text name=subdomain size=8><b>.|DOMAIN|</b>
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_CREATE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_USER_BOTTOM|

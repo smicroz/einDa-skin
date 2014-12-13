@@ -1,0 +1,73 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_NAME_SERVER">`LANG_NAME_SERVERS`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/nameserver.html|
+|HTM_RESELLER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_NAME_SERVERS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				|IPS|
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_SET_NS|</h2>
+		</div>
+		<!-- fin titulo -->
+
+		<form action="/CMD_NAME_SERVER" method="POST">
+			<input type=hidden name=action value="modify">
+
+			<div class="bcpbp-form">
+				<label for="|LANG_NAME_SERVER_1|">|LANG_NAME_SERVER_1|</label>
+				<div class="form-datos">
+					<input type=text name=ns1 size=32 value="|NS1|">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="|LANG_NAME_SERVER_2|">|LANG_NAME_SERVER_2|</label>
+				<div class="form-datos">
+					<input type=text name=ns2 size=32 value="|NS2|">
+				</div>				
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SAVE|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+|HTM_RESELLER_BOTTOM|

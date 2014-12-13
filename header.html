@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="ng-da-app">
+<head>
+	<meta charset="|LANG_ENCODING|">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>|HOSTNAME| - |DEAMONNAME| v|VERSION|</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+	<link rel="stylesheet" href="/CSS_MAIN" />
+	<link rel="stylesheet" href="/CSS_NORMALIZE" />
+
+	<!-- fuentes -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:700%7COpen+Sans:400,700%7CMontserrat:700' rel='stylesheet' type='text/css' />
+
+	<!-- js
+	<script src="/JS_MODERNIZR"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+	<script src="/JS_MAIN"></script>
+
+</head>
+<body ng-controller="gestorContenido" ng-style="gestorScroll">
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="box-header">
+
+		<!-- INICIO HEADER ======================================= -->
+
+		<header class="noselect">
+
+			<!-- logo -->
+			<div class="header-logo">
+				<a href="/|HOME_MEMORY|">Directadmin</a>
+			</div>
+			<!-- menu-->
+			<nav class="header-menu">
+				<ul>
+					<li class="boton-menu" ng-click="sMenu()">
+						<p>
+							&#9776;
+						</p>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- contenido menu -->
+			<div class="menu-contenido ng-hide" ng-show="controlMenu">
+				<div class="mc-header">
+					<!-- header contenido menu -->
+					<nav class="mch-logo header-logo">
+						<a href="/|HOME_MEMORY|">Directadmin</a>
+					</nav>
+					<!-- cerrar menu -->
+					<div class="mch-boton-cerrar">
+						<ul>
+							<li class="boton-menu" ng-click="sMenuCerrar()">
+								<p>
+									<strong>&times;</strong>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- enlaces -->
+				<div class="mc-enlaces">
+					<ul>
+						<!-- Inicio -->
+						<li>
+							<a href="/|HOME_MEMORY|">
+								<span class="mce-titulo">Home</span>
+								<span class="mce-descripcion">return to home</span>
+							</a>
+						</li>
+						<!-- Webmail -->
+						<li>
+							<a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|">
+								<span class="mce-titulo">Webmail</span>
+								<span class="mce-descripcion">Access to default webmail</span>
+							</a>
+						</li>
+						<!-- Gestor archivos -->
+						<li>
+							<a href="/CMD_FILE_MANAGER">
+								<span class="mce-titulo">File Manager</span>
+								<span class="mce-descripcion">Manage your files</span>
+							</a>
+						</li>
+						<!-- Ayuda -->
+						<li>
+							<a href="http://|HELP_SECTION|">
+								<span class="mce-titulo">Help</span>
+								<span class="mce-descripcion">Get help from directadmin</span>
+							</a>
+						</li>
+					</ul>
+
+					<div class="einDa">
+						<p><a class="white" href="http://www.directadmin.com/">DirectAdmin</a> Control Panel &copy; 2012 JBMC Software</p>
+						<p>
+							Template <a href="http://smicroz.tumblr.com">einDA</a> by <a href="http://smicroz.tumblr.com">smicroz</a>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+		<!-- fin app menu -->
+	</div>
+
+	<!-- sub menu -->

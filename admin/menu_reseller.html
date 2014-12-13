@@ -1,0 +1,227 @@
+|LF_LEVEL|
+
+<!-- INICIO SUB MENU ======================================= -->
+
+<nav class="sub-nav noselect">
+
+	<!-- perfil -->
+
+	<div class="sv-perfil" ng-show="controlPerfil">
+		<ul>
+			<li>
+
+				<!-- boton mi nick -->
+				<label for="show" class="ep-boton" ng-click="menu_boton_estado_perfil = !menu_boton_estado_perfil">
+					<div class="epb-contenido">
+						<span>|USERNAME|</span>
+						|*if NEWMESSAGES!="0"|
+						<span class="comentarios-cantidad">|NEWMESSAGES|</span>|*endif|
+
+					</div>
+				</label>
+
+				<!-- sub-menu boton mi nick -->
+
+				<ul class="ng-hide" ng-show="menu_boton_estado_perfil">
+					<li>
+						<a href="/HTM_PASSWD">Password</a>
+					</li>
+					<li>
+						<a href="/CMD_TICKET?sort1=-1">Messages</a>
+					</li>
+					<li>
+						<a href="/CMD_LOGOUT">Log out</a>
+					</li>
+				</ul>
+
+			</li>
+		</ul>
+	</div>
+
+	<!-- nivel usuario -->
+
+	<div class="sv-funciones">
+		<ul>
+			<!-- admin / reseller / user -->
+			<li>
+
+				<!-- boton nivel usuario -->
+				<label class="svf-boton" ng-click="menu_boton_nivel_usuario = !menu_boton_nivel_usuario">
+					<div class="svfb-nivel-usuario">
+						R
+					</div>
+				</label>
+
+				<!-- sub-menu boton nivel usuario -->
+
+				<ul class="ng-hide" ng-show="menu_boton_nivel_usuario">
+					<li>
+						<a href="/">[A] Admin</a>
+					</li>
+					<li>
+						<a href="/HTM_INDEX_RESELLER">[R] Reseller</a>
+					</li>
+					<li>
+						<a href="/HTM_INDEX_USER">[U] User</a>
+					</li>
+				</ul>
+
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<!-- INICIO CONTENIDO ======================================= -->
+
+<div class="contenedor">
+
+	<!-- CONTENIDO IZQ (Stats) -->
+
+	<div class="contenedor-izq">
+		<div class="left-content">
+
+			<h3>Quick Links</h3>
+			<div class="lc-content">
+				<div class="lc-content--links">
+					<ul>
+						<li><a href="/|HOME_MEMORY|"><span>Home</span></a></li>
+						<li><a href="/CMD_FILE_MANAGER"><span>File Manager</span></a></li>
+						<li><a href="http://|HELP_SECTION|"><span>Help</span></a></li>
+						<li><a href="http://|HOSTNAME|/pma"><span>PhpMyAdmin</span></a></li>
+						<li><a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|"><span>Webmail</span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<h3>Stats</h3>
+			<div class="lc-content">
+
+				<h4>Disk Space</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERQUOTAMAX|" value="|RESELLERQUOTA|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>{{|RESELLERQUOTA| | number:0}} / |RESELLERQUOTAMAX|</p>
+					</div>
+				</div>
+
+				<h4>Bandwidth</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERBANDWIDTHMAXGIG|" value="|RESELLERBANDWIDTHGIG|"></progress>
+					</div>
+					<div class="bar-details">
+						<p> {{|RESELLERBANDWIDTHGIG| | number:0}} Gbb / |RESELLERBANDWIDTHMAXGIG|</p>
+					</div>
+				</div>
+
+				<h4>Users</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="100" value="1"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERUSERS|</p>
+					</div>
+				</div>
+
+				<h4>Domains</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERDOMAINSMAX|" value="|RESELLERDOMAINS|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERDOMAINS| / |RESELLERDOMAINSMAX|</p>
+					</div>
+				</div>
+
+				<h4>Forwarder</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="100" value="1"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERFORWARDER| / |RESELLERFORWARDERMAX| </p>
+					</div>
+				</div>
+
+				<h4>Autoresponder</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERRESPONDERMAX|" value="|RESELLERRESPONDER|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERRESPONDER| / |RESELLERRESPONDERMAX|</p>
+					</div>
+				</div>
+
+				<h4>Email Accounts</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="100" value="1"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|ADMINEMAIL|</p>
+					</div>
+				</div>
+
+				<h4>Domain Pointer</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERPOINTERSMAX|" value="|RESELLERPOINTERS|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERPOINTERS| / |RESELLERPOINTERSMAX|</p>
+					</div>
+				</div>
+
+				<h4>Database</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="100" value="1"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERDATABASE| / |RESELLERDATABASEMAX|</p>
+					</div>
+				</div>
+
+				<h4>FTP Accounts</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERFTPMAX|" value="|RESELLERFTP|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERFTP| / |RESELLERFTPMAX|</p>
+					</div>
+				</div>
+
+				<h4>Email Accounts</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLEREMAILMAX|" value="|RESELLEREMAIL|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLEREMAIL| / |RESELLEREMAILMAX|</p>
+					</div>
+				</div>
+
+				<h4>Sub Domains</h4>
+				<div class="lc-content--bar">
+					<div class="bar">
+						<progress max="|RESELLERSUBDOMAINSMAX|" value="|RESELLERSUBDOMAINS|"></progress>
+					</div>
+					<div class="bar-details">
+						<p>|RESELLERSUBDOMAINS| / |RESELLERSUBDOMAINSMAX|</p>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div><!-- fin contenedor-izq -->
+
+	<div class="contenedor-der">
+		<div class="box-content">
+			<div class="bc-padding">
