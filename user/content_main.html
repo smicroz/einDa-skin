@@ -1,7 +1,28 @@
 
-|DOMAINTABLE|
-<br><center>
-|*if ALLOWED_CMD_DOMAIN!="no"|
-<form action="/CMD_ADDITIONAL_DOMAINS" method="GET"><input type=submit value="|LANG_DOMAIN_ADMIN|"></form><br>
-|*endif|
-</center>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        |DOMAINTABLE|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    |*if ALLOWED_CMD_DOMAIN!="no"|
+    <!-- contenedor para boton submit -->
+    <div class="bcpbp-form--submit">
+      <form action="/CMD_ADDITIONAL_DOMAINS" method="GET">
+        <input type=submit value="|LANG_DOMAIN_ADMIN|">
+      </form>
+    </div> <!-- fin contenedor para boton submit -->
+    |*endif|
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
