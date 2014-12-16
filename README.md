@@ -10,10 +10,10 @@ Is a “first mobile” design, because the users use them as main platform, how
 
 Instruction for install (git required)
 ==========
-1. Download and execute installer
-# wget http://goo.gl/b1FlA8 -O install
-# bash install
-2. Enable skin
-i. As admin, join to skin manager
-ii. select einDa-skin
-ii. Clicking the Apply to me, and then the same with Apply to all Users.
+* Download and execute installer
+  * # wget http://goo.gl/b1FlA8 -O install
+  * # bash install
+* Enable skin
+  * As admin, join to skin manager
+  * select einDa-skin
+  * Clicking the Apply to me, and then the same with Apply to all Users.
