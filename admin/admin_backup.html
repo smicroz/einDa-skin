@@ -73,7 +73,7 @@ function set_custom_path()
 
 			<!-- titulo -->
 			<div class="bcpbp-titulo">
-				<h2>Active Backups</h2>
+				<h2>|LANG_ACTIVE_BACKUPS|</h2>
 			</div>
 
 
@@ -99,14 +99,13 @@ function set_custom_path()
 
 				<!-- titulo -->
 				<div class="bcpbp-titulo">
-					<h2>Create Backup</h2>
+					<h2>|LANG_CREATE_BACKUP|</h2>
 				</div>
 
 				<!-- table -->
 				<div class="box-da-table">
 
 <table class=list cellspacing=0 cellpadding=0>
-<tr><td align=center colspan=3><b>|LANG_CREATE_BACKUP|</b></td></tr>
 <form name=tableform1 action="/CMD_ADMIN_BACKUP" method="POST">
 <input type=hidden name="action" value="create">
 <input type=hidden name="form_version" value="3">
@@ -114,7 +113,7 @@ function set_custom_path()
 	<td class=step valign=top rowspan=2>
 			<div>|LANG_STEP_1|: <b>|LANG_WHO|</b></div>
 
-			<table cellpadding=0 cellspacing=1>
+			<table cellpadding=0 cellspacing=0>
 			<tr>
 				<td class=listtitle align=center>
 					<input type=radio name=who value="all">
@@ -161,7 +160,7 @@ function set_custom_path()
 	</td>
 	<td class=step valign=top>
 			<div>|LANG_STEP_2|: <b>|LANG_WHEN|</b></div>
-			<table cellpadding=0 cellspacing=1>
+			<table cellpadding=0 cellspacing=0>
 			<tr>
 				<td class=listtitle>
 					<input type=radio name=when value="now" checked>
@@ -181,7 +180,7 @@ function set_custom_path()
 			<tr>
 				<td></td>
 				<td>
-					<table class=list cellpadding=0 cellspacing=1>
+					<table class=list cellpadding=0 cellspacing=0>
 					<tr><td class=list align=right>|LANG_MINUTE|: </td><td class=list><input type=text size=2 name=minute value="0"></td><td class=list>0-59</td></tr>
 					<tr><td class=list align=right>|LANG_HOUR|: </td><td class=list><input type=text size=2 name=hour value="5"></td><td class=list>0-23</td></tr>
 					<tr><td class=list align=right>|LANG_DAY_OF_MONTH|: </td><td class=list><input type=text size=2 name=dayofmonth value=*></td><td class=list>1-31</td></tr>
@@ -196,7 +195,7 @@ function set_custom_path()
 	</td>
 	<td class=step valign=top>
 			<div>|LANG_STEP_3|: <b>|LANG_WHERE|</b></div>
-			<table cellpadding=0 cellspacing=1>
+			<table cellpadding=0 cellspacing=0>
 				<tr>
 					<td class=listtitle><input type=radio name=where value="local" |LOCAL_CHECKED|></td>
 					<td class=listtitle> - |LANG_LOCAL|: <input type=text size=28 name="local_path" value="|local_path|"></td>
@@ -211,7 +210,7 @@ function set_custom_path()
 				</tr>
 				<tr><td></td>
 					<td>
-						<table cellpadding=0 cellspacing=1 width=100%>
+						<table cellpadding=0 cellspacing=0 width=100%>
 							<tr><td class=list align=right>|LANG_IP|:</td><td class=list><input type=text name=ftp_ip value="|ftp_ip|"></td></tr>
 							<tr><td class=list align=right>|LANG_USERNAME|:</td><td class=list><input type=text name=ftp_username value="|ftp_username|"></td></tr>
 							<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password|"></td></tr>
@@ -238,7 +237,7 @@ function set_custom_path()
 <tr>
 	<td class=step valign=top colspan=2>
 			<div>|LANG_STEP_4|: <b>|LANG_WHAT|</b></div>
-			<table cellpadding=0 cellspacing=1 >
+			<table cellpadding=0 cellspacing=0 >
 				<tr>
 					<td class=listtitle><input type=radio name=what id="what_all" value="all" checked></td>
 					<td class=listtitle> - |LANG_ALL_DATA|</td>
@@ -265,7 +264,7 @@ function select_none(do_select)
 				</tr>
 				<tr><td></td>
 					<td>
-						<table cellpadding=0 cellspacing=1 width=100%>
+						<table cellpadding=0 cellspacing=0 width=100%>
 							<tr><td class=list align=right><input class=backup_option type=checkbox name=option0 value="domain" checked onClick='setSelectedData()'></td><td class=list style="padding-right: 20px;" title="|LANG_DOMAINS_DIR|">|LANG_OPT_DOMAINS_DIR|</td>
 								<td class=list align=right><input class=backup_option type=checkbox name=option2 value="email" checked onClick='setSelectedData(); document.tableform1.option12.checked = this.checked;'></td><td class=list title="|LANG_POP_ACCOUNTS|">|LANG_OPT_EMAIL_ACCOUNTS|</td></tr>
 
@@ -342,7 +341,7 @@ function submitRestore()
 	<td class=step valign=top>
 			<div>|LANG_STEP_1|: <b>|LANG_FROM_WHERE|</b></div>
 
-				<table cellpadding=0 cellspacing=1>
+				<table cellpadding=0 cellspacing=0>
 				<tr>
 					<td class=listtitle><input type=radio name=where value="local" |LOCAL_CHECKED|></td>
 					<td class=listtitle> - |LANG_LOCAL|: <input type=text size=28 name="local_path" value="|local_path|"></td>
@@ -357,7 +356,7 @@ function submitRestore()
 				</tr>
 				<tr><td></td>
 					<td>
-						<table cellpadding=0 cellspacing=1>
+						<table cellpadding=0 cellspacing=0>
 							<tr><td class=list align=right>|LANG_IP|:</td><td class=list><input type=text name=ftp_ip value="|ftp_ip|"></td></tr>
 							<tr><td class=list align=right>|LANG_USERNAME|:</td><td class=list><input type=text name=ftp_username value="|ftp_username|"></td></tr>
 							<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password|"></td></tr>
@@ -385,7 +384,7 @@ function submitRestore()
 	<td class=step valign=top>
 			<div>|LANG_STEP_2|: <b>|LANG_SELECT_IP|</b></div>
 
-			<table cellpadding=0 cellspacing=1>
+			<table cellpadding=0 cellspacing=0>
 				<script language="Javascript">
 				<!--
 				function doIP(which)
