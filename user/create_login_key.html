@@ -1,6 +1,6 @@
 |LF_LOGIN_KEYS|
 |?TREE=&raquo; <a class=tree href="CMD_LOGIN_KEYS">`LANG_LOGIN_KEYS`</a> &raquo; <a class=tree href="CMD_LOGIN_KEYS?action=show_create">`LANG_CREATE_NEW_LOGIN_KEY`</a>|
-|HTM_HEADER_FULL|
+|HTM_USER_TOP|
 
 <script language="Javascript">
 <!--
@@ -53,56 +53,99 @@ function create_random_key()
 // -->
 </script>
 
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
 
-<table class='list' cellpadding=3 cellspacing=1>
-	<form name=tableform action="CMD_LOGIN_KEYS" method="post">
+		<!-- inicio contenido bloque -->
 
-|HTM_PREVENT_AUTOFILL|
+		<!-- titulo -->
+		<div class="bcpbp-titulo">
+			<h2>|LANG_CREATE_NEW_LOGIN_KEY|</h2>
+		</div>
+		<!-- fin titulo -->
 
-		<input type=hidden name="action" value="create">
+		<!-- inicio content -->
+		<div class="bcpbp-content">
+			<!-- table -->
+			<div class="box-da-table">
+				<table class='list' cellpadding=3 cellspacing=1>
+					<form name=tableform action="CMD_LOGIN_KEYS" method="post">
 
-		<tr><td class=listtitle colspan=3><b>|LANG_CREATE_NEW_LOGIN_KEY|</b></td></tr>
+						|HTM_PREVENT_AUTOFILL|
 
-		<tr><td class=list>|LANG_KEY_NAME|:</td><td class=list colspan=2><input type=text name=keyname size=16 maxlength=32> |LANG_KEY_DEFINITION| (a-zA-Z0-9)</td></tr>
-		<tr><td class=list2>|LANG_KEY_VALUE|:</td><td class=list2 colspan=2><input type=password name=key size=|HASH_LEN| maxlength=|HASH_LEN|> <input type=button value="|LANG_RANDOM|" onClick="create_random_key()"></td></tr>
-		<tr><td class=list>|LANG_RE_ENTER_KEY|:</td><td class=list colspan=2><input type=password name=key2 size=|HASH_LEN| maxlength=|HASH_LEN|></td></tr>
-		<tr><td class=list2>|LANG_EXPIRES_ON|:</td><td class=list2 colspan=2>
-			<input type=checkbox name=never_expires value="yes"> |LANG_NEVER| &nbsp;&nbsp;&nbsp;
-			|HOUR|:|MINUTE|, |MONTH||DAY||YEAR|
-		</td></tr>
-		<tr><td class=list>|LANG_USES|:</td><td class=list colspan=2><input type=text size=3 name="max_uses" value="1"> |LANG_USES_EXPLANATION|</td></tr>
-		<tr><td class=list2>|LANG_CLEAR_KEY|:</td>
-			<td class=list2 colspan=2><input type=checkbox name="clear_key" value="yes"> |LANG_AUTO_DELETE|</td>
-		</tr>
-		<tr><td class=list>|LANG_ALLOW_HTM|:</td><td class=list colspan=2><input type=checkbox name="allow_htm" value="yes"> |LANG_ALLOW_HTM_EXPLANATION|</td></tr>
+						<input type=hidden name="action" value="create">
 
-		<tr><td class=list2 valign=top>|LANG_COMMANDS|:</td>
-			<td class=list2 colspan=2>
-				<div style="overflow: auto; height: 350px; width: 640px;">
-					<table cellpadding=0 cellspacing=0 width=100%>
-						<tr>
-							<td>|ALLOW_COMMANDS|</td>
-							<td>|DENY_COMMANDS|</td>
+						<tr><td class=list>|LANG_KEY_NAME|:</td><td class=list colspan=2><input type=text name=keyname size=16 maxlength=32> |LANG_KEY_DEFINITION| (a-zA-Z0-9)</td></tr>
+						<tr><td class=list2>|LANG_KEY_VALUE|:</td><td class=list2 colspan=2><input type=password name=key size=|HASH_LEN| maxlength=|HASH_LEN|> <input type=button value="|LANG_RANDOM|" onClick="create_random_key()"></td></tr>
+						<tr><td class=list>|LANG_RE_ENTER_KEY|:</td><td class=list colspan=2><input type=password name=key2 size=|HASH_LEN| maxlength=|HASH_LEN|></td></tr>
+						<tr><td class=list2>|LANG_EXPIRES_ON|:</td><td class=list2 colspan=2>
+							<input type=checkbox name=never_expires value="yes"> |LANG_NEVER| &nbsp;&nbsp;&nbsp;
+							|HOUR|:|MINUTE|, |MONTH||DAY||YEAR|
+						</td></tr>
+						<tr><td class=list>|LANG_USES|:</td><td class=list colspan=2><input type=text size=3 name="max_uses" value="1"> |LANG_USES_EXPLANATION|</td></tr>
+						<tr><td class=list2>|LANG_CLEAR_KEY|:</td>
+							<td class=list2 colspan=2><input type=checkbox name="clear_key" value="yes"> |LANG_AUTO_DELETE|</td>
 						</tr>
-					</table>
-				</div>
-			</td>
-		</tr>
-		<tr><td class=list valign=top>|LANG_ALLOWED_IPS|:</td>
-			<td class=list valign=top width=220>
-				<textarea name=ips cols=30 rows=3></textarea>
-			</td>
-			<td class=list valign=top>|LANG_IPS_EXPLANATION|</td>
-		</tr>
-		<tr><td class=list2>|LANG_CURRENT_PASSWORD|:</td><td class=list2 colspan=2><input type=password name=passwd size=16></td></tr>
-		<tr><td class=listtitle colspan=3 align=right>
-			<input type=submit name=create value="|LANG_CREATE|">
-		</td></tr>
-	</form>
-</table>
+						<tr><td class=list>|LANG_ALLOW_HTM|:</td><td class=list colspan=2><input type=checkbox name="allow_htm" value="yes"> |LANG_ALLOW_HTM_EXPLANATION|</td></tr>
 
-|LANG_LOGIN_KEYS_RULES|
-<br><br>
-|LANG_ALL_USER_WARNING|
+						<tr><td class=list2 valign=top>|LANG_COMMANDS|:</td>
+							<td class=list2 colspan=2>
+								<div style="overflow: auto; height: 350px; width: 640px;">
+									<table cellpadding=0 cellspacing=0 width=100%>
+										<tr>
+											<td>|ALLOW_COMMANDS|</td>
+											<td>|DENY_COMMANDS|</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr><td class=list valign=top>|LANG_ALLOWED_IPS|:</td>
+							<td class=list valign=top width=220>
+								<textarea name=ips cols=30 rows=3></textarea>
+							</td>
+							<td class=list valign=top>|LANG_IPS_EXPLANATION|</td>
+						</tr>
+						<tr><td class=list2>|LANG_CURRENT_PASSWORD|:</td><td class=list2 colspan=2><input type=password name=passwd size=16></td></tr>
+						<tr><td class=listtitle colspan=3 align=right>
+							<input type=submit name=create value="|LANG_CREATE|">
+						</td></tr>
+					</form>
+				</table>
+			</div> <!-- fin table -->
+		</div> <!-- fin content -->
 
-|HTM_FOOTER_FULL|
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+			
+		<!-- generales -->
+		<div class="bcpbp-generales">
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_LOGIN_KEYS_RULES|</p>
+			</div><!-- fin texto -->
+
+			<!-- texto -->
+			<div class="bcpbpt-texto">
+				<p>|LANG_ALL_USER_WARNING|</p>
+			</div><!-- fin texto -->
+
+		</div><!-- fin generales -->
+
+		<!-- fin contenido bloque -->
+
+	</div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|
+
