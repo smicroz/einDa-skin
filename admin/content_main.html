@@ -458,18 +458,44 @@ function trimit(strobj)
 		</div>
 		<!-- fin items -->
 
-		|PLUGIN_0_ADMIN_TXT|<br>
-		|PLUGIN_1_ADMIN_TXT|<br>
-		|PLUGIN_2_ADMIN_TXT|<br>
-		|PLUGIN_3_ADMIN_TXT|<br>
-		|PLUGIN_4_ADMIN_TXT|<br>
-		|PLUGIN_5_ADMIN_TXT|<br>
-		|PLUGIN_6_ADMIN_TXT|<br>
-		|PLUGIN_7_ADMIN_TXT|<br>
-		|PLUGIN_8_ADMIN_TXT|<br>
-		|PLUGIN_9_ADMIN_TXT|<br>
-
-
+|?PLUGINS=`PLUGIN_0_ADMIN_TXT``PLUGIN_1_ADMIN_TXT``PLUGIN_2_ADMIN_TXT``PLUGIN_3_ADMIN_TXT``PLUGIN_4_ADMIN_TXT``PLUGIN_5_ADMIN_TXT``PLUGIN_6_ADMIN_TXT``PLUGIN_7_ADMIN_TXT``PLUGIN_8_ADMIN_TXT``PLUGIN_9_ADMIN_TXT`|
+|*if PLUGINS!=""|
+                <div class="bcpbp-titulo">
+                        <h2>|LANG_H2_PLUGINS|</h2>
+                </div>
+|*endif|
+		<div class="bcpbp-navitem plugins">
+|*if PLUGIN_0_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_0_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_1_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_1_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_2_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_2_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_3_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_3_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_4_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_4_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_5_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_5_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_6_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_6_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_7_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_7_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_8_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_8_ADMIN_TXT|</div>
+|*endif|
+|*if PLUGIN_9_ADMIN_TXT!=""|
+			<div class="box-items">|PLUGIN_9_ADMIN_TXT|</div>
+|*endif|
+		</div><!-- fin plugins bloque -->
 		<!-- fin contenido bloque -->
 
 	</div> <!-- fin padding -->
