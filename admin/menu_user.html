@@ -99,9 +99,11 @@
 
 				<div class="lc-content--datos">
 					<h5>Current domain</h5>
-					<p>
-						<a href="http://|DOMAIN|">|DOMAIN|</a>
-					</p>
+|*if DOMAIN=""|
+					<p>None</p>
+|*else|
+					|ALL_DOMAINS_SELECT|
+|*endif|
 				</div>
 
 				<h4>Disk Space</h4>
