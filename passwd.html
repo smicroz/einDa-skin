@@ -1,0 +1,86 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/HTM_PASSWD">`LANG_CHANGE_YOUR_PASS`</a>|
+|?HELP_SECTION=`USER_HELPER`/gettingstarted.html#password|
+|HTM_USER_TOP|
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+		<form action="CMD_PASSWD" method="post">
+
+			<!-- titulo -->
+			<div class="bcpbp-titulo">
+				<h2>|LANG_CHANGE_YOUR_PASS|</h2>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="oldPass">|LANG_ENTER_OLD_PASS|</label>
+				<div class="form-datos">
+					<input type="password" name="oldpass" placeholder="Old password" />
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="newPass">|LANG_ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type="password" name="passwd" placeholder="New password">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<label for="repeatPass">|LANG_RE-ENTER_PASS|</label>
+				<div class="form-datos">
+					<input type="password" name="passwd2" placeholder="Repeat new password">
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<div class="form-datos">
+					<input type=checkbox name="system" value="yes" checked />
+					|LANG_PASS_DA|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<div class="form-datos">
+					<input type=checkbox name="ftp" value="yes" checked />
+					|LANG_PASS_FTP|
+				</div>
+			</div>
+
+			<div class="bcpbp-form">
+				<div class="form-datos">
+					<input type=checkbox name="database" value="yes" checked />
+					|LANG_PASS_DB|
+				</div>
+			</div>
+
+			<!-- contenedor para boton submit -->
+			<div class="bcpbp-form--submit">
+				<input type=submit value="|LANG_SUBMIT|">
+			</div> <!-- fin contenedor para boton submit -->
+
+		</form>
+
+		<!-- link footer -->
+			<div class="bcpbp-link--footer">
+				<div class="bcpbplf-izq">
+					<!-- end subtitulo -->
+					|*if HAVE_SECURITY_QUESTIONS="yes"|
+
+					<a href="CMD_SECURITY_QUESTIONS">Manage Security Questions</a>
+					|*endif|
+					<!-- fin contenido bloque -->
+				</div>
+
+				<div class="bcpbplf-der">
+					test
+				</div>
+			</div>
+		<!-- fin link footer -->
+
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+|HTM_USER_BOTTOM|
