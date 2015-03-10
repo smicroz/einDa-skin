@@ -14,14 +14,9 @@
 14=No text provided
 15=Unable to find CA certificate
 16=CA Certificate is Invalid
-17=Unable to open certificate file (%s)to write to: %s
+17=Unable to open certificate file to write to
 18=Unable to find certificate
 19=Certificate is Invalid
 20=Unable to find key
 21=Key is Invalid
 22=The certificate and key do not match.  Please ensure you are using the correct key with this certificate
-23=Your old %s-bit key has been backed up to %s
-24=Newly installed key is %s-bit
-25=This domain will now temporarily use the Shared Server Certificate, unless you restore the backup key (but backup the new key first or it will become lost)
-26=Unable to open ca certificate file (%s)to write to: %s
-27=NOTE: You are using the server IP, so your CA Root Certificate has been saved to

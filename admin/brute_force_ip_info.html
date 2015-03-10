@@ -3,27 +3,87 @@
 |?HELP_SECTION=`ADMIN_HELPER`|
 |HTM_ADMIN_TOP|
 
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-<b>|LANG_IP_INFO|</b> |LANG_ON| |BLOCK_IP|<br>
+    <!-- inicio contenido bloque -->
 
-<textarea cols=125 rows=30 readonly>|IPINFO|</textarea>
-<br><br>
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_IP_INFO| |LANG_ON| |BLOCK_IP|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <div class="bcpbp-resp">
+
+      <textarea cols=125 rows=30 readonly>|IPINFO|</textarea>
+
+    </div>
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 
 |*if HAVE_BLOCK_SH="1"|
-<table class=list cellpadding=3 cellspacing=1>
-<form name=blockform action='?' method='POST'>
-	<input type='hidden' name='ip' value='|BLOCK_IP|'>
-	<input type='hidden' name='action' value='block'>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-<tr><td class=listtitle>|LANG_SCRIPT_FOUND|</td></tr>
-<tr><td class=list align=center>
-	<input type='button' value='|LANG_BLOCK_THIS_IP|' onclick="if (confirm('|LANG_ARE_YOU_SURE_IP| |BLOCK_IP|')){document.blockform.submit();}">
-</td></tr></tr>
-</form>
-</table>
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Custom/block_ip.sh</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+		<table class=list cellpadding=3 cellspacing=1>
+			<form name=blockform action='?' method='POST'>
+				<input type='hidden' name='ip' value='|BLOCK_IP|'>
+				<input type='hidden' name='action' value='block'>
+
+			<tr><td class=listtitle>|LANG_SCRIPT_FOUND|</td></tr>
+			<tr><td class=list align=center>
+				<input type='button' value='|LANG_BLOCK_THIS_IP|' onclick="if (confirm('|LANG_ARE_YOU_SURE_IP| |BLOCK_IP|')){document.blockform.submit();}">
+			</td></tr></tr>
+			</form>
+		</table>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
 |*else|
-|LANG_NO_SCRIPT_FOUND|
-<a target=_blank href="http://www.directadmin.com/features.php?id=1229">http://www.directadmin.com/features.php?id=1229</a>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>|LANG_NO_SCRIPT_FOUND|
+		<a target=_blank href="http://www.directadmin.com/features.php?id=1229">http://www.directadmin.com/features.php?id=1229</a></p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 |*endif|
 
 |HTM_ADMIN_BOTTOM|
