@@ -31,18 +31,6 @@
       </div>
   	</div>
 
-    <!-- subtitulo link -->
-    <div class="bcpbp-subtitulo--link">
-      <div class="bcpbpsl-izq">
-        test
-      </div>
-
-      <div class="bcpbpsl-der">
-        test
-      </div>
-    </div>
-    <!-- end subtitulo -->
-
     <!-- inicio content -->
     <div class="bcpbp-content">
       <!-- table -->
@@ -90,8 +78,32 @@
   </div> <!-- fin padding -->
 </div> <!-- fin bloque -->
 
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-|LOGINFAILURES|
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Login failures</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+      	|LOGINFAILURES|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
 
 <script language="Javascript">
 <!--
@@ -140,18 +152,40 @@ function validate_seek()
 </div> <!-- fin bloque -->
 
 |*if HAVE_SHOW_BLOCKED_IPS_SH="1"|
-<form name=tableform5 action='CMD_BRUTE_FORCE_MONITOR' method=POST>
-<input type=hidden name=action value="unblock">
-<b>|LANG_BLOCKED_IPS|</b>
-<div id="blockedipsdiv" style="overflow: auto; height: 450px; width: 300px; border: 1px solid grey;">
-|BLOCKED_IPS|
-</div>
-|*endif|
-|*if HAVE_UNBLOCK_SH="1"|
-<table id="blockbuttontable" class=list style='width: 50%' cellpadding=3 cellspacing=1>
-<tr><td class=listtitle align='right' colspan='5'> <input type='submit' value='|LANG_UNBLOCK|' name=unblock></td ></tr>
-</table>
-</form>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_BLOCKED_IPS|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+		<form name=tableform5 action='CMD_BRUTE_FORCE_MONITOR' method=POST>
+		<input type=hidden name=action value="unblock">
+		<div id="blockedipsdiv" style="overflow: auto; height: 450px; width: 300px; border: 1px solid grey;">
+		|BLOCKED_IPS|
+		</div>
+		|*endif|
+		|*if HAVE_UNBLOCK_SH="1"|
+		<table id="blockbuttontable" class=list style='width: 50%' cellpadding=3 cellspacing=1>
+		<tr><td class=listtitle align='right' colspan='5'> <input type='submit' value='|LANG_UNBLOCK|' name=unblock></td ></tr>
+		</table>
+		</form>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 |*endif|
 |*if HAVE_SHOW_BLOCKED_IPS_SH="1"|
 <script type="text/javascript">
@@ -177,19 +211,48 @@ sizeTheDiv();
 </script>
 |*endif|
 
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-<br>
-|*if IP_LIMIT="0"|
-|LANG_IP_ZERO|
-|*else|
-|LANG_IP_VALUE|
-|*endif|<br>
+    <!-- inicio contenido bloque -->
 
-|*if USER_LIMIT="0"|
-|LANG_USER_ZERO|
-|*else|
-|LANG_USER_VALUE|
-|*endif|<br>
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Bloque texto</h2>
+    </div>
+    <!-- fin titulo -->
 
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>
+	        |*if IP_LIMIT="0"|
+			|LANG_IP_ZERO|
+			|*else|
+			|LANG_IP_VALUE|
+			|*endif|
+		</p>
+      </div><!-- fin texto -->
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>
+	        |*if USER_LIMIT="0"|
+			|LANG_USER_ZERO|
+			|*else|
+			|LANG_USER_VALUE|
+			|*endif|
+		</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 
 |HTM_ADMIN_BOTTOM|
