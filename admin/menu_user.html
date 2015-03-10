@@ -105,10 +105,14 @@
 
 	        <div class="lc-content">
 	        	<div class="lc-content--datos">
-                  <p>
-                  	<a href="http://|DOMAIN|">|DOMAIN|</a>
-                  </p>
-                </div>
+				<p>
+|*if DOMAIN=""|
+					None
+|*else|
+					|ALL_DOMAINS_SELECT|
+|*endif|
+				</p>
+	                </div>
 	        </div>
 
 			<div class="lc-titulo">
@@ -116,16 +120,6 @@
 	        	<h3>Stats</h3>
 	        </div> 	        
 			<div class="lc-content">
-
-				<div class="lc-content--datos">
-					<h5>Current domain</h5>
-|*if DOMAIN=""|
-					<p>None</p>
-|*else|
-					|ALL_DOMAINS_SELECT|
-|*endif|
-				</div>
-
 				<h4>Disk Space</h4>
 				<div class="lc-content--bar">
 					<div class="bar">

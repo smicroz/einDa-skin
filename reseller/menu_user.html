@@ -94,31 +94,26 @@
 			</div>
 
 			<div class="lc-titulo">
-				<span class="icon-poll"></span>
+				<span class="icon-info"></span>
             	<h3>Current domain</h3>
           	</div> 
 	        <div class="lc-content">
 	        	<div class="lc-content--datos">
-	        		<p>
-	        			<a href="http://|DOMAIN|">|DOMAIN|</a>
-	          		</p>
+				<p>
+|*if DOMAIN=""|
+					None
+|*else|
+					|ALL_DOMAINS_SELECT|
+|*endif|
+				</p>
 	        	</div>
 	        </div> 
 
 			<div class="lc-titulo">
-				<span class="icon-line-chart"></span>
+				<span class="icon-poll"></span>
             	<h3>Stats</h3>
           	</div> 
 			<div class="lc-content">
-
-				<div class="lc-content--datos">
-					<h5>Current domain</h5>
-|*if DOMAIN=""|
-					<p>None</p>
-|*else|
-					|ALL_DOMAINS_SELECT|
-|*endif|
-				</div>
 
 				<h4>Disk Space</h4>
 				<div class="lc-content--bar">
