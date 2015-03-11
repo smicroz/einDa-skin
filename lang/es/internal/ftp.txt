@@ -25,9 +25,3 @@
 25=Cannot restore the ftp account for %s.  You have reached your limit (%s).
 26=Script output
 27=Unable to get lock on %s
-28=That user contains the ftp separator (%c) which cannot be in the username.
-29=Suspend
-30=Unsuspend
-31=Suspended
-32=Yes
-33=No

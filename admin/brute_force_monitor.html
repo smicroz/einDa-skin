@@ -11,48 +11,99 @@
 <br><br>
 |*endif|
 
-<b>|LANG_FAILED_LOGINS|</b> - |LANG_CLICK_IP_TO_FILTER|
 
 
-<form name=tableform action='CMD_BRUTE_FORCE_MONITOR' method=POST>
-<input type=hidden name=action value="skiplist">
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-|?HEIGHT=150px|
-|*if NUM_IPS>"4"|
-|?HEIGHT=250px|
-|*endif|
-<table cellpadding=0 cellspacing=0 style="border: 1px solid grey;">
-<tr><td>
-        <div style="overflow: auto; height: |HEIGHT|; width: 1060px;">
-        <table cellpadding=0 cellspacing=0>
-        <tr><td valign=top>
-        |IPLOGINFAILURES|
-        </td>
-        <td width=30%>&nbsp;</td>
-        <td valign=top>
-        |USERLOGINFAILURES|
-        </td></tr></table>
-        </div>
-</td></tr>
+    <!-- inicio contenido bloque -->
 
-<tr><td colspan=3 class=listtitle align=center>
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Brute force monitor</h2>
+    </div>
+    <!-- fin titulo -->
 
-|*if HAVE_BLOCK_SH="1"|
-<input type='button' value='|LANG_BLOCK_IPS|' onclick="if (confirm('|LANG_ARE_YOU_SURE_BLOCK|')){document.tableform.action.value = 'block_ips';document.tableform.submit();}">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|*endif|
-<input type=text name="skip_value" placeholder="|LANG_OPTIONAL_IP|" title="|LANG_OPTIONAL_IP|" size=24><a target=_blank class=listtitle href="http://www.directadmin.com/features.php?id=1252">?</a>
-<input type=submit value="|LANG_ADD_TO_SKIP|"> |LANG_COMMENTS|:<input type=text name=comments size=32>
-</td></tr>
-</form>
-</table>
-|*if sort1dir|
-<a href='?sort1=-1'>|LANG_CLEAR_SEARCH_FILTER|</a>
-|*endif|
+    <div class="bcpbp-generales">
+      <div class="alerta alerta-success">
+        <b>|LANG_FAILED_LOGINS|</b> - |LANG_CLICK_IP_TO_FILTER|
+      </div>
+  	</div>
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+			<form name=tableform action='CMD_BRUTE_FORCE_MONITOR' method=POST>
+			<input type=hidden name=action value="skiplist">
+
+			|?HEIGHT=150px|
+			|*if NUM_IPS>"4"|
+			|?HEIGHT=250px|
+			|*endif|
+			<table cellpadding=0 cellspacing=0 style="border: 1px solid grey;">
+			<tr><td>
+			        <div style="overflow: auto; height: |HEIGHT|;">
+			        <table cellpadding=0 cellspacing=0>
+			        <tr><td valign=top>
+			        |IPLOGINFAILURES|
+			        </td>
+			        <td width=30%>&nbsp;</td>
+			        <td valign=top>
+			        |USERLOGINFAILURES|
+			        </td></tr></table>
+			        </div>
+			</td></tr>
+
+			<tr><td colspan=3 class=listtitle align=center>
+
+			|*if HAVE_BLOCK_SH="1"|
+			<input type='button' value='|LANG_BLOCK_IPS|' onclick="if (confirm('|LANG_ARE_YOU_SURE_BLOCK|')){document.tableform.action.value = 'block_ips';document.tableform.submit();}">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			|*endif|
+			<input type=text name="skip_value" placeholder="|LANG_OPTIONAL_IP|" title="|LANG_OPTIONAL_IP|" size=24><a target=_blank class=listtitle href="http://www.directadmin.com/features.php?id=1252">?</a>
+			<input type=submit value="|LANG_ADD_TO_SKIP|"> |LANG_COMMENTS|:<input type=text name=comments size=32>
+			</td></tr>
+			</form>
+			</table>
+			|*if sort1dir|
+			<a href='?sort1=-1'>|LANG_CLEAR_SEARCH_FILTER|</a>
+			|*endif|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>Login failures</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+      	|LOGINFAILURES|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 
 
-
-|LOGINFAILURES|
 
 <script language="Javascript">
 <!--
@@ -67,32 +118,92 @@ function validate_seek()
 }
 //-->
 </script>
-<form onsubmit="return validate_seek();">
-<input type=hidden name="sort1" value="-1">
-|LANG_BLE_IS| |BRUTE_LOG_SIZE|. &nbsp;&nbsp;
-|LANG_ONLY_READ| <input size=6 type=text placeholder="|LANG_ZERO_OR_NEG|" title="|LANG_ZERO_OR_NEG|" id="seek_value" name="seek_value" value="|*if seek_value||seek_value||*else|0|*endif|" onchange="if (!validate_seek()) { this.value=0; } else { location.href='CMD_BRUTE_FORCE_MONITOR?sort1=-1&seek_value='+this.value; }"> |LANG_BYTES_FROM_THE_END|</form>
-<br>
-<hr width=50%>
 
-<br>
-<b>|LANG_SKIP_LIST|</b>
-|SKIPLIST|
+ <!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
+    <!-- inicio contenido bloque -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+		<form onsubmit="return validate_seek();">
+		<input type=hidden name="sort1" value="-1">
+		|LANG_BLE_IS| |BRUTE_LOG_SIZE|. &nbsp;&nbsp;
+		|LANG_ONLY_READ| <input size=6 type=text placeholder="|LANG_ZERO_OR_NEG|" title="|LANG_ZERO_OR_NEG|" id="seek_value" name="seek_value" value="|*if seek_value||seek_value||*else|0|*endif|" onchange="if (!validate_seek()) { this.value=0; } else { location.href='CMD_BRUTE_FORCE_MONITOR?sort1=-1&seek_value='+this.value; }"> |LANG_BYTES_FROM_THE_END|</form>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_SKIP_LIST|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+      	|SKIPLIST|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 
 |*if HAVE_SHOW_BLOCKED_IPS_SH="1"|
-<br>
-<form name=tableform5 action='CMD_BRUTE_FORCE_MONITOR' method=POST>
-<input type=hidden name=action value="unblock">
-<b>|LANG_BLOCKED_IPS|</b>
-<div id="blockedipsdiv" style="overflow: auto; height: 450px; width: 300px; border: 1px solid grey;">
-|BLOCKED_IPS|
-</div>
-|*endif|
-|*if HAVE_UNBLOCK_SH="1"|
-<table id="blockbuttontable" class=list style='width: 50%' cellpadding=3 cellspacing=1>
-<tr><td class=listtitle align='right' colspan='5'> <input type='submit' value='|LANG_UNBLOCK|' name=unblock></td ></tr>
-</table>
-</form>
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_BLOCKED_IPS|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+		<form name=tableform5 action='CMD_BRUTE_FORCE_MONITOR' method=POST>
+		<input type=hidden name=action value="unblock">
+		<div id="blockedipsdiv" style="overflow: auto; height: 450px; width: 300px; border: 1px solid grey;">
+		|BLOCKED_IPS|
+		</div>
+		|*endif|
+		|*if HAVE_UNBLOCK_SH="1"|
+		<table id="blockbuttontable" class=list style='width: 50%' cellpadding=3 cellspacing=1>
+		<tr><td class=listtitle align='right' colspan='5'> <input type='submit' value='|LANG_UNBLOCK|' name=unblock></td ></tr>
+		</table>
+		</form>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 |*endif|
 |*if HAVE_SHOW_BLOCKED_IPS_SH="1"|
 <script type="text/javascript">
@@ -118,19 +229,42 @@ sizeTheDiv();
 </script>
 |*endif|
 
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
 
-<br>
-|*if IP_LIMIT="0"|
-|LANG_IP_ZERO|
-|*else|
-|LANG_IP_VALUE|
-|*endif|<br>
+    <!-- inicio contenido bloque -->
 
-|*if USER_LIMIT="0"|
-|LANG_USER_ZERO|
-|*else|
-|LANG_USER_VALUE|
-|*endif|<br>
+    <!-- generales -->
+    <div class="bcpbp-generales">
 
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>
+	        |*if IP_LIMIT="0"|
+			|LANG_IP_ZERO|
+			|*else|
+			|LANG_IP_VALUE|
+			|*endif|
+		</p>
+      </div><!-- fin texto -->
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>
+	        |*if USER_LIMIT="0"|
+			|LANG_USER_ZERO|
+			|*else|
+			|LANG_USER_VALUE|
+			|*endif|
+		</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
 
 |HTM_ADMIN_BOTTOM|
