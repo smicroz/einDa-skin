@@ -76,19 +76,80 @@ function showUserMessage()
 		<!-- fin titulo -->
 
 		<!-- items -->
-		<div class="bcpbp-navitem" ng-controller="gestorItems">
+		<div class="bcpbp-navitem">
 
 			<!-- icono -->
-			<div class="box-items" ng-repeat="item in itemsMain | filter: 'accountManagement' ">
-				<a href="{{item.url}}">
+			<div class="box-items">
+				<a href="/HTM_ACCOUNT_USER_CREATE">
+					<div class="item-icono">
+						<span class="icon-person-add"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_ADD_NEW_USER|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_USER_SHOW">
+					<div class="item-icono">
+						<span class="icon-people"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_LIST_USERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_TICKET_MANAGE">
+					<div class="item-icono">
+						<span class="icon-forum"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_MANAGE_TICKETS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_SHOW_USER_PACKAGE">
+					<div class="item-icono">
+						<span class="icon-my-library-add"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_ADD_PACKAGE|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_MANAGE_USER_PACKAGES">
 					<div class="item-icono">
 						{{item.iniciales}}
 					</div>
 					<div class="item-titulo">
-						{{item.nombre}}
+						|LANG_LIST_PACKAGES|
 					</div>
 				</a>
 			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="javascript:showUserMessage();">
+					<div class="item-icono">
+						{<span class="icon-message"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_EDIT_USER_MESS|
+					</div>
+				</a>
+			</div>
+
 
 		</div> <!-- fin navitems -->
 
@@ -110,16 +171,64 @@ function showUserMessage()
 		<!-- fin titulo -->
 
 		<!-- items -->
-		<div class="bcpbp-navitem" ng-controller="gestorItems">
-
+		<div class="bcpbp-navitem">
+			
 			<!-- icono -->
-			<div class="box-items" ng-repeat="item in itemsMain | filter: 'resellerTools' ">
-				<a href="{{item.url}}">
+			<div class="box-items">
+				<a href="/HTM_USER_PASSWD">
 					<div class="item-icono">
-						{{item.iniciales}}
+						<span class="icon-vpn-key"></span>
 					</div>
 					<div class="item-titulo">
-						{{item.nombre}}
+						|LANG_CHANGE_PASSWORDS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_RESELLER_STATS">
+					<div class="item-icono">
+						<span class="icon-insert-chart"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_RESELLER_STATS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_IP_CONFIG">
+					<div class="item-icono">
+						<span class="icon-settings-ethernet"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_IP_MANAGER|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_SKINS">
+					<div class="item-icono">
+						<span class="icon-picture-in-picture"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_SKIN_MANAGER|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_USER_BACKUP">
+					<div class="item-icono">
+						<span class="icon-backup"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_USER_BACKUPS|
 					</div>
 				</a>
 			</div>
@@ -144,16 +253,52 @@ function showUserMessage()
 		<!-- fin titulo -->
 
 		<!-- items -->
-		<div class="bcpbp-navitem" ng-controller="gestorItems">
+		<div class="bcpbp-navitem">
 
 			<!-- icono -->
-			<div class="box-items" ng-repeat="item in itemsMain | filter: 'extraFeatures' ">
-				<a href="{{item.url}}">
+			<div class="box-items">
+				<a href="/CMD_SYSTEM_INFO">
 					<div class="item-icono">
-						{{item.iniciales}}
+						<span class="icon-info-outline"></span>
 					</div>
 					<div class="item-titulo">
-						{{item.nombre}}
+						|LANG_SYSTEM_INFO|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_NAME_SERVER">
+					<div class="item-icono">
+						<span class="icon-dns"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_NAMESERVERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_TICKET_CREATE?TYPE=Message&amp;who=all">
+					<div class="item-icono">
+						<span class="icon-message"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_MESSSAGE_ALL_USERS|
+					</div>
+				</a>
+			</div>
+
+			<!-- icono -->
+			<div class="box-items">
+				<a href="/CMD_TICKET_CREATE?TYPE=Ticket">
+					<div class="item-icono">
+						<span class="icon-supervisor-account"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_CONTACT_ADMIN|
 					</div>
 				</a>
 			</div>
@@ -164,29 +309,3 @@ function showUserMessage()
 
 	</div> <!-- fin padding -->
 </div> <!-- fin bloque -->
-<script>
-
-	/* idioma */
-
-	// account Management
-	var am_add_new_user = "|LANG_ADD_NEW_USER|"
-	var am_list_users = "|LANG_LIST_USERS|"
-	var am_manage_tickets = "|LANG_MANAGE_TICKETS|"
-	var am_add_package = "|LANG_ADD_PACKAGE|"
-	var am_list_packages = "|LANG_LIST_PACKAGES|"
-	var am_edit_user_msg = "|LANG_EDIT_USER_MESS|"
-
-	// reseller tools
-	var rt_change_pass = "|LANG_CHANGE_PASSWORDS|"
-	var rt_reseller_stats = "|LANG_RESELLER_STATS|"
-	var rt_ip_manager = "|LANG_IP_MANAGER|"
-	var rt_skin_manager = "|LANG_SKIN_MANAGER|"
-	var rt_user_backups = "|LANG_USER_BACKUPS|"
-
-	// extra features
-	var ef_sys_info = "|LANG_SYSTEM_INFO|"
-	var ef_namerservers = "|LANG_NAMESERVERS|"
-	var ef_msg_all_users = "|LANG_MESSSAGE_ALL_USERS|"
-	var ef_contact_admin = "|LANG_CONTACT_ADMIN|"
-
-</script>
