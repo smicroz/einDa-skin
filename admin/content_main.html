@@ -190,7 +190,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_IP_MANAGER">
 					<div class="item-icono">
-						<span class="icon-computer"></span>
+						<span class="icon-settings-ethernet"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_IP_MANAGEMENT|
@@ -229,7 +229,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_MULTI_SERVER">
 					<div class="item-icono">
-						<span class="icon-desktop-windows"></span>
+						<span class="icon-settings-applications"></span>						
 					</div>
 					<div class="item-titulo">
 						|LANG_MULTI_SERVER|
@@ -325,7 +325,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_PROCESS_MONITOR?sort1=|PMSORT|">
 					<div class="item-icono">
-						<span class="icon-settings-applications"></span>
+						<span class="icon-desktop-windows"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_PROCESS_MONITOR|
@@ -361,7 +361,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_ADMIN_STATS">
 					<div class="item-icono">
-						<span class="icon-trending-up"></span>
+						<span class="icon-data-usage"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_COMPLETE_USAGE_STATS|
@@ -458,23 +458,179 @@ function trimit(strobj)
 		</div>
 		<!-- fin items -->
 
-		|PLUGIN_0_ADMIN_TXT|<br>
-		|PLUGIN_1_ADMIN_TXT|<br>
-		|PLUGIN_2_ADMIN_TXT|<br>
-		|PLUGIN_3_ADMIN_TXT|<br>
-		|PLUGIN_4_ADMIN_TXT|<br>
-		|PLUGIN_5_ADMIN_TXT|<br>
-		|PLUGIN_6_ADMIN_TXT|<br>
-		|PLUGIN_7_ADMIN_TXT|<br>
-		|PLUGIN_8_ADMIN_TXT|<br>
-		|PLUGIN_9_ADMIN_TXT|<br>
+		<!-- fin contenido bloque -->
 
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+|?PLUGINS=`PLUGIN_0_ADMIN_TXT``PLUGIN_1_ADMIN_TXT``PLUGIN_2_ADMIN_TXT``PLUGIN_3_ADMIN_TXT``PLUGIN_4_ADMIN_TXT``PLUGIN_5_ADMIN_TXT``PLUGIN_6_ADMIN_TXT``PLUGIN_7_ADMIN_TXT``PLUGIN_8_ADMIN_TXT``PLUGIN_9_ADMIN_TXT`|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		|*if PLUGINS!=""|
+		<div class="bcpbp-titulo">
+			<h2>|LANG_H2_PLUGINS|</h2>
+		</div>
+		|*endif|
+
+		<!-- items -->
+        <div class="bcpbp-navitem">
+
+          <!-- icono -->
+          |*if PLUGIN_0_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_0_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_1_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_1_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_2_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_2_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_3_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_3_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_4_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_4_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_5_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_5_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_6_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_6_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_7_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_7_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_8_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_8_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+ 
+          <!-- icono -->
+          |*if PLUGIN_9_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_9_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+        </div> <!-- fin navitems -->
 
 		<!-- fin contenido bloque -->
 
 	</div> <!-- fin padding -->
 </div>
 <!-- fin bloque -->
+
 
 |*if AJAX="1"|
 <script type="text/javascript">

@@ -11,7 +11,7 @@ The skin is a “mobile-first” design, because the users use them as main plat
 Instruction for install (git required)
 ==========
 * Download and execute installer
-  * # wget http://goo.gl/b1FlA8 -O install
+  * # wget http://git.io/ppxV -O install
   * # bash install
 * Enable skin
   * As reseller, go to the skin manager
