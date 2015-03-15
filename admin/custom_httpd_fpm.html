@@ -61,9 +61,20 @@
 <tr><td class=list colspan=2><span class=expand_toggle_plus id=tokens_toggle onclick="toggle_expand('tokens_toggle', 'tokens_visibility');">+</span> |LANG_AVAIL_TOKENS|</td></tr>
 <tr id=tokens_visibility style="display: none;">
 	<td class=list align=center>
-		<textarea cols=120 rows=30 wrap=off readonly>|AVAILABLE_TOKENS|</textarea>
+		<textarea cols=160 rows=30 wrap=off readonly>|AVAILABLE_TOKENS|</textarea>
 	</td>
 </tr>
+
+
+<tr><td class=list2 colspan=2><span class=expand_toggle_plus id=templates_toggle onclick="toggle_expand('templates_toggle', 'templates_visibility');">+</span> |PHP_FPM_TEMPLATE_NAME| |*if PHP_FPM_IS_CUSTOM_TEMPLATE="1"|<a href="CMD_TEMPLATE_DIFF?name=|PHP_FPM_TEMPLATE_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+<tr id=templates_visibility style="display: none;">
+	<td class=list>
+		<textarea class="code_edit" cols=160 rows=35 wrap=off readonly>|PHP_FPM_TEMPLATE|</textarea>
+	</td>
+</tr>
+
+
+
 <form>
 </table>
 </div> <!-- fin table -->
