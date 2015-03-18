@@ -267,7 +267,7 @@ trigger_toggle();
 
 		<!-- titulo -->
 		<div class="bcpbp-titulo">
-			<h2>|LANG_H2_NGINX|</h2>
+			<h2>|*if HAVE_NGINX="yes"||LANG_H2_NGINX||*else||LANG_H2_HTTPD||*endif|</h2>
 		</div>
 		<!-- table -->
 		<div class="box-da-table">
