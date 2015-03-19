@@ -5,8 +5,7 @@ This is a free skin that you can use freely and even can modify it if you consid
 
 It’s the first version, so it may have bugs.
 
-The skin is a “mobile-first” design, because the users use them as main platform.  However, I haven’t neglected the desktop skin quality.
-
+Version: 0.2
 
 Instruction for install (git required)
 ==========
