@@ -7,7 +7,7 @@ function pause(){
 }
 
 function welcome(){
-  echo -e "Welcome to installer of einDa skin to DA"
+  echo -e "Welcome to einDa-skin installer."
 }
 
 function bar(){
@@ -16,11 +16,12 @@ function bar(){
 
 function end(){
   bar
-  echo "Congratulations, new skin was installed"
+  echo "Congratulations!!, einDa-skin was installed"
+  bar
   echo "Now go to http://yourdomain:2222 and"
-  echo "1. Join admin account"
-  echo "2. Join to skin section"
-  echo "3. Select einDa-skin and apply to me"
+  echo "1 | Join admin account"
+  echo "2 | Join to skin section"
+  echo "3 | Select einDa-skin and apply to me"
   bar
   echo "Thanks for using einDa skin"
   bar
@@ -31,7 +32,7 @@ function join-folder(){
 }
 
 function install(){
-  echo "installing..."
+  echo "Installing..."
   git clone https://github.com/smicroz/einDa-skin.git
   chown -R diradmin:diradmin einDa-skin/
 }
@@ -48,7 +49,7 @@ directory=einDa-skin
 
 if [ -d "$directory" ]; then
   echo "The directory einDa-skin already exists"
-  echo "If you want install skin, the installer will remove folder."
+  echo "If you want update skin, the installer will remove folder."
   pause 'If you agree, press [Enter] key for continue...'
   rm -rf $directory/
   install
