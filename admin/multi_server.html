@@ -17,7 +17,6 @@
 
 		<form action="/CMD_MULTI_SERVER" method="POST">
 			<input type=hidden name=action value="onoff">
-
 			|*if CLUSTER_ON="yes"|
 
 			<div class="bcpbp-form"> <!-- vacio -->
@@ -37,10 +36,9 @@
 
 			<!-- contenedor para boton submit -->
 			<div class="bcpbp-form--submit">
-				<input type=submit name=on value="|LANG_TURN_ON|">
-				|*endif|
+				<input type=submit name=on value="|LANG_TURN_ON|">				
 			</div> <!-- fin contenedor para boton submit -->
-
+			|*endif|
 		</form>
 
 		<!-- fin contenido bloque -->
@@ -92,7 +90,7 @@
 						<td class=list>|LANG_USERNAME|: <input type=text name=user size=8></td>
 						<td class=list>|LANG_PASSWORD|: <input type=password name=passwd size=8></td>
 					</tr>
-					<tr><td class=listtitle align=right colspan=5><input type=submit value="|LANG_ADD|"></td></tr>
+					<tr><td class=listtitle align=right colspan=5><input type=submit value="|LANG_ADD|"><//td></tr>
 				</form>
 			</table>
 		</div> <!-- fin table -->
