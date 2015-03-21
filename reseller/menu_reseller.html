@@ -24,13 +24,13 @@
 
 				<ul class="ng-hide" ng-show="menu_boton_estado_perfil">
 					<li>
-						<a href="/HTM_PASSWD">Password</a>
+						<a href="/HTM_PASSWD">|SUB_MENU_PASSWORD|</a>
 					</li>
 					<li>
-						<a href="/CMD_TICKET?sort1=-1">Messages</a>
+						<a href="/CMD_TICKET?sort1=-1">|SUB_MENU_MESSAGES|</a>
 					</li>
 					<li>
-						<a href="/CMD_LOGOUT">Log out</a>
+						<a href="/CMD_LOGOUT">|SUB_MENU_LOGOUT|</a>
 					</li>
 				</ul>
 
@@ -48,7 +48,7 @@
 				<!-- boton nivel usuario -->
 				<label class="svf-boton" ng-click="menu_boton_nivel_usuario = !menu_boton_nivel_usuario">
 					<div class="svfb-nivel-usuario">
-						Reseller
+						|SUB_MENU_RESELLER|
 					</div>
 				</label>
 
@@ -56,10 +56,10 @@
 
 				<ul class="ng-hide" ng-show="menu_boton_nivel_usuario">
 					<li>
-						<a href="/HTM_INDEX_RESELLER">Reseller</a>
+						<a href="/HTM_INDEX_RESELLER">|SUB_MENU_RESELLER|</a>
 					</li>
 					<li>
-						<a href="/HTM_INDEX_USER">User</a>
+						<a href="/HTM_INDEX_USER">|SUB_MENU_USER|</a>
 					</li>
 				</ul>
 
@@ -79,27 +79,27 @@
 
 			<div class="lc-titulo">
 				<span class="icon-flash-on"></span>
-                <h3>Quick Links</h3>
+                <h3>|SUB_NAV_QUICK_LINKS|</h3>
             </div>  
 			<div class="lc-content">
 				<div class="lc-content--links">
 					<ul>
-						<li><a href="/|HOME_MEMORY|"><span>Home</span></a></li>
-						<li><a href="/CMD_FILE_MANAGER"><span>File Manager</span></a></li>
-						<li><a href="http://|HELP_SECTION|"><span>Help</span></a></li>
-						<li><a href="|HTTP|://|HOSTNAME|/phpmyadmin"><span>PhpMyAdmin</span></a></li>
-						<li><a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|"><span>Webmail</span></a></li>
+						<li><a href="/|HOME_MEMORY|"><span>|SUB_NAV_HOME|</span></a></li>
+						<li><a href="/CMD_FILE_MANAGER"><span>|SUB_NAV_FILE_MANAGER|</span></a></li>
+						<li><a href="http://|HELP_SECTION|"><span>|SUB_NAV_HELP|</span></a></li>
+						<li><a href="|HTTP|://|HOSTNAME|/phpmyadmin"><span>|SUB_NAV_PHPMYADMIN|</span></a></li>
+						<li><a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|"><span>|SUB_NAV_WEBMAIL|</span></a></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="lc-titulo">
 				<span class="icon-poll"></span>
-                <h3>Stats</h3>
+                <h3>|SUB_NAV_STATS|</h3>
             </div> 
 			<div class="lc-content">
 
-				<h4>Disk Space</h4>
+				<h4>|SUB_NAV_RESELLER_DISK_SPACE|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERQUOTAMAX|" value="|RESELLERQUOTA|"></progress>
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 
-				<h4>Bandwidth</h4>
+				<h4>|SUB_NAV_RESELLER_BANDWIDTH|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERBANDWIDTHMAXGIG|" value="|RESELLERBANDWIDTHGIG|"></progress>
@@ -119,7 +119,7 @@
 					</div>
 				</div>
 
-				<h4>Users</h4>
+				<h4>|SUB_NAV_RESELLER_USERS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="100" value="1"></progress>
@@ -129,7 +129,7 @@
 					</div>
 				</div>
 
-				<h4>Domains</h4>
+				<h4>|SUB_NAV_RESELLER_DOMAINS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERDOMAINSMAX|" value="|RESELLERDOMAINS|"></progress>
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 
-				<h4>Forwarder</h4>
+				<h4>|SUB_NAV_RESELLER_FORWARDER|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="100" value="1"></progress>
@@ -149,7 +149,7 @@
 					</div>
 				</div>
 
-				<h4>Autoresponder</h4>
+				<h4>|SUB_NAV_RESELLER_AUTORESPONDER|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERRESPONDERMAX|" value="|RESELLERRESPONDER|"></progress>
@@ -159,7 +159,7 @@
 					</div>
 				</div>
 
-				<h4>Mailing list</h4>
+				<h4>|SUB_NAV_RESELLER_MAILING_LIST|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERLISTMAX|" value="|RESELLERLIST|"></progress>
@@ -169,7 +169,7 @@
 					</div>
 				</div>
 
-				<h4>Email Accounts</h4>
+				<h4>|SUB_NAV_RESELLER_EMAIL_ACCOUNTS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="100" value="1"></progress>
@@ -179,7 +179,7 @@
 					</div>
 				</div>
 
-				<h4>Domain Pointer</h4>
+				<h4>|SUB_NAV_RESELLER_DOMAIN_POINTER|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERPOINTERSMAX|" value="|RESELLERPOINTERS|"></progress>
@@ -189,7 +189,7 @@
 					</div>
 				</div>
 
-				<h4>Database</h4>
+				<h4>|SUB_NAV_RESELLER_DATABASE|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="100" value="1"></progress>
@@ -199,7 +199,7 @@
 					</div>
 				</div>
 
-				<h4>FTP Accounts</h4>
+				<h4>|SUB_NAV_RESELLER_FTP_ACCOUNTS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERFTPMAX|" value="|RESELLERFTP|"></progress>
@@ -209,7 +209,7 @@
 					</div>
 				</div>
 
-				<h4>Email Accounts</h4>
+				<h4>|SUB_NAV_RESELLER_EMAIL_ACCOUNTS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLEREMAILMAX|" value="|RESELLEREMAIL|"></progress>
@@ -219,7 +219,7 @@
 					</div>
 				</div>
 
-				<h4>Sub Domains</h4>
+				<h4>|SUB_NAV_RESELLER_SUB_DOMAINS|</h4>
 				<div class="lc-content--bar">
 					<div class="bar">
 						<progress max="|RESELLERSUBDOMAINSMAX|" value="|RESELLERSUBDOMAINS|"></progress>
