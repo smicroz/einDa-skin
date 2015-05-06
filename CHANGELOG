@@ -11,3 +11,4 @@
 - Added 1.48 DA styles -> http://www.directadmin.com/features.php?id=1718
 - Minimal css changes
 	- removed uppercase of .lc-content h4
+	- removed border-bottom of input submit and button, and added transition effect
