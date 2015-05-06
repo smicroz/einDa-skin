@@ -7,11 +7,11 @@ It’s the first version, so it may have bugs.
 
 Version: 0.2
 
-![ScreenShot](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-1.png)
+![]((https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-1.png)
 
-![ScreenShot](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-2.png)
+![]((https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-2.png)
 
-![ScreenShot](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/mobile-1.png)
+![]((https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/mobile-1.png)
 
 
 Instruction for install (git required)
