@@ -4,58 +4,52 @@
 
 <nav class="sub-nav noselect">
 
-  <!-- perfil -->
+            <!-- perfil -->
 
-  <div class="sv-perfil" ng-show="controlPerfil">
-    <ul>
-      <li>
+            <div class="sv-boton--box sv-boton--right">
+              <ul>
+                <li>
 
-        <!-- boton mi nick -->
-        <label for="show" class="ep-boton" ng-click="menu_boton_estado_perfil = !menu_boton_estado_perfil">
-          <div class="epb-contenido">
-            <span>|USERNAME|</span>
-            |*if NEWMESSAGES!="0"|
-            <span class="comentarios-cantidad">|NEWMESSAGES|</span>|*endif|
+                  <!-- boton mi nick -->
 
-          </div>
-        </label>
+                  <label for="show" class="sv-boton" ng-click="perfil_status = !perfil_status">
+                    <div class="sv-boton--perfil">
+                      <span>|USERNAME|</span>
+                      |*if NEWMESSAGES!="0"|
+                        <span class="comentarios-cantidad">
+                          |NEWMESSAGES|
+                        </span>
+                      |*endif|
+                    </div>
+                  </label>
 
-        <!-- sub-menu boton mi nick -->
+                  <!-- sub-menu boton mi nick -->
 
-        <ul class="ng-hide" ng-show="menu_boton_estado_perfil">
-          <li>
-            <a href="/HTM_PASSWD">|SUB_MENU_PASSWORD|</a>
-          </li>
-          <li>
-            <a href="/CMD_TICKET?sort1=-1">|SUB_MENU_MESSAGES|</a>
-          </li>
-          <li>
-            <a href="/CMD_LOGOUT">|SUB_MENU_LOGOUT|</a>
-          </li>
-        </ul>
+                  <ul class="ng-hide svb-right" ng-show="perfil_status">
+                    <li>
+                      <a href="#">
+                        <span class="icon-vpn-key sm-b-icon sm-b-icon-key"></span>
+                        <a href="/HTM_PASSWD">|SUB_MENU_PASSWORD|</a>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="icon-message sm-b-icon sm-b-icon-message"></span>
+                        <a href="/CMD_TICKET?sort1=-1">|SUB_MENU_MESSAGES|</a>
+                      </a>
+                    </li>
+                    <li class="no-bor">
+                      <a href="#">
+                        <span class="icon-exit-to-app sm-b-icon sm-b-icon-logout"></span>
+                        <a href="/CMD_LOGOUT">|SUB_MENU_LOGOUT|</a>
+                      </a>
+                    </li>
+                  </ul>
 
-      </li>
-    </ul>
-  </div>
+                </li>
+              </ul>
+            </div>
 
-  <!-- nivel usuario -->
-
-  <div class="sv-funciones">
-    <ul>
-      <!-- admin / reseller / user -->
-      <li>
-
-        <!-- boton nivel usuario -->
-        <label class="svf-boton">
-          <div class="svfb-nivel-usuario">
-            |SUB_MENU_USER|
-          </div>
-        </label>
-
-
-      </li>
-    </ul>
-  </div>
 </nav>
 
 <!-- INICIO CONTENIDO ======================================= -->
@@ -68,41 +62,66 @@
     <div class="left-content">
 
       <div class="lc-titulo">
-        <span class="icon-flash-on"></span>
+        <span class="icon-flash-on icon quick-links"></span>
         <h3>|SUB_NAV_QUICK_LINKS|</h3>
       </div>   
       <div class="lc-content">
         <div class="lc-content--links">
           <ul>
-            <li><a href="/|HOME_MEMORY|"><span>|SUB_NAV_HOME|</span></a></li>
-            <li><a href="/CMD_FILE_MANAGER"><span>|SUB_NAV_FILE_MANAGER|</span></a></li>
-            <li><a href="http://|HELP_SECTION|"><span>|SUB_NAV_HELP|</span></a></li>
-            <li><a href="|HTTP|://|HOSTNAME|/phpmyadmin"><span>|SUB_NAV_PHPMYADMIN|</span></a></li>
-            <li><a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|"><span>|SUB_NAV_WEBMAIL|</span></a></li>
+            <li>
+              <a href="/|HOME_MEMORY|">
+                <span class="icon-home lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_HOME|</span>
+              </a>
+            </li>
+            <li>
+              <a href="/CMD_FILE_MANAGER">
+                <span class="icon-folder lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_FILE_MANAGER|</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://|HELP_SECTION|">
+                <span class="icon-help lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_HELP|</span>
+              </a>
+            </li>
+            <li>
+              <a href="|HTTP|://|HOSTNAME|/phpmyadmin">
+                <span class="icon-perm-data-setting lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_PHPMYADMIN|</span>
+              </a>
+            </li>
+            <li>
+              <a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|">
+                <span class="icon-email lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_WEBMAIL|</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="lc-titulo">
-        <span class="icon-info"></span>
+        <span class="icon-info icon current-domain"></span>
         <h3>|SUB_NAV_CURRENT_DOMAIN|</h3>
       </div> 
 
       <div class="lc-content">
         <div class="lc-content--datos">
           <p>
-|*if DOMAIN=""|
-            None
-|*else|
-            |ALL_DOMAINS_SELECT|
-|*endif|
+            |*if DOMAIN=""|
+              None
+            |*else|
+              |ALL_DOMAINS_SELECT|
+            |*endif|
           </p>
         </div>
       </div>    
 
 
       <div class="lc-titulo">
-        <span class="icon-poll"></span>
+        <span class="icon-poll icon stats"></span>
         <h3>|SUB_NAV_STATS|</h3>
       </div> 
 
