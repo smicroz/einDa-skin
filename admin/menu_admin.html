@@ -20,23 +20,23 @@
 
                   <!-- sub-menu boton nivel usuario -->
 
-                  <ul class="ng-hide svb-left" ng-show="user_level">
+                  <ul class="ng-hide svb-right" ng-show="perfil_status">
                     <li>
-                      <a href="/">
-                        <span class="icon-person sm-b-icon sm-b-icon-admin"></span>
-                        <span>|SUB_MENU_ADMIN|</span>
+                      <a href="/HTM_PASSWD">
+                        <span class="icon-vpn-key sm-b-icon sm-b-icon-key"></span>
+                        <span>|SUB_MENU_PASSWORD|</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/HTM_INDEX_RESELLER">
-                        <span class="icon-person sm-b-icon sm-b-icon-reseller"></span>
-                        <span>|SUB_MENU_RESELLER|</span>
+                      <a href="/CMD_TICKET?sort1=-1">
+                        <span class="icon-message sm-b-icon sm-b-icon-message"></span>
+                        <span>|SUB_MENU_MESSAGES|</span>
                       </a>
                     </li>
-                    <li>
-                      <a href="/HTM_INDEX_USER">
-                        <span class="icon-person sm-b-icon sm-b-icon-user"></span>
-                        <span>|SUB_MENU_USER|</span>
+                    <li class="no-bor">
+                      <a href="/CMD_LOGOUT">
+                        <span class="icon-exit-to-app sm-b-icon sm-b-icon-logout"></span>
+                        <span>|SUB_MENU_LOGOUT|</span>
                       </a>
                     </li>
                   </ul>
