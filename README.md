@@ -7,7 +7,7 @@ It’s the first version, so it may have bugs.
 
 Version: 0.3.1
 
-![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-1.png)
+![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-3.png)
 
 ![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-2.png)
 
