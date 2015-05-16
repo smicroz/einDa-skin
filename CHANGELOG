@@ -5,6 +5,7 @@
 - New user level sub nav - media-query > 1024px
 - Added margin to lc-content in left-nav - media-query > 1024px
 - Added color to admin icon (dashboard)
+- Modified show-user icon to icon-group
 
 0.3.1
 - Improved iphone 5 visualization
