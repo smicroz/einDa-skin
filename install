@@ -37,6 +37,12 @@ function install(){
   chown -R diradmin:diradmin einDa-skin/
 }
 
+function update(){
+  echo "Updating..."
+  git pull
+  chown -R diradmin:diradmin *
+}
+
 # innit
 
 bar
@@ -49,13 +55,13 @@ directory=einDa-skin
 
 if [ -d "$directory" ]; then
   echo "The directory einDa-skin already exists"
-  echo "UPDATE - If you want update skin, the installer will remove folder."
-  pause 'If you agree, press [Enter] key for continue...'
-  rm -rf $directory/
-  install
+  echo -e "\x1B[31m == UPDATE == \x1B[0m"
+  pause 'If you want update the skin, press [Enter] key for continue...'
+  cd $directory/
+  update
 else
   pause 'Press [Enter] key for start installation...'
   install
+  end
 fi
 
-end

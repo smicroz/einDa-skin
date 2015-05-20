@@ -5,11 +5,9 @@ This is a free skin that you can use freely and even can modify it if you consid
 
 It’s the first version, so it may have bugs.
 
-Version: 0.3.1
+![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/v032-desktop-3.png)
 
-![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-3.png)
-
-![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/desktop-2.png)
+![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/v032-desktop-2.png)
 
 ![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/mobile-1.png)
 
