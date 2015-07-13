@@ -4,58 +4,52 @@
 
 <nav class="sub-nav noselect">
 
-  <!-- perfil -->
+            <!-- perfil -->
 
-  <div class="sv-perfil" ng-show="controlPerfil">
-    <ul>
-      <li>
+            <div class="sv-boton--box sv-boton--right">
+              <ul>
+                <li>
 
-        <!-- boton mi nick -->
-        <label for="show" class="ep-boton" ng-click="menu_boton_estado_perfil = !menu_boton_estado_perfil">
-          <div class="epb-contenido">
-            <span>|USERNAME|</span>
-            |*if NEWMESSAGES!="0"|
-            <span class="comentarios-cantidad">|NEWMESSAGES|</span>|*endif|
+                  <!-- boton mi nick -->
 
-          </div>
-        </label>
+                  <label for="show" class="sv-boton" ng-click="perfil_status = !perfil_status">
+                    <div class="sv-boton--perfil">
+                      <span>|USERNAME|</span>
+                      |*if NEWMESSAGES!="0"|
+                        <span class="comentarios-cantidad">
+                          |NEWMESSAGES|
+                        </span>
+                      |*endif|
+                    </div>
+                  </label>
 
-        <!-- sub-menu boton mi nick -->
+                  <!-- sub-menu boton mi nick -->
 
-        <ul class="ng-hide" ng-show="menu_boton_estado_perfil">
-          <li>
-            <a href="/HTM_PASSWD">Password</a>
-          </li>
-          <li>
-            <a href="/CMD_TICKET?sort1=-1">Messages</a>
-          </li>
-          <li>
-            <a href="/CMD_LOGOUT">Log out</a>
-          </li>
-        </ul>
+                  <ul class="ng-hide svb-right" ng-show="perfil_status">
+                    <li>
+                      <a href="/HTM_PASSWD">
+                        <span class="icon-vpn-key sm-b-icon sm-b-icon-key"></span>
+                        <span>|SUB_MENU_PASSWORD|</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/CMD_TICKET?sort1=-1">
+                        <span class="icon-message sm-b-icon sm-b-icon-message"></span>
+                        <span>|SUB_MENU_MESSAGES|</span>
+                      </a>
+                    </li>
+                    <li class="no-bor">
+                      <a href="/CMD_LOGOUT">
+                        <span class="icon-exit-to-app sm-b-icon sm-b-icon-logout"></span>
+                        <span>|SUB_MENU_LOGOUT|</span>
+                      </a>
+                    </li>
+                  </ul>
 
-      </li>
-    </ul>
-  </div>
+                </li>
+              </ul>
+            </div>
 
-  <!-- nivel usuario -->
-
-  <div class="sv-funciones">
-    <ul>
-      <!-- admin / reseller / user -->
-      <li>
-
-        <!-- boton nivel usuario -->
-        <label class="svf-boton">
-          <div class="svfb-nivel-usuario">
-            User
-          </div>
-        </label>
-
-
-      </li>
-    </ul>
-  </div>
 </nav>
 
 <!-- INICIO CONTENIDO ======================================= -->
@@ -68,47 +62,72 @@
     <div class="left-content">
 
       <div class="lc-titulo">
-        <span class="icon-flash-on"></span>
-        <h3>Quick Links</h3>
+        <span class="icon-flash-on icon color-user"></span>
+        <h3>|SUB_NAV_QUICK_LINKS|</h3>
       </div>   
       <div class="lc-content">
         <div class="lc-content--links">
           <ul>
-            <li><a href="/|HOME_MEMORY|"><span>Home</span></a></li>
-            <li><a href="/CMD_FILE_MANAGER"><span>File Manager</span></a></li>
-            <li><a href="http://|HELP_SECTION|"><span>Help</span></a></li>
-            <li><a href="|HTTP|://|HOSTNAME|/phpmyadmin"><span>PhpMyAdmin</span></a></li>
-            <li><a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|"><span>Webmail</span></a></li>
+            <li>
+              <a href="/|HOME_MEMORY|">
+                <span class="icon-home lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_HOME|</span>
+              </a>
+            </li>
+            <li>
+              <a href="/CMD_FILE_MANAGER">
+                <span class="icon-folder lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_FILE_MANAGER|</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://|HELP_SECTION|">
+                <span class="icon-help lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_HELP|</span>
+              </a>
+            </li>
+            <li>
+              <a href="|HTTP|://|HOSTNAME|/phpmyadmin">
+                <span class="icon-perm-data-setting lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_PHPMYADMIN|</span>
+              </a>
+            </li>
+            <li>
+              <a href="|WEBAPPS_SSL|://|HOSTNAME|/|WEBMAIL_LINK|">
+                <span class="icon-email lc-icon lc-icon--color"></span>
+                <span>|SUB_NAV_WEBMAIL|</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="lc-titulo">
-        <span class="icon-info"></span>
-        <h3>Current domain</h3>
+        <span class="icon-info icon color-user"></span>
+        <h3>|SUB_NAV_CURRENT_DOMAIN|</h3>
       </div> 
 
       <div class="lc-content">
         <div class="lc-content--datos">
           <p>
-|*if DOMAIN=""|
-            None
-|*else|
-            |ALL_DOMAINS_SELECT|
-|*endif|
+            |*if DOMAIN=""|
+              None
+            |*else|
+              |ALL_DOMAINS_SELECT|
+            |*endif|
           </p>
         </div>
       </div>    
 
 
       <div class="lc-titulo">
-        <span class="icon-poll"></span>
-        <h3>Stats</h3>
+        <span class="icon-poll icon color-user"></span>
+        <h3>|SUB_NAV_STATS|</h3>
       </div> 
 
       <div class="lc-content">
        
-        <h4>Disk Space</h4>
+        <h4>|SUB_NAV_USER_DISK_SPACE|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERQUOTAMAX|" value="|USERQUOTA|"></progress>
@@ -118,7 +137,7 @@
           </div>
         </div>
 
-        <h4>Bandwidth</h4>
+        <h4>|SUB_NAV_USER_BANDWIDTH|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERBANDWIDTHMAXGIG|" value="|USERBANDWIDTHGIG|"></progress>
@@ -128,7 +147,7 @@
           </div>
         </div>
 
-        <h4>Database</h4>
+        <h4>|SUB_NAV_USER_DATABASE|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERDATABASEMAX|" value="|USERDATABASE|"></progress>
@@ -138,7 +157,7 @@
           </div>
         </div>
 
-        <h4>FTP users</h4>
+        <h4>|SUB_NAV_USER_FTP_USERS|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERFTPMAX|" value="|USERFTP|"></progress>
@@ -148,7 +167,7 @@
           </div>
         </div>
 
-        <h4>Accounts Emails</h4>
+        <h4>|SUB_NAV_USER_ACOUNTS_EMAILS|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USEREMAILMAX|" value="|USEREMAIL|"></progress>
@@ -158,7 +177,7 @@
           </div>
         </div>
 
-        <h4>Email Forwarder</h4>
+        <h4>|SUB_NAV_USER_EMAIL_FORWARDER|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERFORWARDERMAX|" value="|USERFORWARDER|"></progress>
@@ -168,7 +187,7 @@
           </div>
         </div>
 
-        <h4>Auto Responder</h4>
+        <h4>|SUB_NAV_USER_AUTO_RESPONDER|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|USERRESPONDERMAX|" value="|USERRESPONDER|"></progress>
@@ -178,7 +197,7 @@
           </div>
         </div>
 
-        <h4>Domains</h4>
+        <h4>|SUB_NAV_USER_DOMAINS|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|NDOMAINSMAX|" value="|NDOMAINS|"></progress>
@@ -188,7 +207,7 @@
           </div>
         </div>
 
-        <h4>Sub Domains</h4>
+        <h4>|SUB_NAV_USER_SUB_DOMAINS|</h4>
         <div class="lc-content--bar">
           <div class="bar">
             <progress max="|NUSERSUBDOMAINSMAX|" value="|NUSERSUBDOMAINS|"></progress>

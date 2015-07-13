@@ -1,0 +1,24 @@
+0.3.2
+- Increase font-size of table buttons
+- Removed exterior border of tables
+- Updated color admin - reseller - user
+- New user level sub nav - media-query > 1024px
+- Added margin to lc-content in left-nav - media-query > 1024px
+- Added color to admin icon (dashboard)
+- Modified show-user icon to icon-group
+- Updated installer, with git pull to update. (by tristan)
+
+0.3.1
+- Improved iphone 5 visualization
+- Added icon to menu
+- Re worked sub-nav
+	- icon color added to differenciate user level
+	- added new dropdown
+	- added new icons
+- Removed user level of end-user
+- Added more info to install
+- Updated footer language
+- Added 1.48 DA styles -> http://www.directadmin.com/features.php?id=1718
+- Minimal css changes
+	- removed uppercase of .lc-content h4
+	- removed border-bottom of input submit and button, and added transition effect
