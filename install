@@ -39,6 +39,7 @@ function install(){
 
 function update(){
   echo "Updating..."
+  git reset --hard
   git pull
   chown -R diradmin:diradmin *
 }
