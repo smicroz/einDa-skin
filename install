@@ -33,8 +33,9 @@ function join-folder(){
 
 function install(){
   echo "Installing..."
-  git clone https://github.com/smicroz/einDa-skin.git
-  chown -R diradmin:diradmin einDa-skin/
+  git clone https://github.com/lunadream/einDa-CN.git
+  mv einDa-CN einda
+  chown -R diradmin:diradmin einda
 }
 
 function update(){
@@ -52,7 +53,7 @@ bar
 
 join-folder
 
-directory=einDa-skin
+directory=einda
 
 if [ -d "$directory" ]; then
   echo "The directory einDa-skin already exists"
