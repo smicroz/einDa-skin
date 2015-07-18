@@ -1,9 +1,11 @@
 einDa-skin
 ==========
 
-This is a free skin that you can use freely and even can modify it if you consider it necessary.
+Mobile-First skin to Directadmin CP.
 
-It’s the first version, so it may have bugs.
+Compatibility: Directadmin 1.48.0
+
+MIT LICENSE
 
 ![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/v032-desktop-3.png)
 
