@@ -4,8 +4,8 @@ einDa-skin
 Mobile-First skin to Directadmin CP.
 
 Compatibility: Directadmin 1.48.0
-
-MIT LICENSE
+License: MIT
+Web: http://smicroz.tumblr.com/
 
 ![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/v032-desktop-3.png)
 
