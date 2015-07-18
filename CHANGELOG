@@ -1,6 +1,8 @@
+0.3.3
+New feature - added login template
 0.3.2.1
-- Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
-
+Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
+Bugfix - Added show_services to admin backend area
 0.3.2
 - Increase font-size of table buttons
 - Removed exterior border of tables

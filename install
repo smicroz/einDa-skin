@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# functions
+
+# general functions
 
 function pause(){
   read -p "$*"
@@ -13,6 +14,16 @@ function welcome(){
 function bar(){
   echo "========================================"
 }
+
+# login functions
+
+function login(){
+  cd /usr/local/directadmin/data/templates/
+  rm $login
+  wget https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/login/login.html
+}
+
+# skin functions
 
 function end(){
   bar
@@ -50,9 +61,10 @@ bar
 welcome
 bar
 
-join-folder
+cd /usr/local/directadmin/data/skins/
 
 directory=einDa-skin
+login=./login.html
 
 if [ -d "$directory" ]; then
   echo "The directory einDa-skin already exists"
@@ -60,6 +72,9 @@ if [ -d "$directory" ]; then
   pause 'If you want update the skin, press [Enter] key for continue...'
   cd $directory/
   update
+  # login template
+  login
+  
 else
   pause 'Press [Enter] key for start installation...'
   install
