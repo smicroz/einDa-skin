@@ -1,11 +1,22 @@
-0.3.3
+==========================================
+0.3.3 (xx-07-2015)
+==========================================
 New feature - added login template
 Minor changes - Hide "Current Domain" when domain isn't visible
 Bugfix - The submit button was outside the form for adding new DNS zones. (guillermodejavu)
 Bugfix - Solves the problem with log values form TXT DNS records. (guillermodejavu)
 Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
 Bugfix - Added show_services to admin backend area
-0.3.2
+
+Directadmin Update 1.481
+* http://www.directadmin.com/features.php?id=1295
+	- Added language text to lang/en/user/db/db.html and lang/es/user/db/db.html
+	- user/db/user_priv.html updated
+
+
+==========================================
+0.3.2 (20-05-2015)
+==========================================
 - Increase font-size of table buttons
 - Removed exterior border of tables
 - Updated color admin - reseller - user
@@ -14,8 +25,9 @@ Bugfix - Added show_services to admin backend area
 - Added color to admin icon (dashboard)
 - Modified show-user icon to icon-group
 - Updated installer, with git pull to update. (by tristan)
-
-0.3.1
+==========================================
+0.3.1 (05-06-2015)
+==========================================
 - Improved iphone 5 visualization
 - Added icon to menu
 - Re worked sub-nav

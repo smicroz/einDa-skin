@@ -38,7 +38,7 @@ function end(){
   bar
 }
 
-function join-folder(){
+function joinFolder(){
   cd /usr/local/directadmin/data/skins/
 }
 
@@ -61,7 +61,7 @@ bar
 welcome
 bar
 
-cd /usr/local/directadmin/data/skins/
+joinFolder
 
 directory=einDa-skin
 login=./login.html
@@ -72,7 +72,7 @@ if [ -d "$directory" ]; then
   pause 'If you want update the skin, press [Enter] key for continue...'
   cd $directory/
   update
-  # login template
+  # install login template
   login
   
 else
