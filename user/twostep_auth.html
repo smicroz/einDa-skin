@@ -1,0 +1,211 @@
+|?TREE=&raquo; <a class=tree href="/CMD_SECURITY_QUESTIONS">`LANG_TWOSTEP_AUTH`</a>|
+|HTM_USER_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_TWOSTEP_AUTH|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>
+
+			|*if TWOSTEP_TRUSTED_DEVICE="yes"|
+			<form action='CMD_TWOSTEP_AUTH' method='POST'>
+			<br><b>|LANG_CURRENTLY_TRUSTED|</b>
+			<input type=hidden name='action' value='untrust'>
+			<input type=submit value='|LANG_REMOVE_TRUST|' title='|LANG_REMOVE_TRUST_EXPLANATION|'>
+			</form>
+			|*endif|
+
+			|?SQ_BOLD_OPEN=|
+			|?SQ_BOLD_CLOSE=|
+			|*if TWOSTEP_AUTH_CHECKED=""|
+			<br><b>|LANG_FEATURE_OFF|</b><br>
+			|LANG_CREATE_A_SECRET|
+			|?SQ_BOLD_OPEN=<b>|
+			|?SQ_BOLD_CLOSE=</b>|
+			|*endif|
+
+        </p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- generales -->
+    <div class="bcpbp-generales">
+
+      <!-- texto -->
+      <div class="bcpbpt-texto">
+        <p>|LANG_TWOSTEP_AUTH_INFO|</p>
+      </div><!-- fin texto -->
+
+    </div><!-- fin generales -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_SETTINGS|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+		<table class='list table-highlight' cellpadding=3 cellspacing=1>
+		<form action='CMD_TWOSTEP_AUTH' method='POST'>
+		<input type='hidden' name="action" value="new_secret" />
+		<tr>
+			<td class=list>|LANG_SECRET|</td>
+			<td class=list><span class=code_edit>|SPACED_SECRET|</span> &nbsp;&nbsp;&nbsp; <input type=submit value='|LANG_NEW_SECRET|'>
+				<br>
+				|LANG_NEW_SECRET_NOTE|
+			</td>
+		</tr>
+		</form>
+
+		|*if QR_URL!=""|
+		<form onsubmit="check_twostep_auth_code(); return false;">
+		<tr>
+			<td class=list2>QR Code</td>
+			<td class=list2><img id='qr_url' src="|QR_URL|">
+							<div style='display: inline-block; vertical-align: top;'>
+								|LANG_SCAN_TO_PHONE|
+								<br>
+								<br>
+		<script type="text/javascript">
+		<!--
+
+		var original_qr_url = "|QR_URL|";
+
+		function check_twostep_auth_code()
+		{
+			if (document.getElementById('code').value == "")
+			{
+				document.getElementById('code_test_result').innerHTML = 'Empty Code';
+				return;
+			}
+
+			document.getElementById('code_test_result').innerHTML = '';
+
+			var formData = new FormData();
+			formData.append('action', 'test');
+			formData.append('code', document.getElementById('code').value);
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', 'CMD_TWOSTEP_AUTH', true);
+
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					console.log('Code test result: ' + xhr.responseText);
+					document.getElementById('code_test_result').innerHTML = xhr.responseText;
+				} else {
+					alert('An error occurred! ' + xhr.responseText);
+					console.log('An error occurred: ' + xhr.responseText);
+				}
+			};
+
+			xhr.send(formData);
+		}
+		//-->
+		</script>
+								|LANG_CHECK_BEFORE_LOGOUT|:<br>
+								<input id=code name=code placeholder='6 digit code' maxlength=8 onchange="this.value=this.value.replace(/\s+/g, '');"> <input type=submit value='|LANG_TEST_CODE|'><br>
+								<span id='code_test_result'></span>
+							</div>
+			</td>
+		</tr>
+		</form>
+		|*endif|
+
+		<form action='CMD_TWOSTEP_AUTH' method='POST'>
+		<input type='hidden' name="action" value="settings" />
+		<input type='hidden' name="version" value="1" />
+		<tr title='|LANG_DESC_IN_PHONE|'>
+			<td class=list>|LANG_DESCRIPTION|</td>
+			<td class=list><input type=text name="twostep_auth_description" value='|KEY_NAME|' size=40></td>
+		</tr>
+		<tr>
+			<td class=list2 align=center><input type=checkbox name="twostep_auth" value="yes" |TWOSTEP_AUTH_CHECKED| |TWOSTEP_AUTH_DISABLED|></td>
+			<td class=list2>|SQ_BOLD_OPEN||LANG_REQUIRE_AUTH_CODE||SQ_BOLD_CLOSE|</td>
+		</tr>
+		<tr>
+			<td class=list align=center><input type=checkbox name="api_with_password" value="yes" |SECURITY_QUESTIONS_ON_API_CHECKED|></td>
+			<td class=list>|LANG_ALLOW_AP_LOGIN|</td>
+		</tr>
+		<tr>
+			<td class=list2 align=center><input type=checkbox name="notify_on_all_twostep_auth_failures" value="yes" |NOTIFY_ON_ALL_FAILURES_CHECKED|></td>
+			<td class=list2>|LANG_NOTIFY_ME| |MAX_ATTEMPTS| |LANG_FAILED_ATTEMPTS|</td>
+		</tr>
+		<tr>
+			<td colspan=2 class=listtitle align=right><input type=submit name=save value="|LANG_SAVE|"></td>
+		</tr>
+		</form>
+		</table>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+      	|SCRATCH_CODES|
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+
+
+
+<br>
+|HTM_USER_BOTTOM|

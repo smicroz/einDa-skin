@@ -8,7 +8,7 @@ Bugfix - Solves the problem with log values form TXT DNS records. (by guillermod
 Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
 Bugfix - Added show_services to admin backend area
 Bugfix - Added data/skins/enhanced/lang/en/internal/suspension.txt file
-Translate (es) - data/skins/enhanced/lang/en/internal/suspension.txt
+Translation (es) - data/skins/enhanced/lang/en/internal/suspension.txt
 
 Directadmin Update 1.481 to 1.483
 * http://www.directadmin.com/features.php?id=1295
@@ -19,6 +19,13 @@ Directadmin Update 1.481 to 1.483
 * http://www.directadmin.com/features.php?id=1751
 	- Added new javascript.
 * http://www.directadmin.com/features.php?id=1754
+	- Updated 1.48.3 css styles
+	- Updated passwd.html
+	- Updated files_user.conf
+	- Added lang/en/internal/twostep_auth.txt and lang/es/internal/twostep_auth.txt
+	- Updated lang/en/internal/command.txt added from 561 to 570
+	- Updated lang/es/internal/command.txt added from 581 to 570
+	- Added user/twostep_auth.html
 
 ==========================================
 0.3.2 (20-05-2015)

@@ -559,3 +559,12 @@
 559=User DNSSEC Control is disabled
 560=Error Unblocking paths
 561=Paths Unblocked
+562=Double click for main domain page
+563=Nginx is not enabled
+564=Settings
+565=Error with Two-Step Authentication
+566=Two-Step Authentication is disabled
+567=Error generating scratch codes
+568=Scratch codes
+569=%s Removed
+570=Trust cookie has been cleared
