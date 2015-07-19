@@ -107,17 +107,16 @@
         <h3>|SUB_NAV_CURRENT_DOMAIN|</h3>
       </div> 
 
-      <div class="lc-content">
-        <div class="lc-content--datos">
-          <p>
-            |*if DOMAIN=""|
-              None
-            |*else|
+      |*if DOMAIN=""|
+      |*else|
+        <div class="lc-content">
+          <div class="lc-content--datos">
+            <p>
               |ALL_DOMAINS_SELECT|
-            |*endif|
-          </p>
-        </div>
-      </div>    
+            </p>
+          </div>
+        </div>  
+      |*endif|  
 
 
       <div class="lc-titulo">

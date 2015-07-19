@@ -1,6 +1,8 @@
 0.3.3
 New feature - added login template
-0.3.2.1
+Minor changes - Hide "Current Domain" when domain isn't visible
+Bugfix - The submit button was outside the form for adding new DNS zones. (guillermodejavu)
+Bugfix - Solves the problem with log values form TXT DNS records. (guillermodejavu)
 Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
 Bugfix - Added show_services to admin backend area
 0.3.2

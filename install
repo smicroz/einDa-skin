@@ -31,7 +31,7 @@ function end(){
   bar
   echo "Now go to http://yourdomain:2222 and"
   echo "1 | Join admin account"
-  echo "2 | Join to skin section (its usually in reseller level)"
+  echo "2 | As reseller, go to the skin manager"
   echo "3 | Select einDa-skin and apply to me"
   bar
   echo "Thanks for using einDa skin"
