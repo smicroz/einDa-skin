@@ -3,16 +3,22 @@
 ==========================================
 New feature - added login template
 Minor changes - Hide "Current Domain" when domain isn't visible
-Bugfix - The submit button was outside the form for adding new DNS zones. (guillermodejavu)
-Bugfix - Solves the problem with log values form TXT DNS records. (guillermodejavu)
+Bugfix - The submit button was outside the form for adding new DNS zones. (by guillermodejavu)
+Bugfix - Solves the problem with log values form TXT DNS records. (by guillermodejavu)
 Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
 Bugfix - Added show_services to admin backend area
+Bugfix - Added data/skins/enhanced/lang/en/internal/suspension.txt file
+Translate (es) - data/skins/enhanced/lang/en/internal/suspension.txt
 
-Directadmin Update 1.481
+Directadmin Update 1.481 to 1.483
 * http://www.directadmin.com/features.php?id=1295
 	- Added language text to lang/en/user/db/db.html and lang/es/user/db/db.html
 	- user/db/user_priv.html updated
-
+* http://www.directadmin.com/features.php?id=1750
+	- New entry in data/skins/enhanced/lang/en/internal/suspension.txt
+* http://www.directadmin.com/features.php?id=1751
+	- Added new javascript.
+* http://www.directadmin.com/features.php?id=1754
 
 ==========================================
 0.3.2 (20-05-2015)

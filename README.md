@@ -3,7 +3,7 @@ einDa-skin
 
 Mobile-First skin to Directadmin CP.
 
-* Compatibility: Directadmin 1.48.0
+* Compatibility: Directadmin 1.48.3
 * License: MIT
 * Web: http://smicroz.tumblr.com/
 
