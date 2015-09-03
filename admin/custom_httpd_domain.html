@@ -141,6 +141,78 @@ trigger_toggle();
 		<textarea cols=120 rows=40 wrap=off readonly>|AVAILABLE_TOKENS|</textarea>
 	</td>
 </tr>
+
+
+<tr><td class=list2 colspan=2><span class=expand_toggle_plus id=templates_toggle onclick="toggle_expand('templates_toggle', 'templates_visibility');">+</span> |LANG_TEMPLATES|</td></tr>
+<tr id=templates_visibility style="display: none;">
+	<td class=list>
+
+|?VH_COLS=118|
+		<table style='padding-left: 10px;' width=100%>
+			<tr><td class=list colspan=2><span class=expand_toggle_plus id=vh1_toggle onclick="toggle_expand('vh1_toggle', 'vh1_visibility');">+</span> |VH1_NAME| |*if VH1_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH1_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh1_visibility style="display: none;">
+				<td>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH1|</textarea>
+				</td>
+			</tr>
+
+			<tr><td class=list2 colspan=2><span class=expand_toggle_plus id=vh2_toggle onclick="toggle_expand('vh2_toggle', 'vh2_visibility');">+</span> |VH2_NAME| |*if VH2_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH2_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh2_visibility style="display: none;">
+				<td class=list2>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH2|</textarea>
+				</td>
+			</tr>
+
+			<tr><td class=list colspan=2><span class=expand_toggle_plus id=vh3_toggle onclick="toggle_expand('vh3_toggle', 'vh3_visibility');">+</span> |VH3_NAME| |*if VH3_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH3_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh3_visibility style="display: none;">
+				<td class=list>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH3|</textarea>
+				</td>
+			</tr>
+
+			<tr><td class=list2 colspan=2><span class=expand_toggle_plus id=vh4_toggle onclick="toggle_expand('vh4_toggle', 'vh4_visibility');">+</span> |VH4_NAME| |*if VH4_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH4_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh4_visibility style="display: none;">
+				<td class=list2>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH4|</textarea>
+				</td>
+			</tr>
+
+			<tr |*if VH5_NAME=""|style="display: none;"|*endif|><td class=list colspan=2><span class=expand_toggle_plus id=vh5_toggle onclick="toggle_expand('vh5_toggle', 'vh5_visibility');">+</span> |VH5_NAME| |*if VH5_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH5_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh5_visibility style="display: none;">
+				<td class=list>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH5|</textarea>
+				</td>
+			</tr>
+
+			<tr |*if VH6_NAME=""|style="display: none;"|*endif|><td class=list2 colspan=2><span class=expand_toggle_plus id=vh6_toggle onclick="toggle_expand('vh6_toggle', 'vh6_visibility');">+</span> |VH6_NAME| |*if VH6_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH6_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr id=vh6_visibility style="display: none;">
+				<td class=list2>
+					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH6|</textarea>
+				</td>
+			</tr>
+
+			<script language="Javascript">
+				<!--
+					|?SHOW_TEMPLATES=0|
+					|*if VH1_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if VH2_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if VH3_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if VH4_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if VH5_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if VH6_CUSTOM="1"||?SHOW_TEMPLATES=1||*endif|
+					|*if SHOW_TEMPLATES="1"|
+						toggle_expand('templates_toggle', 'templates_visibility');
+					|*endif|
+				//-->
+			</script>
+
+		</table>
+
+	</td>
+</tr>
+
+
+
 <tr>
 	<td class=listtitle align=right><input type=submit value="|LANG_SAVE|"></td>
 </tr>
@@ -162,7 +234,7 @@ trigger_toggle();
 
 		<!-- titulo -->
 		<div class="bcpbp-titulo">
-			<h2>|LANG_H2_NGINX|</h2>
+			<h2>|*if HAVE_NGINX="yes"||LANG_H2_NGINX||*else||LANG_H2_HTTPD||*endif|</h2>
 		</div>
 
 		<!-- table -->
@@ -195,7 +267,7 @@ trigger_toggle();
 
 		<!-- titulo -->
 		<div class="bcpbp-titulo">
-			<h2>|LANG_H2_NGINX|</h2>
+			<h2>|*if HAVE_NGINX="yes"||LANG_H2_NGINX||*else||LANG_H2_HTTPD||*endif|</h2>
 		</div>
 		<!-- table -->
 		<div class="box-da-table">

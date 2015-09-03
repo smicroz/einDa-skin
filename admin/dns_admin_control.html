@@ -231,7 +231,15 @@ function selectAllDNS()
   </div> <!-- fin padding -->
 </div> <!-- fin bloque -->
 
+<script>
+var myElements = document.querySelectorAll(".box-da-table td");
 
-
+for (var i = 0; i < myElements.length; i++) {
+        var o = myElements[i];
+        var t = o.textContent ? o.textContent : o.innerText;
+        if (t.length > 40)
+            o.style.wordBreak = 'break-all';
+}
+</script>
 
 |HTM_ADMIN_BOTTOM|

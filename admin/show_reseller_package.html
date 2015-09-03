@@ -197,7 +197,7 @@ function setText( inputid, checkbx)
 			</div>
 
 			<div class="bcpbp-form">
-				<label for="|LANG_ALLOW_OVERSELLING">|LANG_ALLOW_OVERSELLING</label>
+				<label for="|LANG_ALLOW_OVERSELLING|">|LANG_ALLOW_OVERSELLING|</label>
 				<div class="form-datos">
 					<input type=checkbox name=oversell value="ON" |OVERSELLCHECKED|>
 				</div>
@@ -232,21 +232,23 @@ function setText( inputid, checkbx)
 			</div>
 
 			<div class="bcpbp-form">
-				<label for="|LANG_PERSONAL_DNS|">|LANG_PERSONAL_DNS|</label>
+				<label>|LANG_PERSONAL_DNS|</label>
 				<div class="form-datos">
 					<input type=radio name=dns value="OFF" |DNSCHECKED|>
+					|LANG_NONE|
 				</div>
 			</div>
 
 			<div class="bcpbp-form">
-				<label for="|LANG_NONE|">|LANG_NONE|</label>
+				<label></label>
 				<div class="form-datos">
 					<input type=radio name=dns value="TWO" |DNS2CHECKED|>
+					|LANG_TWO_IPS|
 				</div>
 			</div>
 
 			<div class="bcpbp-form">
-				<label for="|LANG_TWO_IPS|">|LANG_TWO_IPS|</label>
+				<label></label>
 				<div class="form-datos">
 					<input type=radio name=dns value="THREE" |DNS3CHECKED|>
 					|LANG_THREE_IPS|
@@ -255,8 +257,10 @@ function setText( inputid, checkbx)
 
 			<div class="bcpbp-form">
 				<label for="|LANG_SERVER_IP|">|LANG_SERVER_IP|</label>
-				<input type=checkbox name=serverip value="ON" |SERVERIP|>
-				|LANG_ALLOW_RES_SERVER|
+				<div class="form-datos">
+					<input type=checkbox name=serverip value="ON" |SERVERIP|>
+					|LANG_ALLOW_RES_SERVER|
+				</div>
 			</div>
 
 			|*if CUSTOM_ITEM_1|

@@ -36,3 +36,23 @@
 36=Low
 37=Medium
 38=High
+39=Clear Message System
+40=Delete
+41=Subject Contains
+42=When
+43=-- any time --
+44=newer than
+45=older than
+46=day(s)
+47=Cannot find any message subjects from clear_message_system_list
+48=Cannot have newline characters in subject
+49=subject_select != %d, but subject is not set. This shouldn't happen.
+50='when' should be all, newer or older
+51=Invalid %s days. Should be a positive integer.
+52=Invalid %s days.  Too big.  Max = 
+53=message
+54=ticket
+55=Invalid delete_messages_days or delete_tickets_days. Should be 0 or a positive integer.
+56=Invalid delete_messages_days or delete_tickets_days.  Too big.  Max = 
+57=Unable to read ticket config file
+58=Unable to write ticket config

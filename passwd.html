@@ -68,8 +68,12 @@
 				<div class="bcpbplf-izq">
 					<!-- end subtitulo -->
 					|*if HAVE_SECURITY_QUESTIONS="yes"|
-
 					<a href="CMD_SECURITY_QUESTIONS">Manage Security Questions</a>
+					|*endif|
+
+					|*if HAVE_TWOSTEP_AUTH="yes"|
+					-
+					<a href="CMD_TWOSTEP_AUTH">|LANG_TWO_STEP_AUTH|</a>
 					|*endif|
 					<!-- fin contenido bloque -->
 				</div>

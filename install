@@ -1,0 +1,83 @@
+#!/bin/bash
+
+
+# general functions
+
+function pause(){
+  read -p "$*"
+}
+
+function welcome(){
+  echo -e "Welcome to einDa-skin installer."
+}
+
+function bar(){
+  echo "========================================"
+}
+
+# login functions
+
+function login(){
+  cd /usr/local/directadmin/data/templates/
+  rm $login
+  wget https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/login/login.html
+}
+
+# skin functions
+
+function end(){
+  bar
+  echo "Congratulations!!, einDa-skin was installed"
+  bar
+  echo "Now go to http://yourdomain:2222 and"
+  echo "1 | Join admin account"
+  echo "2 | As reseller, go to the skin manager"
+  echo "3 | Select einDa-skin and apply to me"
+  bar
+  echo "Thanks for using einDa skin"
+  bar
+}
+
+function joinFolder(){
+  cd /usr/local/directadmin/data/skins/
+}
+
+function install(){
+  echo "Installing..."
+  git clone https://github.com/smicroz/einDa-skin.git
+  chown -R diradmin:diradmin einDa-skin/
+}
+
+function update(){
+  echo "Updating..."
+  git reset --hard
+  git pull
+  chown -R diradmin:diradmin *
+}
+
+# innit
+
+bar
+welcome
+bar
+
+joinFolder
+
+directory=einDa-skin
+login=./login.html
+
+if [ -d "$directory" ]; then
+  echo "The directory einDa-skin already exists"
+  echo -e "\x1B[31m == UPDATE == \x1B[0m"
+  pause 'If you want update the skin, press [Enter] key for continue...'
+  cd $directory/
+  update
+  # install login template
+  login
+  
+else
+  pause 'Press [Enter] key for start installation...'
+  install
+  end
+fi
+

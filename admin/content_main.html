@@ -68,7 +68,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/HTM_ACCOUNT_ADMIN_CREATE">
 					<div class="item-icono">
-						<span class="icon-person-add"></span>
+						<span class="icon-person-add c-purple"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_CREATE_ADMIN|
@@ -80,7 +80,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_ADMIN_SHOW">
 					<div class="item-icono">
-						<span class="icon-people"></span>
+						<span class="icon-people c-purple"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_LIST_ADMINS|
@@ -90,33 +90,9 @@ function trimit(strobj)
 
 			<!-- item -->
 			<div class="box-items">
-				<a href="/HTM_USER_PASSWD">
-					<div class="item-icono">
-						<span class="icon-vpn-key"></span>
-					</div>
-					<div class="item-titulo">
-						|LANG_CHANGE_PASS|
-					</div>
-				</a>
-			</div>
-
-			<!-- item -->
-			<div class="box-items">
-				<a href="CMD_TICKET_MANAGE">
-					<div class="item-icono">
-						<span class="icon-forum"></span>
-					</div>
-					<div class="item-titulo">
-						|LANG_MANAGE_TICKETS|
-					</div>
-				</a>
-			</div>
-
-			<!-- item -->
-			<div class="box-items">
 				<a href="/HTM_ACCOUNT_RESELLER_CREATE">
 					<div class="item-icono">
-						<span class="icon-person-add"></span>
+						<span class="icon-person-add c-red"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_CREATE_RESELLER|
@@ -128,7 +104,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_RESELLER_SHOW">
 					<div class="item-icono">
-						<span class="icon-people-outline"></span>
+						<span class="icon-people c-red"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_LIST_RESELLERS|
@@ -138,9 +114,33 @@ function trimit(strobj)
 
 			<!-- item -->
 			<div class="box-items">
+				<a href="/HTM_USER_PASSWD">
+					<div class="item-icono">
+						<span class="icon-vpn-key c-yellow"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_CHANGE_PASS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="CMD_TICKET_MANAGE">
+					<div class="item-icono">
+						<span class="icon-forum c-green-light"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_MANAGE_TICKETS|
+					</div>
+				</a>
+			</div>	
+
+			<!-- item -->
+			<div class="box-items">
 				<a href="/CMD_MANAGE_RESELLER_PACKAGES">
 					<div class="item-icono">
-						<span class="icon-contacts"></span>
+						<span class="icon-contacts c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_RESELLER_PACKAGES|
@@ -152,7 +152,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_ALL_USER_SHOW">
 					<div class="item-icono">
-						<span class="icon-format-list-numbered"></span>
+						<span class="icon-group c-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_SHOW_ALL_USERS|
@@ -190,7 +190,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_IP_MANAGER">
 					<div class="item-icono">
-						<span class="icon-computer"></span>
+						<span class="icon-settings-ethernet c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_IP_MANAGEMENT|
@@ -203,7 +203,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_DNS_ADMIN">
 					<div class="item-icono">
-						<span class="icon-dns"></span>
+						<span class="icon-dns c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_DNS_ADMIN|
@@ -216,10 +216,22 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_ADMIN_BACKUP">
 					<div class="item-icono">
-						<span class="icon-backup"></span>
+						<span class="icon-backup c-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_ADMIN_BACKUPS|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_SYSTEM_BACKUP">
+					<div class="item-icono c-blue">
+						<span class="icon-settings-backup-restore c-orange"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_SYS_BACKUP|
 					</div>
 				</a>
 			</div>
@@ -229,7 +241,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_MULTI_SERVER">
 					<div class="item-icono">
-						<span class="icon-desktop-windows"></span>
+						<span class="icon-settings-applications c-green-light"></span>						
 					</div>
 					<div class="item-titulo">
 						|LANG_MULTI_SERVER|
@@ -241,7 +253,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_MAIL_QUEUE?sort1=2">
 					<div class="item-icono">
-						<span class="icon-mail"></span>
+						<span class="icon-mail c-yellow"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_MAIL_Q_ADMIN|
@@ -253,7 +265,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_MOVE_USERS">
 					<div class="item-icono">
-						<span class="icon-supervisor-account"></span>
+						<span class="icon-supervisor-account c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_MOVE_USERS|
@@ -265,43 +277,21 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_SYSTEM_INFO">
 					<div class="item-icono">
-						<span class="icon-info-outline"></span>
+						<span class="icon-info-outline c-blue"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_SYSTEM_INFO|
 					</div>
 				</a>
-			</div>
+			</div>		
 
-			<!-- item -->
-			<div class="box-items">
-				<a href="/CMD_SHOW_SERVICES">
-					<div class="item-icono">
-						<span class="icon-settings-input-composite"></span>
-					</div>
-					<div class="item-titulo">
-						|LANG_SERVICE_MONITOR|
-					</div>
-				</a>
-			</div>
-
-			<!-- item -->
-			<div class="box-items">
-				<a href="/CMD_SYSTEM_BACKUP">
-					<div class="item-icono">
-						<span class="icon-settings-backup-restore"></span>
-					</div>
-					<div class="item-titulo">
-						|LANG_SYS_BACKUP|
-					</div>
-				</a>
-			</div>
+			
 
 			<!-- item -->
 			<div class="box-items">
 				<a href="/CMD_LOG_VIEWER">
 					<div class="item-icono">
-						<span class="icon-find-in-page"></span>
+						<span class="icon-find-in-page c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_LOG_VIEWER|
@@ -313,7 +303,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="/CMD_ADMIN_FILE_EDITOR">
 					<div class="item-icono">
-						<span class="icon-insert-drive-file"></span>
+						<span class="icon-insert-drive-file c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_FILE_EDITOR|
@@ -324,11 +314,23 @@ function trimit(strobj)
 			<!-- item -->
 			<div class="box-items">
 				<a href="/CMD_PROCESS_MONITOR?sort1=|PMSORT|">
-					<div class="item-icono">
-						<span class="icon-settings-applications"></span>
+					<div class="item-icono c-gray-yellow">
+						<span class="icon-desktop-windows c-gray-yellow"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_PROCESS_MONITOR|
+					</div>
+				</a>
+			</div>
+
+			<!-- item -->
+			<div class="box-items">
+				<a href="/CMD_SHOW_SERVICES">
+					<div class="item-icono c-gray-yellow">
+						<span class="icon-settings-input-composite"></span>
+					</div>
+					<div class="item-titulo">
+						|LANG_SERVICE_MONITOR|
 					</div>
 				</a>
 			</div>
@@ -361,7 +363,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_ADMIN_STATS">
 					<div class="item-icono">
-						<span class="icon-trending-up"></span>
+						<span class="icon-data-usage c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_COMPLETE_USAGE_STATS|
@@ -373,7 +375,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_CUSTOM_HTTPD">
 					<div class="item-icono">
-						<span class="icon-import-export"></span>
+						<span class="icon-import-export c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_CUSTOM_HTTPD|
@@ -385,7 +387,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_PHP_SAFE_MODE">
 					<div class="item-icono">
-						<span class="icon-archive"></span>
+						<span class="icon-archive c-purple"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_PHP_SAFEMODE|
@@ -396,8 +398,8 @@ function trimit(strobj)
 			<!-- item -->
 			<div class="box-items">
 				<a href="CMD_BRUTE_FORCE_MONITOR?sort1=-1&seek_value=-500000">
-					<div class="item-icono">
-						<span class="icon-beenhere"></span>
+					<div class="item-icono c-blue">
+						<span class="icon-beenhere c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_BRUTE_FORCE_MONITOR|
@@ -409,7 +411,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_ADMIN_SETTINGS">
 					<div class="item-icono">
-						<span class="icon-settings"></span>
+						<span class="icon-settings c-gray-yellow"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_ADMIN_SETTINGS|
@@ -421,7 +423,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_LICENSE">
 					<div class="item-icono">
-						<span class="icon-folder-shared"></span>
+						<span class="icon-folder-shared c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_LICENSE_UPDATES|
@@ -434,7 +436,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_PLUGIN_MANAGER">
 					<div class="item-icono">
-						<span class="icon-extension"></span>
+						<span class="icon-extension c-green-light"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_PLUGIN_MANAGER|
@@ -446,7 +448,7 @@ function trimit(strobj)
 			<div class="box-items">
 				<a href="CMD_ADMIN_CRON_JOBS">
 					<div class="item-icono">
-						<span class="icon-query-builder"></span>
+						<span class="icon-query-builder c-yellow-orange"></span>
 					</div>
 					<div class="item-titulo">
 						|LANG_ADMIN_CRON_JOBS|
@@ -458,23 +460,179 @@ function trimit(strobj)
 		</div>
 		<!-- fin items -->
 
-		|PLUGIN_0_ADMIN_TXT|<br>
-		|PLUGIN_1_ADMIN_TXT|<br>
-		|PLUGIN_2_ADMIN_TXT|<br>
-		|PLUGIN_3_ADMIN_TXT|<br>
-		|PLUGIN_4_ADMIN_TXT|<br>
-		|PLUGIN_5_ADMIN_TXT|<br>
-		|PLUGIN_6_ADMIN_TXT|<br>
-		|PLUGIN_7_ADMIN_TXT|<br>
-		|PLUGIN_8_ADMIN_TXT|<br>
-		|PLUGIN_9_ADMIN_TXT|<br>
+		<!-- fin contenido bloque -->
 
+	</div> <!-- fin padding -->
+</div>
+<!-- fin bloque -->
+
+|?PLUGINS=`PLUGIN_0_ADMIN_TXT``PLUGIN_1_ADMIN_TXT``PLUGIN_2_ADMIN_TXT``PLUGIN_3_ADMIN_TXT``PLUGIN_4_ADMIN_TXT``PLUGIN_5_ADMIN_TXT``PLUGIN_6_ADMIN_TXT``PLUGIN_7_ADMIN_TXT``PLUGIN_8_ADMIN_TXT``PLUGIN_9_ADMIN_TXT`|
+
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+	<div class="bcpb-padding">
+
+		<!-- inicio contenido bloque -->
+
+		<!-- titulo -->
+		|*if PLUGINS!=""|
+		<div class="bcpbp-titulo">
+			<h2>|LANG_H2_PLUGINS|</h2>
+		</div>
+		|*endif|
+
+		<!-- items -->
+        <div class="bcpbp-navitem">
+
+          <!-- icono -->
+          |*if PLUGIN_0_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_0_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_1_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_1_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_2_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_2_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_3_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_3_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_4_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_4_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_5_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_5_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_6_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_6_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_7_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_7_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+          <!-- icono -->
+          |*if PLUGIN_8_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_8_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+ 
+          <!-- icono -->
+          |*if PLUGIN_9_ADMIN_TXT!=""|
+          <div class="box-items">
+            <a>
+              <div class="item-icono">
+                <span class="icon-extension"></span>
+              </div>
+              <div class="item-titulo">
+                |PLUGIN_9_ADMIN_TXT|
+              </div>
+            </a>
+          </div>
+          |*endif|
+
+        </div> <!-- fin navitems -->
 
 		<!-- fin contenido bloque -->
 
 	</div> <!-- fin padding -->
 </div>
 <!-- fin bloque -->
+
 
 |*if AJAX="1"|
 <script type="text/javascript">

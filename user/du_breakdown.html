@@ -1,3 +1,4 @@
+<!-- backup 
 |LF_STANDARD|
 <html>
 <head>
@@ -31,4 +32,49 @@
 </center>
 </form>
 </body>
-</html>
+</html> -->
+
+|LF_STANDARD|
+|HTM_USER_SIMPLE_TOP|
+
+<!-- inicio bloque -->
+<div class="bcp-bloque">
+  <div class="bcpb-padding">
+
+    <!-- inicio contenido bloque -->
+
+    <!-- titulo -->
+    <div class="bcpbp-titulo">
+      <h2>|LANG_ADD_NEW_DOMAIN_POINTER|</h2>
+    </div>
+    <!-- fin titulo -->
+
+    <!-- inicio content -->
+    <div class="bcpbp-content">
+      <!-- table -->
+      <div class="box-da-table">
+        <form action=? method=GET>
+			<input type=checkbox name="hidezero" value="1" |*if hidezero="1"|checked|*endif|>|LANG_HIDE_ZERO|<br>
+			<input type=checkbox name="hide_duplicate_count" value="1" |*if hide_duplicate_count="1"|checked|*endif|>|LANG_HIDE_NOT_COUNTED| <a href="javascript:alert('|LANG_EXPLANATION|');">(?)</a><br>
+			<input type=hidden name="sort1" value="|sort1|">
+			<input type=hidden name="ipp" value="|ipp|">
+			<input type=submit value="|LANG_UPDATE|">
+			|*if user|<input type=hidden name="user" value="|user|">|*endif|
+			<center>
+			|TABLE|
+			<br>
+			|*if DU_NOTICE!=""|
+			<b>|DU_NOTICE|</b><br><br>
+			|*endif|
+			<a href="javascript:self.close();">|LANG_CLOSE|</a>
+			</center>
+		</form>
+      </div> <!-- fin table -->
+    </div> <!-- fin content -->
+
+    <!-- fin contenido bloque -->
+
+  </div> <!-- fin padding -->
+</div> <!-- fin bloque -->
+
+|HTM_USER_BOTTOM|

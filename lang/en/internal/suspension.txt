@@ -21,3 +21,4 @@
 21=Other
 22=-- Reason:
 23=Inactive
+24=Account %s was suspended by an Admin and you only have Reseller access. You cannot unsuspend this account.

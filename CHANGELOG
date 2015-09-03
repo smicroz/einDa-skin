@@ -1,0 +1,56 @@
+==========================================
+0.3.3 (19-07-2015)
+==========================================
+New feature - added login template
+Minor changes - Hide "Current Domain" when domain isn't visible
+Bugfix - The submit button was outside the form for adding new DNS zones. (by guillermodejavu)
+Bugfix - Solves the problem with log values form TXT DNS records. (by guillermodejavu)
+Bugfix - Added to installer "git reset --hard" to reset the staging area to match the most recent commit (by tristan)
+Bugfix - Added show_services to admin backend area
+Bugfix - Added data/skins/enhanced/lang/en/internal/suspension.txt file
+Translation (es) - data/skins/enhanced/lang/en/internal/suspension.txt
+
+Directadmin Update 1.481 to 1.483
+* http://www.directadmin.com/features.php?id=1295
+	- Added language text to lang/en/user/db/db.html and lang/es/user/db/db.html
+	- user/db/user_priv.html updated
+* http://www.directadmin.com/features.php?id=1750
+	- New entry in data/skins/enhanced/lang/en/internal/suspension.txt
+* http://www.directadmin.com/features.php?id=1751
+	- Added new javascript.
+* http://www.directadmin.com/features.php?id=1754
+	- Updated 1.48.3 css styles
+	- Updated passwd.html
+	- Updated files_user.conf
+	- Added lang/en/internal/twostep_auth.txt and lang/es/internal/twostep_auth.txt
+	- Updated lang/en/internal/command.txt added from 561 to 570
+	- Updated lang/es/internal/command.txt added from 581 to 570
+	- Added user/twostep_auth.html
+
+==========================================
+0.3.2 (20-05-2015)
+==========================================
+- Increase font-size of table buttons
+- Removed exterior border of tables
+- Updated color admin - reseller - user
+- New user level sub nav - media-query > 1024px
+- Added margin to lc-content in left-nav - media-query > 1024px
+- Added color to admin icon (dashboard)
+- Modified show-user icon to icon-group
+- Updated installer, with git pull to update. (by tristan)
+==========================================
+0.3.1 (05-06-2015)
+==========================================
+- Improved iphone 5 visualization
+- Added icon to menu
+- Re worked sub-nav
+	- icon color added to differenciate user level
+	- added new dropdown
+	- added new icons
+- Removed user level of end-user
+- Added more info to install
+- Updated footer language
+- Added 1.48 DA styles -> http://www.directadmin.com/features.php?id=1718
+- Minimal css changes
+	- removed uppercase of .lc-content h4
+	- removed border-bottom of input submit and button, and added transition effect
