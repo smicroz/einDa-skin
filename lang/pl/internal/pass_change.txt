@@ -1,0 +1,22 @@
+1=<html><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><div style="text-align:center">%s</div></html>
+2=Funkcjonalność zmiany hasła jest wyłączona.
+3=Nowe hasła nie są identyczne.
+4=Musisz podać poprawny adres ftp, Old Password oraz dwukrotnie New Password.
+5=Nie można odnaleźć domeny w pliku z właścicielami domen.
+6=Musisz podać poprawny adres e-mail, Old Password oraz dwukrotnie New Password.
+7=Hasło nie jest poprawne.
+8=Nie można odnaleźć poprawnego użytkownika systemowego w pliku z właścicielami domen.
+9=Nie można zmienić hasła dla konta systemowego, można to zrobić logując się do panelu administracyjnego.
+10=Nie można zmienić hasła dla tego konta e-mail ponieważ konto jest w zawieszonej domenie.
+11=Plik ftp_password nie istnieje.
+12=Taka domena nie istnieje.
+13=Niepoprawna nazwa użytkownika lub hasło.
+14=Wystąpił błąd podczas zapisu hasła: %s.
+15=Nie można odczytać pliku z właścicielami domen.
+16=Wystąpił błąd podczas zapisu hasła.
+17=Hasło zostało zapisane!
+18=Wiadomość dla tego użytkownika już istnieje.
+19=Ustawiono wiadomość wakacyjną.
+20=Zaktualizowano wiadomość wakacyjną.
+21=Usunięto wiadomość wakacyjną.
+22=Ustawiono brak wiadomości wakacyjnej.

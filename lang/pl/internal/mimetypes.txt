@@ -1,0 +1,12 @@
+1=Musisz podać typ mime, nazwę uchwytu lun rozszerzenie. np.: <b>text/html</b> lub <b>cgi-script</b> lub <b>html</b>
+2=Możesz podać tylko jedno rozszerzenie na raz. np.: <b>jpg</b> a NIE <b>jpg jpeg jpe</b>
+3=Niepoprawna nazwa lub rozszerzenie
+4=Uchwyt
+5=Rozszerzenie
+6=Typ mime
+7=Wybierz
+8=z wybranymi
+9=Usuń rozszerzenie
+10=Usuń uchwyt
+11=Usuń typ mime
+12=lub
