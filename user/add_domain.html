@@ -160,6 +160,52 @@ function submitForm()
 				</div>
 			</div>
 
+|*if CUSTOM_ITEM_1|
+                        <div class="bcpbp-form"> <!-- vacio -->
+                                <label>|CUSTOM_ITEM_1_STR|</label>
+                                <div class="form-datos">
+                                        |CUSTOM_ITEM_1|
+                                        |CUSTOM_ITEM_1_DESC|
+                                </div>
+                        </div>
+|*endif|
+|*if CUSTOM_ITEM_2|
+                        <div class="bcpbp-form"> <!-- vacio -->
+                                <label>|CUSTOM_ITEM_2_STR|</label>
+                                <div class="form-datos">
+                                        |CUSTOM_ITEM_2|
+                                        |CUSTOM_ITEM_2_DESC|
+                                </div>
+                        </div>
+|*endif|
+|*if CUSTOM_ITEM_3|
+                        <div class="bcpbp-form"> <!-- vacio -->
+                                <label>|CUSTOM_ITEM_3_STR|</label>
+                                <div class="form-datos">
+                                        |CUSTOM_ITEM_3|
+                                        |CUSTOM_ITEM_3_DESC|
+                                </div>
+                        </div>
+|*endif|
+|*if CUSTOM_ITEM_4|
+                        <div class="bcpbp-form"> <!-- vacio -->
+                                <label>|CUSTOM_ITEM_4_STR|</label>
+                                <div class="form-datos">
+                                        |CUSTOM_ITEM_4|
+                                        |CUSTOM_ITEM_4_DESC|
+                                </div>
+                        </div>
+|*endif|
+|*if CUSTOM_ITEM_5|
+                        <div class="bcpbp-form"> <!-- vacio -->
+                                <label>|CUSTOM_ITEM_5_STR|</label>
+                                <div class="form-datos">
+                                        |CUSTOM_ITEM_5|
+                                        |CUSTOM_ITEM_5_DESC|
+                                </div>
+                        </div>
+|*endif|
+
 			<!-- contenedor para boton submit -->
 			<div class="bcpbp-form--submit">
 				<input type=button name=create value="|LANG_CREATE|" onClick="if (formOK()) {submitForm();}">
