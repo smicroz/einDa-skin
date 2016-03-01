@@ -1,0 +1,10 @@
+1=U heeft een wachtwoord nodig
+2=Dat is niet uw systeemwachtwoord
+3=is een symbolic link.<br>Frontpage op uw domein instellen is een beveiligingsrisico
+4=Domein en wachtwoord zijn verplicht
+5=Frontpage is geinstalleerd op
+6=Ingeschakeld
+7=Uitgeschakeld
+8=Inschakelen
+9=Uitschakelen
+10=Frontpage is niet geinstalleerd

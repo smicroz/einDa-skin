@@ -1,0 +1,30 @@
+1=%s bestaat niet.
+2=Kan geen data lezen van %s
+3=Kan geen lock krijgen op %s
+4=Fout bij schrijven %s: %s
+5=%s%s is geblokkeerd in %s om verdere inlogpogingen tegen te houden.
+6=Waarschuwing: %s heeft een geldig wachtwoord voor %s maar de twee-factor authenticatiecode ging %s keer fout.
+7=Het IP %s heeft een geldig wachtwoord gegeven voor het account %s.%cEchter, na %s pogingen is er nog geen geldige twee-factor authenticatiecode opgegeven, dus is er geen toegang verleend.%cIndien dit niet uw IP is pas dan uw wachtwoord aan.%s
+8=Twee-factor autenticatiegeheim is niet ingesteld.
+9=<b>Vul uw twee-factor autenticatiecode in</b>
+10=Verstuur
+11=Code
+12=%sUw ipadres wordt geblokkeerd
+13=Ongeldige twee-factor autenticatiecode
+14=Eenmalige codes
+15=Aanmaakdatum
+16=Selecteer
+17=Verwijder
+18=Toevoegen Codes
+19=Nieuwe geheime set: <span class=code_edit>%s</span><br>Herscan de QR code, alle oude codes zijn niet meer geldig.
+20=Geldig
+21=Haal de code van uw telefoon of gebruik een backup eenmalige code.
+22=Nooit
+23=%s Dag(en)
+24=%s Week(/weken)
+25=%s Maand(en)
+26=Verloopt op
+27=Ongeldige tekens in omschrijving. Toegestaan %s
+28=Print
+29=De code is geldig maar voor een andere tijd. Controleer de tijd op de server en uw telefoon.<br>Tijdsverschil = %d<br>
+30=%s Vertrouwe deze dienst voor %d dagen

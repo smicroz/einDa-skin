@@ -1,0 +1,15 @@
+1=Om een cronjob toe te voegen moet u alle volgende gegevens opgeven; minuut, uur, dag van de maand, maand, dag van de week en commando.
+2=De tijden moeten eruitzien als een van de volgende voorbeelden:<br>*<br>1<br>1-5<br>0-23/2<br>1,2,3,13,22<br>0-4,8-12
+3=Het commando kan geen nieuwe regel karakter bevatten
+4=Minuut
+5=Uur
+6=Dag van de<br>Maand
+7=Maand
+8=Dag van de<br>Week
+9=Commando
+10=Opslaan
+11=Bewerk
+12=Verwijder
+13=Selecteer
+14=Gebruiker
+15=Ongeldig email address. DirectAdmin gebruikersnaam mag ook
