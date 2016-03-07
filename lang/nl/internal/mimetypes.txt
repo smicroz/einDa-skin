@@ -1,0 +1,12 @@
+1=U moet een mime type of handler name opgeven een een enkele extentie, bijv: <b>text/html</b> of <b>cgi-script</b> en <b>html</b>
+2=Geef slechts een extensie per keer op, bijv: <b>jpg</b> en NIET <b>jpg jpeg jpe</b>
+3=Ongeldige naam of extensie
+4=Handler
+5=Extensies
+6=MimeType
+7=Selecteer
+8=Met geseelecteerde
+9=Verwijder extensie
+10=Verwijder handler
+11=Verwijder mimeType
+12=of
