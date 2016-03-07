@@ -138,6 +138,7 @@ function submitBackup()
 											<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password|"></td></tr>
 											<tr><td class=list align=right>|LANG_REMOTE_PATH|:</td><td class=list><input type=text name=ftp_path value="|ftp_path|"></td></tr>
 											<tr><td class=list align=right>|LANG_REMOTE_PORT|:</td><td class=list><input type=text name=ftp_port value="|ftp_port|"></td></tr>
+											<tr><td class=list align=right>|LANG_SECURE_FTP|:</td><td class=list>|FTP_SECURE_SELECT|</td></tr>
 										</table>
 									</td>
 								</tr>
@@ -209,6 +210,7 @@ function submitBackup()
 										<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password|"></td></tr>
 										<tr><td class=list align=right>|LANG_REMOTE_PATH|:</td><td class=list><input type=text name=ftp_path value="|ftp_path|"></td></tr>
 										<tr><td class=list align=right>|LANG_REMOTE_PORT|:</td><td class=list><input type=text name=ftp_port value="|ftp_port|"></td></tr>
+										<tr><td class=list align=right>|LANG_SECURE_FTP|:</td><td class=list>|FTP_SECURE_SELECT|</td></tr>
 										<tr><td class=list align=right> </td><td class=list><input type=submit value="|LANG_UPDATE_FILES|"></td></tr>
 									</table>
 								</td>
@@ -226,6 +228,7 @@ function submitBackup()
 					<input type=hidden name=ftp_password value="|ftp_password|">
 					<input type=hidden name=ftp_path value="|ftp_path|">
 					<input type=hidden name=ftp_port value="|ftp_port|">
+					<input type=hidden name=ftp_secure value="|ftp_secure|">
 					<td class=step valign=top>
 						<div>|LANG_STEP_2|: <b>|LANG_SELECT_IP|</b></div>
 						<table cellpadding=0 cellspacing=0>

@@ -25,3 +25,8 @@
 25=This domain will now temporarily use the Shared Server Certificate, unless you restore the backup key (but backup the new key first or it will become lost)
 26=Unable to open ca certificate file (%s)to write to: %s
 27=NOTE: You are using the server IP, so your CA Root Certificate has been saved to
+28=Let's Encrypt is not enabled.  You cannot use this option.
+29=Invalid keysize. Valid values: %s
+30=Unable to create %s: %s
+31=Error during automated certificate renewal for %s
+32=Automated certificate renewal for %s has succeeded
