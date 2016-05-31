@@ -2,7 +2,7 @@
 2=Scriptuitvoer
 3=Geen geldig ipadres
 4=Er zijn nog gebruikers op %s. Vrwijder ze eerst van het ipadres en zet het dan op 'vrij'
-5=%s is niet op 'vrij' gezet of is nog aan een wederverkoper toegewezen
+5=%s is niet op 'vrij' gezet of is nog aan een reseller toegewezen
 6=%s is geen geldige ipreeks.  Gebruik 1.2.3.4-10
 7=Ongeldig ipadres (1.2.3.4) of reeks (1.2.3.4-5)
 8=of IPv6 (1:2:3:4:5:6:7:8) of IPv6 reeks (1:2:3:4:5:6:7:8-9)
@@ -15,7 +15,7 @@
 15=Gebruiker(s)
 16=Nameserver
 17=Ken toen aan
-18=Verwijder van wederverkoper
+18=Verwijder van reseller
 19=NS opschonen
 20=Verwijder geselecteerde
 21=Wederveroper
@@ -35,4 +35,4 @@
 35=Herschrijf Apache
 36=Toepassen op bestaande domeinen
 37=Variable 'ip' is niet opgenomen in de aanmelding
-38=Er zijn geen ipadressen beschikbaar om aan de gebruiker te geven. De wederverkoper moet bruikbare ipadressen over hebben.
+38=Er zijn geen ipadressen beschikbaar om aan de gebruiker te geven. De reseller moet bruikbare ipadressen over hebben.

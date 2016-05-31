@@ -93,7 +93,7 @@
 93=Account %s overgeslagen wegens schorsing
 94=Geschrosten overslaan
 95=FTPgegevens zijn niet correct
-96='%s' kan niet worden teruggezet want de wederverkoper of admin '%s' kan niet worden gevonden. Hernoem het bestand.
+96='%s' kan niet worden teruggezet want de reseller of admin '%s' kan niet worden gevonden. Hernoem het bestand.
 97=Dupliceer
 98=Nu uitvoeren
 99=Hardlink check voor backup
