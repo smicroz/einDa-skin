@@ -239,15 +239,15 @@ function init_letsencrypt_options()
 						<input type=hidden name=domain value="|DOMAIN|">
 						<input type=hidden name=action value="save">
 
-						<tr><td class=list align=center><input type=radio name=type value="server" |SERVERCHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_USE_SERVERS|</td></tr>
+						<tr><td class=listtitle align=center><input type=radio name=type value="server" |SERVERCHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_USE_SERVERS|</td></tr>
 						<tr><td class=list>&nbsp;</td><td class=list colspan=2>|LANG_USE_SHARED|</td></tr>
 
-						<tr><td class=list align=center><input type=radio name=type value="create" onClick="setRequest('on');"></td>
+						<tr><td class=listtitle align=center><input type=radio name=type value="create" onClick="setRequest('on');"></td>
 							<td class=listtitle colspan=2>
-								<input type=radio name=request value="no" checked disabled>|LANG_CREATE_SELF_SIGNED|<br>
-								<input type=radio name=request value="yes" disabled>|LANG_CREATE_CSR|
+								<input type=radio name=request value="no" checked disabled onClick="set_letsencrypt_options();">|LANG_CREATE_SELF_SIGNED|<br>
+								<input type=radio name=request value="yes" disabled onClick="set_letsencrypt_options();">|LANG_CREATE_CSR|
 								|*if LETSENCRYPT="1"|
-									<br><input type=radio name=request value="letsencrypt" disabled>|LANG_FREE_LETS_ENCRYPT| <a class='listtitle' target=_blank href="https://letsencrypt.org/">Let's Encrypt</a></td>
+									<br><input type=radio name=request value="letsencrypt" disabled onClick="set_letsencrypt_options();">|LANG_FREE_LETS_ENCRYPT| <a class='listtitle' target=_blank href="https://letsencrypt.org/">Let's Encrypt</a></td>
 								|*endif|
 								</td>
 						</tr>
@@ -260,7 +260,22 @@ function init_letsencrypt_options()
 						<tr><td class=list>&nbsp;</td><td class=list>|LANG_EMAIL|</td><td class=list><input type=input name=email></td></tr>
 						<tr><td class=list>&nbsp;</td><td class=list>|LANG_KEYSIZE|</td><td class=list><select class=selectclass name=keysize><option>2048</option><option selected>4096</option></select></td></tr>
 						<tr><td class=list>&nbsp;</td><td class=list>|LANG_CERT_TYPE|</td><td class=list><select class=selectclass name=encryption><option value="rsa">SHA1</option><option value="sha256" selected>SHA256</option></select></td></tr>
-						<tr><td class=list align=center><input type=radio name=type value="paste" |PASTECHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_PASTE|</td></tr>
+|*if LETSENCRYPT="1"|
+						<tr id=letsencrypt_visibility style="display: none;">
+							<td class=list>&nbsp;</td>
+							<td class=list colspan=2>
+								<h2>|LANG_LE_SELECTED|: <span id=le_selected_count>X</span> &nbsp;&nbsp; |LANG_LE_MAX|: |LETSENCRYPT_MAX_REQUESTS|</h2><span id='le_options_warning' class='warning'></span>
+								<div style="overflow: auto; height: 160px; width: 100%;">
+									|LETSENCRYPT_OPTIONS|
+								</div>
+							</td>
+						</tr>
+						<script language="Javascript">
+							init_letsencrypt_options();
+						</script>
+|*endif|
+
+						<tr><td class=listtitle align=center><input type=radio name=type value="paste" |PASTECHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_PASTE|</td></tr>
 						<tr><td class=list>&nbsp;</td>
 							<td class=list align=center colspan=2>
 								<textarea class="code_edit ssl_text" name=certificate rows=16>|KEY||CERTIFICATE|</textarea><br>
