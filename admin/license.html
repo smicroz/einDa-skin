@@ -38,6 +38,11 @@
         <tr><td class="listtitle">|LANG_CURRENT_TIME|</td><td class=list2>|TIME|</td></tr>
         <tr><td class="listtitle">|LANG_TIME_REM|</td><td class=list>|remaining|</td></tr>
         <tr><td class="listtitle">|LANG_LAST_UP|</td><td class=list2>|license_change|</td></tr>
+|*if da_needs_restart="yes"|
+        <tr><td class=list align=center colspan=2>*** <b>|LANG_DA_NOT_RESTARTED|</b> ***<br>
+                <a href="CMD_SERVICE?action=restart&service=directadmin">|LANG_RESTART_DA|</a></td></tr>
+|*endif|
+
         <tr><td class=list align=center colspan=2><a href="/CMD_LICENSE?update=license">|LANG_UP_LICE|</a></td></tr>
       </table>
     </div> <!-- fin table -->
