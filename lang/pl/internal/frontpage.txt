@@ -1,0 +1,10 @@
+1=Hasło jest wymagane
+2=To nie jest hasło systemowe
+3=to jest link symboliczny.<br>Włączanie rozszerzenia frontpage w tej domenie będą stanowić ryzyko dla bezpieczeństwa
+4=Domena i hasło są wymagane
+5=Rozszerzenie frontpage zostało pomyślnie zainstalowane
+6=Włączone
+7=Wyłączone
+8=Włącz
+9=Wyłącz
+10=Rozszerzenie frontpage nie jest zainstalowane

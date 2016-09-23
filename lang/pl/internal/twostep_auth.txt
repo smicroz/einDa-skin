@@ -1,0 +1,30 @@
+1=%s does not exist.
+2=Unable to read data from %s
+3=Unable to get lock on %s
+4=Error writing %s: %s
+5=%s%s has been blocked in %s to prevent further attempts on the account.
+6=Warning: %s has a valid password for %s but failed the Two-Step Authentication code %s times.
+7=The IP %s has provided the correct password for the %s account.%cHowever, after %s attempts, they were not able to provide a valid Two-Step Authentication code, so no access was granted.%cIf this is not your IP, change your password.%s
+8=Two-Step Auth secret is not set.
+9=<b>Enter your Two-Step Authentication Code</b>
+10=Submit
+11=Code
+12=%sYour IP will be blacklisted
+13=Invalid Two-Step Auth code
+14=Scratch Codes
+15=Date Created
+16=Select
+17=Delete
+18=Add Codes
+19=New Secret Set: <span class=code_edit>%s</span><br>Be sure to re-scan the QR code, as all old codes become invalid.
+20=Valid
+21=Get the code from your phone's app, or use a backup scratch code.
+22=Never
+23=%s Day(s)
+24=%s Week(s)
+25=%s Month(s)
+26=Expires
+27=Invalid characters in description.  Allowed %s
+28=Print
+29=The code is valid, but for a different time.<br>Check the time on both your server and your phone.<br>Time slice discrepancy = %d<br>
+30=%s Trust this device for %d days

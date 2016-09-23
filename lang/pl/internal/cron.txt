@@ -1,0 +1,15 @@
+1=W celu dodania zadania należy wypełnić wszystkie dane: minuta, godzina, dzień miesiąca,  miesiąc, dzień tygodnia i komenda
+2=Czas wykonania musi mieć jeden z formatów jak pokazano poniżej (np. godzina, bez odstępów):<br>*<br>1<br>1-5<br>0-23/2<br>1,2,3,13,22<br>0-4,8-12
+3=Komenda nie może zawierać znaków nowego wiersza
+4=Minuta
+5=Godzina
+6=<div style="text-align:center">Dzień<br>miesiąca</div>
+7=Miesiąc
+8=<div style="text-align:center">Dzień<br>tygodnia</div>
+9=Komenda
+10=Zapisz
+11=Zmień
+12=Usuń
+13=Wybierz
+14=Użytkownik
+15=Niepoprawny adres e-mail. Można również użyć nazwy użytkownika DirectAdmin.

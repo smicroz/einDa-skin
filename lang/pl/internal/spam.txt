@@ -1,0 +1,5 @@
+1=Spamd nie jest uruchomiony w systemie.
+2=Kliknij tutaj
+3=żeby dowiedzieć sie jak to włączyć
+4=Błąd podczas ustawiania filtru antyspamowego
+5=Wyjście skryptu
