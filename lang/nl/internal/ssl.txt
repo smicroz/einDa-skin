@@ -25,3 +25,8 @@
 25=Dit domein maakt tijdelijk gebruik van het server certificaat tenzij u de opgeslagen key terugzet (maar sla de nieuwe key eerst op. Anders bent u 'm kwijt.)
 26=Kan aan het ca certificaatbestand (%s) niet toevoegen: %s
 27=Let op: U gebruikt het ipadres van de server, uw CA Root Certificaat is opgeslagen in
+28=Let's Encrypt is niet ingeschakeld.  Je kunt deze functie niet gebruiken.
+29=Ongeldige sleutelgrootte. Juiste waarden: %s
+30=Kan %s niet maken: %s
+31=Fout tijdens het automatisch vernieuwden van het certificaat voor %s
+32=Certificaat voor %s is succesvol automatisch vernieuwd
