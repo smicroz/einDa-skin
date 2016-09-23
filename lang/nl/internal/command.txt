@@ -117,10 +117,10 @@
 117=kon niet worden gedeeld, moet eerst vrij zijn.
 118=is nu vrij.
 119=kon niet vrij worden gemaakt. Er mogen geen domein zijn die dit adres gebruiken of het IP adres moet zijn gereserveerd.
-120=Onmogelijk een wederverkoper aan te maken
+120=Onmogelijk een reseller aan te maken
 121=U moet eerst packages aanmaken
-122=Uw wederverkoper heeft zijn/haar quotum bereikt
-123=U zit aan het quotum van uw wederverkopersaccount
+122=Uw reseller heeft zijn/haar quotum bereikt
+123=U zit aan het quotum van uw resellersaccount
 124=U zit al aan uw toegekende quotum
 125=Onmogelijk een gebruiker aan te maken
 126=U moet eerst een IP bezitten
@@ -273,7 +273,7 @@
 273=Nameserver 1
 274=Nameserver 2
 275=Shelltoegang (ssh)
-276=Shell voor gebruikers van wederverkopers
+276=Shell voor gebruikers van resellers
 277=Secure Socket Layer (SSL)
 278=CGI-Bin
 279=PHP
@@ -316,7 +316,7 @@
 316=Geen Awstats
 317=Webalizer
 318=aantal vrije IPs
-319=Aantal wederverkopers
+319=Aantal resellers
 320=Loadgemiddelde
 321=%sServerhistorie%s
 322=Bestandssysteem
@@ -452,7 +452,7 @@
 452=Totaal
 453=Emails afgeleverd (verzonden)
 454=Kan de domeininstellingen niet inzien
-455=<br><b>*** LET OP ***</b><br>U staat op het punt een beheerder of wederverkoper te verwijderen met %d gebruikers.<br>Wanneer u doorgaat zullen al deze accounts indien niet hieronder vermeld worden verwijderd inclusief alle websites en emailaccounts..
+455=<br><b>*** LET OP ***</b><br>U staat op het punt een beheerder of reseller te verwijderen met %d gebruikers.<br>Wanneer u doorgaat zullen al deze accounts indien niet hieronder vermeld worden verwijderd inclusief alle websites en emailaccounts..
 456=Subdomain aangemaakt
 457=Emails afgeleverd
 458=%sTijdelijke bandbreedteverhoging

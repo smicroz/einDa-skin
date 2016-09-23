@@ -18,7 +18,7 @@
 18=U moet een nummer, gebruiker, onderwerp, prioriteit, status en bericht opgeven
 19=U heeft geen rechten om op di ticket te reageren
 20=Alle gebruikers
-21=Alle wederverkopers
+21=Alle resellers
 22=Al uw gebruikers
 23=Ticket #
 24=Antwoorden

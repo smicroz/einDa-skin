@@ -21,4 +21,4 @@
 21=Andere
 22=-- Reden:
 23=Inactief
-24=Account %s is geschordt door een beheerder en u hebt alleen wederverkopertoegang. Dit account kan niet worden geactiveerd.
+24=Account %s is geschordt door een beheerder en u hebt alleen resellertoegang. Dit account kan niet worden geactiveerd.
