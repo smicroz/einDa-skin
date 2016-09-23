@@ -30,3 +30,10 @@
 30=Unable to create %s: %s
 31=Error during automated certificate renewal for %s
 32=Automated certificate renewal for %s has succeeded
+33=Script output
+34=Must use letsencrypt=1 for options.  letsencrypt=%d is currently set.
+35=Let's Encrypt Certificate Entries
+36=Select
+37=Requested LetsEncrypt value of '%s' is not an allowed value.
+38=Must select more than zero LetsEncrypt entries.
+39=Must include your domain %s in the LetsEncrypt entries.
