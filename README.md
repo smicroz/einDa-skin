@@ -6,6 +6,7 @@ Mobile-First skin to Directadmin CP.
 * Compatibility: Directadmin 1.48.3
 * License: MIT
 * Web: http://smicroz.tumblr.com/
+* Donation with Crpyto: Litecoin -> Ldk23VxHGNcgJUmMugX5fmVeybk84gtzqB
 
 ![](https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/screen/v032-desktop-3.png)
 
